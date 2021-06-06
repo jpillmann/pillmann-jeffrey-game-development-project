@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61ced4d31f07346885b186f23723c3, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 4e528faadfc3dd04c86fda9663912ab6, type: 3}
   itemName: Sword
   modelPrefab: {fileID: 6337552554242579930, guid: 8b8ea6925acc3ce4d8772451185eacaf, type: 3}
   isUnarmed: 0

@@ -41,6 +41,8 @@ namespace JP
             inputHandler.TickInput(delta);
             playerMovement.HandleMovement(delta);
             playerMovement.HandleRollingAndSprinting(delta);
+
+            CheckForInteractableObject();
         }
 
         private void FixedUpdate()
@@ -58,6 +60,38 @@ namespace JP
         {
             inputHandler.rollFlag = false;
             inputHandler.sprintFlag = false;
+            inputHandler.d_Pad_Up = false;
+            inputHandler.d_Pad_Down = false;
+            inputHandler.d_Pad_Left = false;
+            inputHandler.d_Pad_Right = false;
+            inputHandler.a_Input = false;
+        }
+
+        // Look for Interactable Object's around the Player
+        public void CheckForInteractableObject()
+        {
+            RaycastHit hit;
+
+            if (Physics.SphereCast(transform.position, 0.6f, transform.forward, out hit, 1f, cameraHandler.ignoreLayers))
+            {
+                if (hit.collider.tag == "Interactable")
+                {
+                    Interactable interactableObject = hit.collider.GetComponent<Interactable>();
+
+                    if (interactableObject != null)
+                    {
+                        string interactableText = interactableObject.interactableText;
+                        // Set UI Text to Interactable Objects Text
+                        //Set text pop up to true
+
+                        if (inputHandler.a_Input)
+                        {
+                            Debug.Log("Oy!");
+                            hit.collider.GetComponent<Interactable>().Interact(this);
+                        }
+                    }
+                }
+            }
         }
     }
 }

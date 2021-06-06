@@ -9,8 +9,12 @@ namespace JP
         WeaponHolderSlot leftHandSlot;
         WeaponHolderSlot rightHandSlot;
 
+        QuickSlotsUI quickSlotsUI;
+
         private void Awake()
         {
+            quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
+
             WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
             foreach (WeaponHolderSlot weaponSlot in weaponHolderSlots)
             {
@@ -30,10 +34,12 @@ namespace JP
             if (isLeft)
             {
                 leftHandSlot.LoadWeaponModel(weaponItem);
+                quickSlotsUI.UpdateWeaponQuickSlotsUI(true, weaponItem);
             }
             else
             {
                 rightHandSlot.LoadWeaponModel(weaponItem);
+                quickSlotsUI.UpdateWeaponQuickSlotsUI(false, weaponItem);
             }
         }
     }
