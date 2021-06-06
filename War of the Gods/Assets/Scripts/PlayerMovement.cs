@@ -9,6 +9,7 @@ namespace JP
         PlayerManager playerManager;
         Transform cameraObject;
         InputHandler inputHandler;
+        PlayerStats playerStats;
         Vector3 moveDirection;
 
         [HideInInspector]
@@ -23,7 +24,13 @@ namespace JP
         [SerializeField]
         float movementSpeed = 5;
         [SerializeField]
+        float walkingSpeed = 3;
+        [SerializeField]
+        float sprintSpeed = 7;
+        [SerializeField]
         float rotationSpeed = 10;
+
+  
 
         // Start is called before the first frame update
         void Start()
@@ -32,6 +39,7 @@ namespace JP
             rigidbody = GetComponent<Rigidbody>();
             inputHandler = GetComponent<InputHandler>();
             animatorHandler = GetComponentInChildren<AnimatorHandler>();
+            playerStats = GetComponent<PlayerStats>();
             cameraObject = Camera.main.transform;
             myTransform = transform;
             animatorHandler.Initialize();
@@ -68,18 +76,42 @@ namespace JP
 
         public void HandleMovement(float delta)
         {
+            if (inputHandler.rollFlag)
+            {
+                return;
+            }
+
             moveDirection = cameraObject.forward * inputHandler.vertical;
             moveDirection += cameraObject.right * inputHandler.horizontal;
             moveDirection.Normalize();
             moveDirection.y = 0;
 
             float speed = movementSpeed;
-            moveDirection *= speed;
+
+            if (inputHandler.sprintFlag && inputHandler.moveAmount > 0.5f)
+            {
+                    speed = sprintSpeed;
+                    playerManager.isSprinting = true;
+                    moveDirection *= speed;
+            }
+            else
+            {
+                if (inputHandler.moveAmount < 0.5f)
+                {
+                    moveDirection *= walkingSpeed;
+                    playerManager.isSprinting = false;
+                }
+                else
+                {
+                    moveDirection *= speed;
+                    playerManager.isSprinting = false;
+                }
+            }
 
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);
             rigidbody.velocity = projectedVelocity;
 
-            animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0);
+            animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0, playerManager.isSprinting);
 
             if (animatorHandler.canRotate)
             {
@@ -95,6 +127,9 @@ namespace JP
                 return;
             }
 
+            if (playerStats.currentStamina <= 0)
+                return;
+
             if (inputHandler.rollFlag)
             {
                 moveDirection = cameraObject.forward * inputHandler.vertical;
@@ -102,10 +137,10 @@ namespace JP
 
                 if (inputHandler.moveAmount > 0)
                 {
-                    animatorHandler.PlayTargetAnimation("Roll", true);
-                    moveDirection.y = 0;
-                    Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
-                    myTransform.rotation = rollRotation;
+                        animatorHandler.PlayTargetAnimation("Roll", true);
+                        moveDirection.y = 0;
+                        Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
+                        myTransform.rotation = rollRotation;
                 }
             }
         }

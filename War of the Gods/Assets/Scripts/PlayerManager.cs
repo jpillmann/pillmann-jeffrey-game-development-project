@@ -10,8 +10,12 @@ namespace JP
         Animator anim;
         CameraHandler cameraHandler;
         PlayerMovement playerMovement;
+        PlayerStats playerStats;
 
         public bool isInteracting;
+
+        [Header("Player Flags")]
+        public bool isSprinting;
 
 
         private void Awake()
@@ -25,15 +29,14 @@ namespace JP
             inputHandler = GetComponent<InputHandler>();
             anim = GetComponentInChildren<Animator>();
             playerMovement = GetComponent<PlayerMovement>();
+            playerStats = GetComponent<PlayerStats>();
         }
 
         // Update is called once per frame
         void Update()
         {
             float delta = Time.deltaTime;
-
             isInteracting = anim.GetBool("isInteracting");
-            inputHandler.rollFlag = false;
 
             inputHandler.TickInput(delta);
             playerMovement.HandleMovement(delta);
@@ -54,6 +57,7 @@ namespace JP
         private void LateUpdate()
         {
             inputHandler.rollFlag = false;
+            inputHandler.sprintFlag = false;
         }
     }
 }

@@ -7,6 +7,7 @@ namespace JP
     public class AnimatorHandler : MonoBehaviour
     {
         PlayerManager playerManager;
+        PlayerStats playerStats;
         public Animator anim;
         InputHandler inputHandler;
         PlayerMovement playerMovement;
@@ -17,6 +18,7 @@ namespace JP
         public void Initialize()
         {
             playerManager = GetComponentInParent<PlayerManager>();
+            playerStats = GetComponentInParent<PlayerStats>();
             anim = GetComponent<Animator>();
             inputHandler = GetComponentInParent<InputHandler>();
             playerMovement = GetComponentInParent<PlayerMovement>();
@@ -24,7 +26,7 @@ namespace JP
             horizontal = Animator.StringToHash("Horizontal");
         }
 
-        public void UpdateAnimatorValues(float verticalMovement, float horizontalMovement)
+        public void UpdateAnimatorValues(float verticalMovement, float horizontalMovement, bool isSprinting)
         {
             #region Vertical
             float v = 0;
@@ -76,6 +78,12 @@ namespace JP
             }
             #endregion
 
+            if (isSprinting)
+            {
+                v = 2;
+                h = horizontalMovement;
+            }
+
             anim.SetFloat(vertical, v, 0.1f, Time.deltaTime);
             anim.SetFloat(horizontal, h, 0.1f, Time.deltaTime);
         }
@@ -110,6 +118,16 @@ namespace JP
             deltaPosition.y = 0;
             Vector3 velocity = deltaPosition / delta;
             playerMovement.rigidbody.velocity = velocity;
+        }
+
+        private void DrainStaminaRoll()
+        {
+            playerStats.UseStamina(playerStats.rollStaminaCost);
+        }
+
+        private void DrainStaminaSprint()
+        {
+            playerStats.UseStamina(playerStats.sprintStaminaCost);
         }
     }
 }
