@@ -14,6 +14,7 @@ namespace JP
 
         public bool b_Input;
         public bool a_Input;
+        public bool inventory_Input;
 
         public bool d_Pad_Up;
         public bool d_Pad_Down;
@@ -22,11 +23,13 @@ namespace JP
 
         public bool rollFlag;
         public bool sprintFlag;
+        public bool inventoryFlag;
         public float rollInputTimer;
         public bool isInteracting;
 
         PlayerConttrols inputActions;
         PlayerInventory playerInventory;
+        UIManager uiManager;
 
         Vector2 movementInput;
         Vector2 cameraInput;
@@ -35,6 +38,7 @@ namespace JP
         private void Awake()
         {
             playerInventory = GetComponent<PlayerInventory>();
+            uiManager = FindObjectOfType<UIManager>();
         }
 
         public void OnEnable()
@@ -60,6 +64,7 @@ namespace JP
             HandleRollInput(delta);
             HandleQuickSlotsInput();
             HandleInteractingInput();
+            HandleInventoryInput();
         }
 
         private void MoveInput(float delta)
@@ -110,6 +115,29 @@ namespace JP
         private void HandleInteractingInput()
         {
             inputActions.PlayerActions.Interact.performed += i => a_Input = true;
+        }
+
+        private void HandleInventoryInput()
+        {
+            inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
+
+            if (inventory_Input)
+            {
+                inventoryFlag = !inventoryFlag;
+
+                if (inventoryFlag)
+                {
+                    uiManager.OpenSelectWindow();
+                    uiManager.UpdateUI();
+                    uiManager.hudWindow.SetActive(false);
+                }
+                else
+                {
+                    uiManager.CloseSelectWindow();
+                    uiManager.CloseAllInventoryWindows();
+                    uiManager.hudWindow.SetActive(true);
+                }
+            }
         }
     }
 }

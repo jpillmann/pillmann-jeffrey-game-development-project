@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace JP
 {
@@ -30,6 +31,9 @@ namespace JP
             playerMovement.rigidbody.velocity = Vector3.zero;
             //animatorHandler.PlayTargetAnimation("Pick Up Item", true);
             playerInventory.weaponsInventory.Add(weapon);
+            playerManager.itemInteractableUIGameObject.GetComponentInChildren<Text>().text = weapon.itemName;
+            playerManager.itemInteractableUIGameObject.GetComponentInChildren<RawImage>().texture = weapon.itemIcon.texture;
+            playerManager.itemInteractableUIGameObject.SetActive(true);
             Destroy(gameObject);
         }
     }

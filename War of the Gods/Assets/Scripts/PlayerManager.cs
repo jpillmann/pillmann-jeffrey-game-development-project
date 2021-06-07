@@ -12,6 +12,10 @@ namespace JP
         PlayerMovement playerMovement;
         PlayerStats playerStats;
 
+        InteractableUI interactableUI;
+        public GameObject interactableUIGameObject;
+        public GameObject itemInteractableUIGameObject;
+
         public bool isInteracting;
 
         [Header("Player Flags")]
@@ -30,6 +34,7 @@ namespace JP
             anim = GetComponentInChildren<Animator>();
             playerMovement = GetComponent<PlayerMovement>();
             playerStats = GetComponent<PlayerStats>();
+            interactableUI = FindObjectOfType<InteractableUI>();
         }
 
         // Update is called once per frame
@@ -65,6 +70,7 @@ namespace JP
             inputHandler.d_Pad_Left = false;
             inputHandler.d_Pad_Right = false;
             inputHandler.a_Input = false;
+            inputHandler.inventory_Input = false;
         }
 
         // Look for Interactable Object's around the Player
@@ -81,15 +87,26 @@ namespace JP
                     if (interactableObject != null)
                     {
                         string interactableText = interactableObject.interactableText;
-                        // Set UI Text to Interactable Objects Text
-                        //Set text pop up to true
+                        interactableUI.interactableText.text = interactableText;
+                        interactableUIGameObject.SetActive(true);
 
                         if (inputHandler.a_Input)
                         {
-                            Debug.Log("Oy!");
                             hit.collider.GetComponent<Interactable>().Interact(this);
                         }
                     }
+                }
+            }
+            else
+            {
+                if (interactableUIGameObject != null)
+                {
+                    interactableUIGameObject.SetActive(false);
+                }
+
+                if (interactableUIGameObject != null && inputHandler.a_Input)
+                {
+                    itemInteractableUIGameObject.SetActive(false);
                 }
             }
         }
