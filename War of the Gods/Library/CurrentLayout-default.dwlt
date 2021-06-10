@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 131
+  controlID: 72
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 57
+  controlID: 77
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 58
+  controlID: 78
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,22 +396,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/UI/Icons
+    - Assets/Data/Prefabs/Weapons
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/UI/Icons
+  - Assets/Data/Prefabs/Weapons
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\pillmann-jeffrey-game-development-project\War of the Gods
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fc410000
-    m_LastClickedID: 16892
-    m_ExpandedIDs: 00000000aa410000ac410000ae410000b0410000b2410000b4410000b6410000b8410000ba410000bc410000be410000c0410000c2410000da41000000ca9a3b
+    scrollPos: {x: 0, y: 58}
+    m_SelectedIDs: 94420000
+    m_LastClickedID: 17044
+    m_ExpandedIDs: 000000006a4200006c4200006e42000070420000724200007442000076420000784200007a4200007c4200007e42000080420000824200008642000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -439,7 +439,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa410000ac410000ae410000b0410000b2410000b4410000b6410000b8410000ba410000bc410000be410000c0410000c2410000
+    m_ExpandedIDs: 000000006a4200006c4200006e42000070420000724200007442000076420000784200007a4200007c4200007e4200008042000082420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -562,7 +562,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6eb4ffff26b6ffffb8b7ffff40bdffffc0beffff2ebfffffb2c0ffff40c2ffff8acbffff90ccffffa2d4ffff84e5ffff62f2ffff74f5ffff04fbffff4cfbffff4efbffff
+      m_ExpandedIDs: c0e0ffffc4e0ffff9ee1ffffdce6ffff08edffff0aedffff10edffff14edffffd0edffffd4edffff80eefffffef5ffffa0f7ffffa8f7ffffaaf7ffff4efbffffd43c0000ee3c0000f23c0000fe3c0000163d00001c3d00003e3d0000583d0000723d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 577.64923, y: 279.36804, z: -316.01944}
+    m_Target: {x: 486.8708, y: 291.61163, z: -661.73737}
     speed: 2
-    m_Value: {x: 577.64923, y: 279.36804, z: -316.01944}
+    m_Value: {x: 486.8708, y: 291.61163, z: -661.73737}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -675,9 +675,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 373.31656
+    m_Target: 319.42636
     speed: 2
-    m_Value: 373.31656
+    m_Value: 319.42636
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -695,7 +695,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.043306895, y: -0.95591384, z: 0.18464401, w: -0.22421828}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 

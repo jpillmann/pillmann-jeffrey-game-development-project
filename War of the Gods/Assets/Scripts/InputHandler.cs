@@ -48,6 +48,10 @@ namespace JP
                 inputActions = new PlayerConttrols();
                 inputActions.PlayerMovement.Movement.performed += inputActions => movementInput = inputActions.ReadValue<Vector2>();
                 inputActions.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
+                inputActions.InventoryQuickSlots.DPadRight.performed += i => d_Pad_Right = true;
+                inputActions.InventoryQuickSlots.DPadLeft.performed += i => d_Pad_Left = true;
+                inputActions.PlayerActions.Interact.performed += i => a_Input = true;
+                inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
             }
 
             inputActions.Enable();
@@ -63,7 +67,6 @@ namespace JP
             MoveInput(delta);
             HandleRollInput(delta);
             HandleQuickSlotsInput();
-            HandleInteractingInput();
             HandleInventoryInput();
         }
 
@@ -79,11 +82,10 @@ namespace JP
         private void HandleRollInput(float delta)
         {
             b_Input = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Started;
-
-            if(b_Input)
+            sprintFlag = b_Input;
+            if (b_Input)
             {
                 rollInputTimer += delta;
-                sprintFlag = true;
             }
             else
             {
@@ -99,9 +101,6 @@ namespace JP
      
         private void HandleQuickSlotsInput()
         {
-            inputActions.InventoryQuickSlots.DPadRight.performed += i => d_Pad_Right = true;
-            inputActions.InventoryQuickSlots.DPadLeft.performed += i => d_Pad_Left = true;
-
             if (d_Pad_Right)
             {
                 playerInventory.ChangeRightWeapon();
@@ -112,15 +111,8 @@ namespace JP
             }
         }
 
-        private void HandleInteractingInput()
-        {
-            inputActions.PlayerActions.Interact.performed += i => a_Input = true;
-        }
-
         private void HandleInventoryInput()
         {
-            inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
-
             if (inventory_Input)
             {
                 inventoryFlag = !inventoryFlag;

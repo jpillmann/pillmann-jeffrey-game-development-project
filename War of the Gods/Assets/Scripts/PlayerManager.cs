@@ -44,33 +44,32 @@ namespace JP
             isInteracting = anim.GetBool("isInteracting");
 
             inputHandler.TickInput(delta);
-            playerMovement.HandleMovement(delta);
             playerMovement.HandleRollingAndSprinting(delta);
-
             CheckForInteractableObject();
         }
 
         private void FixedUpdate()
         {
             float delta = Time.fixedDeltaTime;
-
-            if (cameraHandler != null)
-            {
-                cameraHandler.FollowTarget(delta);
-                cameraHandler.HandleCameraRotation(delta, inputHandler.mouseX, inputHandler.mouseY);
-            }
+            playerMovement.HandleMovement(delta);
         }
 
         private void LateUpdate()
         {
             inputHandler.rollFlag = false;
-            inputHandler.sprintFlag = false;
             inputHandler.d_Pad_Up = false;
             inputHandler.d_Pad_Down = false;
             inputHandler.d_Pad_Left = false;
             inputHandler.d_Pad_Right = false;
             inputHandler.a_Input = false;
             inputHandler.inventory_Input = false;
+
+            float delta = Time.fixedDeltaTime;
+            if (cameraHandler != null)
+            {
+                cameraHandler.FollowTarget(delta);
+                cameraHandler.HandleCameraRotation(delta, inputHandler.mouseX, inputHandler.mouseY);
+            }
         }
 
         // Look for Interactable Object's around the Player

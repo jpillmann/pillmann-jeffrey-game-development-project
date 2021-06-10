@@ -28,8 +28,11 @@ namespace JP
 
         private void Start()
         {
-            rightWeapon = unarmedWeapon;
-            leftWeapon = unarmedWeapon;
+            // Load Equipped Weapons on Launch
+            rightWeapon = weaponsInRightHandSlots[0];
+            leftWeapon = weaponsInLeftHandSlots[0];
+            weaponSlotManager.LoadWeaponOnSlot(rightWeapon, false);
+            weaponSlotManager.LoadWeaponOnSlot(leftWeapon, true);
         }
 
         public void ChangeRightWeapon()
