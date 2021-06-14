@@ -3418,6 +3418,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1812701067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4765178623229268594, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268594, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 8035d43025da7dd478ba88359edf0415, type: 2}
+    - target: {fileID: 4765178623229268594, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: interactableText
+      value: Pick Up Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268595, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_Name
+      value: TestItem Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268621, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.972
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765178623229268622, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
 --- !u!4 &1979560624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2964976509521350046, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
@@ -3820,6 +3893,22 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 1379210076}
+    - target: {fileID: 2964976509521350041, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
+      propertyPath: weaponsInLeftHandSlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f5d00b79ac555b448870b55d4978aa1d, type: 2}
+    - target: {fileID: 2964976509521350041, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
+      propertyPath: weaponsInLeftHandSlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f5d00b79ac555b448870b55d4978aa1d, type: 2}
+    - target: {fileID: 2964976509521350041, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
+      propertyPath: weaponsInRightHandSlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f5d00b79ac555b448870b55d4978aa1d, type: 2}
+    - target: {fileID: 2964976509521350041, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
+      propertyPath: weaponsInRightHandSlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8035d43025da7dd478ba88359edf0415, type: 2}
     - target: {fileID: 2964976509521350043, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
       propertyPath: interactableUIGameObject
       value: 
@@ -3968,7 +4057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4765178623229268595, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
       propertyPath: m_Name
-      value: TestItem
+      value: TestItem Sword
       objectReference: {fileID: 0}
     - target: {fileID: 4765178623229268621, guid: 77bd77eac9f60c6448e69f80d61e9074, type: 3}
       propertyPath: m_Radius

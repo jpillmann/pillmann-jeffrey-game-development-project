@@ -45,6 +45,8 @@ namespace JP
 
             inputHandler.TickInput(delta);
             playerMovement.HandleRollingAndSprinting(delta);
+            playerStats.RegenerateStamina();
+
             CheckForInteractableObject();
         }
 

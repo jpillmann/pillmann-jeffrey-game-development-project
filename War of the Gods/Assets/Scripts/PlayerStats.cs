@@ -14,17 +14,21 @@ namespace JP
         public int maxStamina;
         public int currentStamina;
         public int staminaRegen;
+        public float staminaRegenTimer = 0;
 
-        public int sprintStaminaCost = 10;
-        public int rollStaminaCost = 5;
-
+        PlayerManager playerManager;
         public HealthBar healthBar;
         public StaminaBar staminaBar;
 
-        private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
-        private Coroutine regen;
 
-        // Start is called before the first frame update
+        private void Awake()
+        {
+            playerManager = GetComponent<PlayerManager>();
+        }
+
+        // Set Values for Players Max and Current Health, Stamina
+        // Set Health and Stamina Bar UI Sliders
+        // Init StaminaRegen value
         void Start()
         {
             maxHealth = SetMaxHealthFromHealthLevel();
@@ -34,77 +38,68 @@ namespace JP
             maxStamina = SetMaxStaminaFromStaminaLevel();
             currentStamina = maxStamina;
             staminaBar.SetMaxStamina(maxStamina);
-            staminaRegen = SetStaminaRegenFromStaminaLevel();
+            staminaRegen = 40;
         }
 
         #region Health
+
+        // Set MaxHealth value from Players Health Level
         private int SetMaxHealthFromHealthLevel()
         {
             maxHealth = healthLevel * 10;
             return maxHealth;
         }
 
+        // Player takes damage to Health stat according to damage value
         public void TakeDamage(int damage)
         {
-            currentHealth = currentHealth - damage;
+            currentHealth -= damage;
             healthBar.SetCurrentHealth(currentHealth);
 
-            // Play "take damage" animation
+            // TODO: Play "take damage" animation
 
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                // Handle Player Death
+                // TODO: Handle Player Death
             }
         }
         #endregion
 
         #region Stamina
 
+        // Set the Max Stamina based on the Players StaminaLevel
         private int SetMaxStaminaFromStaminaLevel()
         {
             maxStamina = staminaLevel * 10;
             return maxStamina;
         }
 
-        private int SetStaminaRegenFromStaminaLevel()
+        // Depelte Stamina based on Stamina Cost
+        public void TakeStaminaDamage(int staminaCost)
         {
-            staminaRegen = Mathf.RoundToInt(staminaLevel / 2);
-            return staminaRegen;
+            currentStamina -= staminaCost;
+
+            staminaBar.SetCurrentStamina(currentStamina);
         }
 
-        public void UseStamina(int staminaCost)
+        // Regenerate Stamina on 1s delay if the player is currently not performing an action (i.e rolling, sprinting)
+        public void RegenerateStamina()
         {
-            if (currentStamina - staminaCost >= 0)
+            if (playerManager.isInteracting)
             {
-                currentStamina = currentStamina - staminaCost;
-
-                staminaBar.SetCurrentStamina(currentStamina);
-
-                if (regen != null)
-                {
-                    StopCoroutine(regen);
-                }
-
-                regen = StartCoroutine(RegenerateStamina());
+                staminaRegenTimer = 0;
             }
             else
             {
-                regen = StartCoroutine(RegenerateStamina());
-            }
-        }
+                staminaRegenTimer += Time.deltaTime;
 
-        public IEnumerator RegenerateStamina()
-        {
-            yield return new WaitForSeconds(2);
-
-            while (currentStamina < maxStamina)
-            {
-                currentStamina += staminaRegen;
-                staminaBar.SetCurrentStamina(currentStamina);
-                yield return regenTick;
+                if (currentStamina < maxStamina && staminaRegenTimer > 1f)
+                {
+                    currentStamina += Mathf.RoundToInt(staminaRegen * Time.deltaTime);
+                    staminaBar.SetCurrentStamina(currentStamina);
+                }
             }
-            regen = null;
         }
         #endregion
     }

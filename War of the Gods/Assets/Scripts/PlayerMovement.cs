@@ -30,6 +30,12 @@ namespace JP
         [SerializeField]
         float rotationSpeed = 10;
 
+        [Header("Stamina Costs")]
+        [SerializeField]
+        int rollStaminaCost = 15;
+        [SerializeField]
+        int sprintStaminaCost = 1;
+
   
 
         // Start is called before the first frame update
@@ -90,9 +96,10 @@ namespace JP
 
             if (inputHandler.sprintFlag && inputHandler.moveAmount > 0.5f)
             {
-                    speed = sprintSpeed;
-                    playerManager.isSprinting = true;
-                    moveDirection *= speed;
+                speed = sprintSpeed;
+                playerManager.isSprinting = true;
+                moveDirection *= speed;
+                playerStats.TakeStaminaDamage(sprintStaminaCost);
             }
             else
             {
@@ -137,10 +144,11 @@ namespace JP
 
                 if (inputHandler.moveAmount > 0)
                 {
-                        animatorHandler.PlayTargetAnimation("Roll", true);
-                        moveDirection.y = 0;
-                        Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
-                        myTransform.rotation = rollRotation;
+                    animatorHandler.PlayTargetAnimation("Roll", true);
+                    moveDirection.y = 0;
+                    Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
+                    myTransform.rotation = rollRotation;
+                    playerStats.TakeStaminaDamage(rollStaminaCost);
                 }
             }
         }

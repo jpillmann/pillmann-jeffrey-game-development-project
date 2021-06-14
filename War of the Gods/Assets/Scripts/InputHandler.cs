@@ -30,6 +30,8 @@ namespace JP
         PlayerConttrols inputActions;
         PlayerInventory playerInventory;
         UIManager uiManager;
+        PlayerManager playerManager;
+        PlayerStats playerStats;
 
         Vector2 movementInput;
         Vector2 cameraInput;
@@ -39,6 +41,8 @@ namespace JP
         {
             playerInventory = GetComponent<PlayerInventory>();
             uiManager = FindObjectOfType<UIManager>();
+            playerManager = GetComponent<PlayerManager>();
+            playerStats = GetComponent<PlayerStats>();
         }
 
         public void OnEnable()
@@ -52,6 +56,9 @@ namespace JP
                 inputActions.InventoryQuickSlots.DPadLeft.performed += i => d_Pad_Left = true;
                 inputActions.PlayerActions.Interact.performed += i => a_Input = true;
                 inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
+
+                inputActions.PlayerActions.Roll.performed += i => b_Input = true;
+                inputActions.PlayerActions.Roll.canceled += i => b_Input = false;
             }
 
             inputActions.Enable();
@@ -81,17 +88,28 @@ namespace JP
 
         private void HandleRollInput(float delta)
         {
-            b_Input = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Started;
-            sprintFlag = b_Input;
+
             if (b_Input)
             {
                 rollInputTimer += delta;
+
+                if (playerStats.currentStamina <= 0)
+                {
+                    b_Input = false;
+                    sprintFlag = false;
+                }
+
+                if (moveAmount > 0.5f && playerStats.currentStamina > 0)
+                {
+                    sprintFlag = true;
+                }
             }
             else
             {
+                sprintFlag = false;
+
                 if (rollInputTimer > 0 && rollInputTimer < 0.5f)
                 {
-                    sprintFlag = false;
                     rollFlag = true;
                 }
 

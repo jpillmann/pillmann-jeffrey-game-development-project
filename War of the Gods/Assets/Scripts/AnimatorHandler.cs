@@ -119,15 +119,5 @@ namespace JP
             Vector3 velocity = deltaPosition / delta;
             playerMovement.rigidbody.velocity = velocity;
         }
-
-        private void DrainStaminaRoll()
-        {
-            playerStats.UseStamina(playerStats.rollStaminaCost);
-        }
-
-        private void DrainStaminaSprint()
-        {
-            playerStats.UseStamina(playerStats.sprintStaminaCost);
-        }
     }
 }
