@@ -16,6 +16,10 @@ namespace JP
         public GameObject interactableUIGameObject;
         public GameObject itemInteractableUIGameObject;
 
+        public GameObject interactableUIDialogueObject;
+        public GameObject interactableNPCName;
+        public GameObject interactableNPCDialogue;
+
         public bool isInteracting;
 
         [Header("Player Flags")]
@@ -97,6 +101,23 @@ namespace JP
                         }
                     }
                 }
+                else if (hit.collider.tag == "InteractableNPC")
+                {
+                    Interactable interactableObject = hit.collider.GetComponent<Interactable>();
+
+                    if (interactableObject != null && !interactableUIDialogueObject.activeSelf)
+                    {
+                        string interactableText = interactableObject.interactableText;
+                        interactableUI.interactableText.text = interactableText;
+                        interactableUIGameObject.SetActive(true);
+
+                        if (inputHandler.a_Input)
+                        {
+                            hit.collider.GetComponent<Interactable>().Interact(this);
+                            interactableUIGameObject.SetActive(false);
+                        }
+                    }
+                }
             }
             else
             {
@@ -108,6 +129,7 @@ namespace JP
                 if (interactableUIGameObject != null && inputHandler.a_Input)
                 {
                     itemInteractableUIGameObject.SetActive(false);
+                    interactableUIDialogueObject.SetActive(false);
                 }
             }
         }

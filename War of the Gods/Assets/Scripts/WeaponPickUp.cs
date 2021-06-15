@@ -27,7 +27,7 @@ namespace JP
             playerMovement = playerManager.GetComponent<PlayerMovement>();
             //animatorHandler = playerManager.GetComponentInChildren<AnimatorHandler>();
 
-            // stops the play from moving while picking up item
+            // stops the Player from moving while picking up item
             playerMovement.rigidbody.velocity = Vector3.zero;
             //animatorHandler.PlayTargetAnimation("Pick Up Item", true);
             playerInventory.weaponsInventory.Add(weapon);
