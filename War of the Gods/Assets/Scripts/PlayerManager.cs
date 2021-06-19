@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace JP
 {
@@ -11,6 +12,7 @@ namespace JP
         CameraHandler cameraHandler;
         PlayerMovement playerMovement;
         PlayerStats playerStats;
+        PlayerInventory playerInventory;
 
         InteractableUI interactableUI;
         public GameObject interactableUIGameObject;
@@ -20,10 +22,20 @@ namespace JP
         public GameObject interactableNPCName;
         public GameObject interactableNPCDialogue;
 
-        public bool isInteracting;
+        public GameObject interactableUIQuestObject;
+        public GameObject questTitle;
+        public GameObject questDescription;
+
+        public GameObject interactableUICompleteQuestObject;
+        public GameObject completeQuestTitle;
+
+        public List<Quest> quests = new List<Quest>();
+        public List<Quest> completedQuests = new List<Quest>();
+        public Quest tempQuest;
 
         [Header("Player Flags")]
         public bool isSprinting;
+        public bool isInteracting;
 
 
         private void Awake()
@@ -38,6 +50,7 @@ namespace JP
             anim = GetComponentInChildren<Animator>();
             playerMovement = GetComponent<PlayerMovement>();
             playerStats = GetComponent<PlayerStats>();
+            playerInventory = GetComponent<PlayerInventory>();
             interactableUI = FindObjectOfType<InteractableUI>();
         }
 
@@ -130,6 +143,71 @@ namespace JP
                 {
                     itemInteractableUIGameObject.SetActive(false);
                     interactableUIDialogueObject.SetActive(false);
+                }
+            }
+        }
+
+        // Sets the in tempQuest saved Quest to active and adds it to the Players Quest List
+        public void AcceptQuest()
+        {
+            tempQuest.isActive = true;
+            quests.Add(tempQuest);
+            interactableUIQuestObject.SetActive(false);
+            tempQuest = null;
+        }
+
+        // Disables Quest Dialogue(Accept/Decline) Window and resets tempQuest variable
+        public void DeclineQuest()
+        {
+            interactableUIQuestObject.SetActive(false);
+            tempQuest = null;
+        }
+
+        // Completes the Quest if the QuestGoal is Reached
+        public void CompleteQuest()
+        {
+            for (int i = 0; i < quests.Count; i++)
+            {
+                if (quests[i].title == tempQuest.title)
+                {
+                    quests[i].questGoal.CheckCurrentAmount(playerInventory);
+
+                    if (quests[i].questGoal.IsReached())
+                    {
+                        int currentAmount = quests[i].questGoal.requiredAmount;
+                        for (int j = 0; j < playerInventory.weaponsInventory.Count; j++)
+                        {
+                            if (currentAmount > 0)
+                            {
+                                if (playerInventory.weaponsInventory[j] == quests[i].questGoal.item)
+                                {
+                                    currentAmount--;
+                                    playerInventory.weaponsInventory.RemoveAt(j);
+                                }
+                            }
+                            else
+                            {
+                                break;
+                            }
+                            
+                        }
+
+                        // Handle Quest Reward
+                        playerInventory.weaponsInventory.Add(quests[i].weaponReward);
+                        itemInteractableUIGameObject.GetComponentInChildren<Text>().text = quests[i].weaponReward.itemName;
+                        itemInteractableUIGameObject.GetComponentInChildren<RawImage>().texture = quests[i].weaponReward.itemIcon.texture;
+
+                        // Handle Quests Lists
+                        quests.Remove(quests[i]);
+                        tempQuest.isActive = false;
+                        completedQuests.Add(tempQuest);
+                        tempQuest = null;
+
+                        // Handle UI
+                        interactableUICompleteQuestObject.SetActive(false);
+                        itemInteractableUIGameObject.SetActive(true);
+                        break;
+                    }   
                 }
             }
         }

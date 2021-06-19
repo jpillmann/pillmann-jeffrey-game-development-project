@@ -6,6 +6,7 @@ namespace JP
 {
     public class UIManager : MonoBehaviour
     {
+        public PlayerManager playerManager;
         public PlayerInventory playerInventory;
         public EquipmentWindowUI equipmentWindowUI;
 
@@ -14,6 +15,7 @@ namespace JP
         public GameObject selectWindow;
         public GameObject equipmentScreenWindow;
         public GameObject weaponInventoryWindow;
+        public GameObject questListWindow;
 
         [Header("Equipment Window Slot Selected")]
         public bool rightHandSlot01Selected;
@@ -27,11 +29,24 @@ namespace JP
         public Transform weaponInventorySlotsParent;
         WeaponInventorySlot[] weaponInventorySlots;
 
+        [Header("Quests List")]
+        public GameObject questSlotPrefab;
+        public Transform questsList;
+        QuestSlot[] questSlots;
+
+        [Header("Completed Quests List")]
+        public GameObject completedQuestSlotPrefab;
+        public Transform completedQuestsList;
+        QuestSlot[] completedQuestSlots;
+
 
         private void Start()
         {
             weaponInventorySlots = weaponInventorySlotsParent.GetComponentsInChildren<WeaponInventorySlot>();
             equipmentWindowUI.LoadWeaponsOnEquipmentScreen(playerInventory);
+
+            questSlots = questsList.GetComponentsInChildren<QuestSlot>();
+            completedQuestSlots = completedQuestsList.GetComponentsInChildren<QuestSlot>();
         }
 
         public void UpdateUI()
@@ -54,6 +69,44 @@ namespace JP
                 }
             }
             #endregion
+
+            #region Quest Lists
+            // Quests List
+            for (int i = 0; i < questSlots.Length; i++)
+            {
+                if (i < playerManager.quests.Count)
+                {
+                    if (questSlots.Length < playerManager.quests.Count)
+                    {
+                        Instantiate(questSlotPrefab, questsList);
+                        questSlots = questsList.GetComponentsInChildren<QuestSlot>();
+                    }
+                    questSlots[i].AddQuest(playerManager.quests[i]);
+                }
+                else
+                {
+                    questSlots[i].ClearQuestSlot();
+                }
+            }
+
+            // Completed Quests List
+            for (int i = 0; i < completedQuestSlots.Length; i++)
+            {
+                if (i < playerManager.completedQuests.Count)
+                {
+                    if (completedQuestSlots.Length < playerManager.completedQuests.Count)
+                    {
+                        Instantiate(completedQuestSlotPrefab, completedQuestsList);
+                        completedQuestSlots = completedQuestsList.GetComponentsInChildren<QuestSlot>();
+                    }
+                    completedQuestSlots[i].AddQuest(playerManager.completedQuests[i]);
+                }
+                else
+                {
+                    completedQuestSlots[i].ClearQuestSlot();
+                }
+            }
+            #endregion
         }
 
         public void OpenSelectWindow()
@@ -71,6 +124,7 @@ namespace JP
             ResetAllSelectedSlots();
             weaponInventoryWindow.SetActive(false);
             equipmentScreenWindow.SetActive(false);
+            questListWindow.SetActive(false);
         }
 
         public void ResetAllSelectedSlots()
