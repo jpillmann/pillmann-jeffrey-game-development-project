@@ -43,7 +43,7 @@ namespace JP
             cameraHandler = CameraHandler.singleton;
         }
 
-        // Start is called before the first frame update
+        // Set Components
         void Start()
         {
             inputHandler = GetComponent<InputHandler>();
@@ -54,7 +54,9 @@ namespace JP
             interactableUI = FindObjectOfType<InteractableUI>();
         }
 
-        // Update is called once per frame
+        // Input Update [Interaction, Rolling, Sprinting]
+        // Stamina Regen Update
+        // Check for Interactable Update
         void Update()
         {
             float delta = Time.deltaTime;
@@ -67,12 +69,15 @@ namespace JP
             CheckForInteractableObject();
         }
 
+        // Handle Player Movement Update
         private void FixedUpdate()
         {
             float delta = Time.fixedDeltaTime;
             playerMovement.HandleMovement(delta);
         }
 
+        // Reset Player Flags
+        // Handle Camera Update
         private void LateUpdate()
         {
             inputHandler.rollFlag = false;
@@ -91,13 +96,15 @@ namespace JP
             }
         }
 
-        // Look for Interactable Object's around the Player
+        // Look for Interactable Object's around the Player with Spherecast
         public void CheckForInteractableObject()
         {
             RaycastHit hit;
 
             if (Physics.SphereCast(transform.position, 0.6f, transform.forward, out hit, 1f, cameraHandler.ignoreLayers))
             {
+                // Set Interaction UI Element for "Interactable" and call Interact function
+                #region Interactable
                 if (hit.collider.tag == "Interactable")
                 {
                     Interactable interactableObject = hit.collider.GetComponent<Interactable>();
@@ -114,6 +121,10 @@ namespace JP
                         }
                     }
                 }
+                #endregion
+
+                // Set Interaction UI Element for "InteractableNPC" and call Interact function
+                #region Interactable NPC
                 else if (hit.collider.tag == "InteractableNPC")
                 {
                     Interactable interactableObject = hit.collider.GetComponent<Interactable>();
@@ -131,9 +142,11 @@ namespace JP
                         }
                     }
                 }
+                #endregion
             }
             else
             {
+                // Close UI Interaction Window
                 if (interactableUIGameObject != null)
                 {
                     interactableUIGameObject.SetActive(false);
@@ -170,11 +183,14 @@ namespace JP
             {
                 if (quests[i].title == tempQuest.title)
                 {
+                    // Sets the currentAmount Value for the Quest
                     quests[i].questGoal.CheckCurrentAmount(playerInventory);
 
                     if (quests[i].questGoal.IsReached())
                     {
+                        // Remove required Item(s) from Player Inventory
                         int currentAmount = quests[i].questGoal.requiredAmount;
+
                         for (int j = 0; j < playerInventory.weaponsInventory.Count; j++)
                         {
                             if (currentAmount > 0)

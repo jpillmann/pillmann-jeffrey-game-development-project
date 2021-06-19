@@ -8,6 +8,7 @@ namespace JP
     {
         private int damage = 25;
 
+        // Damages Players Health Stat on Collision
         private void OnTriggerEnter(Collider other)
         {
             PlayerStats playerStats = other.GetComponent<PlayerStats>();

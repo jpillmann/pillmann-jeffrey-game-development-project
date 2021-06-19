@@ -16,20 +16,20 @@ namespace JP
             PickUpItem(playerManager);
         }
 
-        // Pick Up WeaponItem and add it to the Players Inventory
+        // Pick Up WeaponItem, add it to the Players Inventory and destroy the GameObject in the WorldSpace
         private void PickUpItem(PlayerManager playerManager)
         {
             PlayerInventory playerInventory;
             PlayerMovement playerMovement;
-            //AnimatorHandler animatorHandler;
+            // LATER: AnimatorHandler animatorHandler;
 
             playerInventory = playerManager.GetComponent<PlayerInventory>();
             playerMovement = playerManager.GetComponent<PlayerMovement>();
-            //animatorHandler = playerManager.GetComponentInChildren<AnimatorHandler>();
+            // LATER: animatorHandler = playerManager.GetComponentInChildren<AnimatorHandler>();
 
             // stops the Player from moving while picking up item
             playerMovement.rigidbody.velocity = Vector3.zero;
-            //animatorHandler.PlayTargetAnimation("Pick Up Item", true);
+            // LATER: animatorHandler.PlayTargetAnimation("Pick Up Item", true);
             playerInventory.weaponsInventory.Add(weapon);
             playerManager.itemInteractableUIGameObject.GetComponentInChildren<Text>().text = weapon.itemName;
             playerManager.itemInteractableUIGameObject.GetComponentInChildren<RawImage>().texture = weapon.itemIcon.texture;

@@ -21,6 +21,7 @@ namespace JP
             uiManager = FindObjectOfType<UIManager>();
         }
 
+        // Add a weapon in the Hand EquipmentSlot UI
         public void AddItem(WeaponItem newWeapon)
         {
             weapon = newWeapon;
@@ -29,6 +30,7 @@ namespace JP
             gameObject.SetActive(true);
         }
 
+        // Clear Hand Equipment Slot in UI
         public void ClearItem()
         {
             weapon = null;
@@ -37,6 +39,7 @@ namespace JP
             gameObject.SetActive(false);
         }
 
+        // Select UI Hand Equipment Slot, which can then be filled by selecting a weapon in the Weapon Inventory UI
         public void SelectThisSlot()
         {
             if (rightHandSlot01)

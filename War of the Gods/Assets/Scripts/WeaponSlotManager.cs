@@ -29,6 +29,7 @@ namespace JP
             }
         }
 
+        // Load Equipped Weapon Models
         public void LoadWeaponOnSlot(WeaponItem weaponItem, bool isLeft)
         {
             if (isLeft)

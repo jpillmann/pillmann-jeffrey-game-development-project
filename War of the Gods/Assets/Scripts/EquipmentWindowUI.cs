@@ -14,6 +14,7 @@ namespace JP
 
         public HandEquipmentSlotUI[] handEquipmentSlotUI;
 
+        // Load Weapons in Equipment UI from Right and Left hand Slots
         public void LoadWeaponsOnEquipmentScreen(PlayerInventory playerInventory)
         {
             for (int i = 0; i < handEquipmentSlotUI.Length; i++)

@@ -9,12 +9,14 @@ namespace JP
     {
         public Slider slider;
 
+        // Set Stamina Bar Slider to Max Value
         public void SetMaxStamina(int maxStamina)
         {
             slider.maxValue = maxStamina;
             slider.value = maxStamina;
         }
 
+        // Set Stamina Bar Slider to current stamina value
         public void SetCurrentStamina(int currentStamina)
         {
             slider.value = currentStamina;

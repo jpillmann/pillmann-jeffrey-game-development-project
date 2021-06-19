@@ -12,6 +12,7 @@ namespace JP
 
         public GameObject currentWeaponModel;
 
+        // Unload current Weapon Model
         public void UnloadWeapon()
         {
             if (currentWeaponModel != null)
@@ -20,6 +21,7 @@ namespace JP
             }
         }
 
+        // Destroy current Weapon Model
         public void UnloadWeaponAndDestroy()
         {
             if (currentWeaponModel != null)
@@ -28,6 +30,7 @@ namespace JP
             }
         }
 
+        // Load WeaponModel
         public void LoadWeaponModel(WeaponItem weaponItem)
         {
             UnloadWeaponAndDestroy();

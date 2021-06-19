@@ -48,7 +48,7 @@ namespace JP
                 }
             }
 
-            // Set UI Quest Object
+            // Set UI Quest Object if NPC has Quest that has not been accepted or completed yet
             if (hasQuest)
             {
                 if (quest.isActive)

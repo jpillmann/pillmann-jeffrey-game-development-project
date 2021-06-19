@@ -10,6 +10,7 @@ namespace JP
         public Image leftWeaponIcon;
         public Image rightWeaponIcon;
 
+        // Load Weapon Icons when the Player swaps between WeaponQuickSlots
         public void UpdateWeaponQuickSlotsUI(bool isLeft, WeaponItem weapon)
         {
             if (isLeft == false)

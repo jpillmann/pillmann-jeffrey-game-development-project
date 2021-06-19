@@ -45,6 +45,7 @@ namespace JP
             playerStats = GetComponent<PlayerStats>();
         }
 
+        // Enable Input Actions
         public void OnEnable()
         {
             if (inputActions == null)
@@ -69,6 +70,7 @@ namespace JP
             inputActions.Disable();
         }
 
+        // Check for Input
         public void TickInput(float delta)
         {
             MoveInput(delta);
@@ -77,6 +79,7 @@ namespace JP
             HandleInventoryInput();
         }
 
+        // Handle Movement Input
         private void MoveInput(float delta)
         {
             horizontal = movementInput.x;
@@ -86,6 +89,9 @@ namespace JP
             mouseY = cameraInput.y;
         }
 
+        // Handle roll Input
+        // Rolling and Sprinting only possible with enough stamina
+        // Sprint only when the Player is moving
         private void HandleRollInput(float delta)
         {
 
@@ -117,6 +123,7 @@ namespace JP
             }
         }
      
+        // Quick Slot Input to swap between equipped weapons
         private void HandleQuickSlotsInput()
         {
             if (d_Pad_Right)
@@ -129,6 +136,8 @@ namespace JP
             }
         }
 
+        // Opens Select Window [Player can choose between Quest, Inventory, Equip, Settings]
+        // Disables HUD while Select Window is open
         private void HandleInventoryInput()
         {
             if (inventory_Input)

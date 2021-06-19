@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace JP
 {
+    // UI Slot for Displaying Quests
     public class QuestSlot : MonoBehaviour
     {
         UIManager uiManager;
@@ -17,6 +18,7 @@ namespace JP
             uiManager = FindObjectOfType<UIManager>();
         }
 
+        // Add a Quest to UI Slot
         public void AddQuest(Quest newQuest)
         {
             quest = newQuest;
@@ -25,6 +27,7 @@ namespace JP
             gameObject.SetActive(true);
         }
 
+        // Remove a Quest from UI
         public void ClearQuestSlot()
         {
             quest = null;

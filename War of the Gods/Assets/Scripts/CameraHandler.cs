@@ -49,6 +49,7 @@ namespace JP
             HandleCameraCollision(delta);
         }
 
+        // Rotate Camera with mouse input around pivot
         public void HandleCameraRotation(float delta, float mouseXInput, float mouseYInput)
         {
             lookAngle += (mouseXInput * lookSpeed) / delta;

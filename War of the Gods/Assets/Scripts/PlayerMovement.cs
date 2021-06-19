@@ -56,6 +56,7 @@ namespace JP
         Vector3 normalVector;
         Vector3 targetPosition;
 
+        // Character Rotation with camera when the Player is moving
         private void HandleRotation(float delta)
         {
             Vector3 targetDir = Vector3.zero;
@@ -80,6 +81,9 @@ namespace JP
             myTransform.rotation = targetRotation;
         }
 
+        // Character Movement
+        // Sets Character Speed between Walking and Sprinting Speed
+        // Stamina depletion during Sprint
         public void HandleMovement(float delta)
         {
             if (inputHandler.rollFlag)
@@ -126,6 +130,8 @@ namespace JP
             }
         }
 
+        // Character Rolling and play rolling animation
+        // Rolling is stamina dependant action
         public void HandleRollingAndSprinting(float delta)
         {
             // Stop Rolling from cancelling other actions

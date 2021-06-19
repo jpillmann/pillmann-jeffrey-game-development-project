@@ -35,6 +35,7 @@ namespace JP
             weaponSlotManager.LoadWeaponOnSlot(leftWeapon, true);
         }
 
+        // Change Right Hand Weapon when swapping through Right Hand Quick Slots
         public void ChangeRightWeapon()
         {
             currentRightWeaponIndex += 1;
@@ -67,6 +68,7 @@ namespace JP
             }
         }
 
+        // Change Left Hand Weapon when swapping through Left Hand Quick Slots
         public void ChangeLeftWeapon()
         {
             currentLeftWeaponIndex += 1;

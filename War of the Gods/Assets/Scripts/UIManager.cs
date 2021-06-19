@@ -49,6 +49,9 @@ namespace JP
             completedQuestSlots = completedQuestsList.GetComponentsInChildren<QuestSlot>();
         }
 
+        // Updates Weapon Inventory and Quest List UI
+        // Add/ Remove Slots according to List Size (WeaponsInventory, QuestsList, CompletedQuestsList)
+        // Add Items/ Quests onto Slots in UI
         public void UpdateUI()
         {
             #region Weapon Inventory

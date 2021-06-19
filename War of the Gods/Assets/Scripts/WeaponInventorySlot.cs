@@ -21,6 +21,7 @@ namespace JP
             weaponSlotManager = FindObjectOfType<WeaponSlotManager>();
         }
 
+        // Adds a Weapon to the Weapon Inventory UI
         public void AddItem(WeaponItem newItem)
         {
             item = newItem;
@@ -29,6 +30,7 @@ namespace JP
             gameObject.SetActive(true);
         }
 
+        // Removes Weapon from Weapon Inventory UI
         public void ClearInventorySlot()
         {
             item = null;

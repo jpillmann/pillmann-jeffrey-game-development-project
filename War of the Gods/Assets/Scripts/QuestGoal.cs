@@ -36,6 +36,7 @@ namespace JP
         }
     }
 
+    // Types of Quest are Listed here
     public enum GoalType
     {
         Gathering

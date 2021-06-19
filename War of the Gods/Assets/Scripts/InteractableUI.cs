@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace JP
 {
+    // Interactable UI values are set and displayed according to what the Player interacts with
     public class InteractableUI : MonoBehaviour
     {
         // Pick Up Items
