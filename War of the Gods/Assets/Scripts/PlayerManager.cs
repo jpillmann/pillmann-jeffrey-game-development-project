@@ -9,6 +9,7 @@ namespace JP
     {
         InputHandler inputHandler;
         Animator anim;
+        AnimatorHandler animatorHandler;
         CameraHandler cameraHandler;
         PlayerMovement playerMovement;
         PlayerStats playerStats;
@@ -48,6 +49,7 @@ namespace JP
         {
             inputHandler = GetComponent<InputHandler>();
             anim = GetComponentInChildren<Animator>();
+            animatorHandler = GetComponentInChildren<AnimatorHandler>();
             playerMovement = GetComponent<PlayerMovement>();
             playerStats = GetComponent<PlayerStats>();
             playerInventory = GetComponent<PlayerInventory>();
@@ -81,6 +83,9 @@ namespace JP
         private void LateUpdate()
         {
             inputHandler.rollFlag = false;
+            inputHandler.rb_Input = false;
+            inputHandler.rt_Input = false;
+
             inputHandler.d_Pad_Up = false;
             inputHandler.d_Pad_Down = false;
             inputHandler.d_Pad_Left = false;
@@ -118,6 +123,7 @@ namespace JP
                         if (inputHandler.a_Input)
                         {
                             hit.collider.GetComponent<Interactable>().Interact(this);
+                            animatorHandler.PlayTargetAnimation("PickUpItem", true);
                         }
                     }
                 }

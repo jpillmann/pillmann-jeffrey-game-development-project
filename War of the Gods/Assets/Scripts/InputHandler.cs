@@ -15,6 +15,8 @@ namespace JP
         public bool b_Input;
         public bool a_Input;
         public bool inventory_Input;
+        public bool rb_Input;
+        public bool rt_Input;
 
         public bool d_Pad_Up;
         public bool d_Pad_Down;
@@ -28,6 +30,7 @@ namespace JP
         public bool isInteracting;
 
         PlayerConttrols inputActions;
+        PlayerAttacker playerAttacker;
         PlayerInventory playerInventory;
         UIManager uiManager;
         PlayerManager playerManager;
@@ -39,6 +42,7 @@ namespace JP
 
         private void Awake()
         {
+            playerAttacker = GetComponent<PlayerAttacker>();
             playerInventory = GetComponent<PlayerInventory>();
             uiManager = FindObjectOfType<UIManager>();
             playerManager = GetComponent<PlayerManager>();
@@ -75,6 +79,7 @@ namespace JP
         {
             MoveInput(delta);
             HandleRollInput(delta);
+            HandleAttackInput(delta);
             HandleQuickSlotsInput();
             HandleInventoryInput();
         }
@@ -156,6 +161,29 @@ namespace JP
                     uiManager.CloseAllInventoryWindows();
                     uiManager.hudWindow.SetActive(true);
                 }
+            }
+        }
+
+        private void HandleAttackInput(float delta)
+        {
+            inputActions.PlayerActions.RB.performed += i => rb_Input = true;
+            inputActions.PlayerActions.RT.performed += i => rt_Input = true;
+
+            // RB Input handles RIGHT hand weapon's light attack
+            if (rb_Input)
+            {
+                playerAttacker.HandleLightAttack(playerInventory.rightWeapon);
+            }
+
+            // RT Input handles RIGHT hand weapon's heavy attack
+            if (rt_Input)
+            {
+                if (playerManager.isInteracting)
+                {
+                    return;
+                }
+
+                playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
             }
         }
     }

@@ -86,7 +86,8 @@ namespace JP
         // Stamina depletion during Sprint
         public void HandleMovement(float delta)
         {
-            if (inputHandler.rollFlag)
+            // Prevent Movement During other Actions
+            if (playerManager.isInteracting)
             {
                 return;
             }
