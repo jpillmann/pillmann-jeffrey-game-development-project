@@ -115,11 +115,12 @@ namespace JP
         public void OpenSelectWindow()
         {
             selectWindow.SetActive(true);
+            selectWindow.GetComponent<SelectTween>().Open();
         }
 
         public void CloseSelectWindow()
         {
-            selectWindow.SetActive(false);
+            selectWindow.GetComponent<SelectTween>().Close();
         }
 
         public void CloseAllInventoryWindows()

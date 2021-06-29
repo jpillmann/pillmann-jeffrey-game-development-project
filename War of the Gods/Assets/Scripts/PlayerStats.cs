@@ -6,14 +6,14 @@ namespace JP
 {
     public class PlayerStats : MonoBehaviour
     {
-        public int healthLevel = 10;
-        public int maxHealth;
-        public int currentHealth;
+        public float healthLevel = 10;
+        public float maxHealth;
+        public float currentHealth;
 
-        public int staminaLevel = 10;
-        public int maxStamina;
-        public int currentStamina;
-        public int staminaRegen;
+        public float staminaLevel = 10;
+        public float maxStamina;
+        public float currentStamina;
+        public float staminaRegen;
         public float staminaRegenTimer = 0;
 
         PlayerManager playerManager;
@@ -44,14 +44,14 @@ namespace JP
         #region Health
 
         // Set MaxHealth value from Players Health Level
-        private int SetMaxHealthFromHealthLevel()
+        private float SetMaxHealthFromHealthLevel()
         {
             maxHealth = healthLevel * 10;
             return maxHealth;
         }
 
         // Player takes damage to Health stat according to damage value
-        public void TakeDamage(int damage)
+        public void TakeDamage(float damage)
         {
             currentHealth -= damage;
             healthBar.SetCurrentHealth(currentHealth);
@@ -69,14 +69,14 @@ namespace JP
         #region Stamina
 
         // Set the Max Stamina based on the Players StaminaLevel
-        private int SetMaxStaminaFromStaminaLevel()
+        private float SetMaxStaminaFromStaminaLevel()
         {
             maxStamina = staminaLevel * 10;
             return maxStamina;
         }
 
         // Depelte Stamina based on Stamina Cost
-        public void TakeStaminaDamage(int staminaCost)
+        public void TakeStaminaDamage(float staminaCost)
         {
             currentStamina -= staminaCost;
 

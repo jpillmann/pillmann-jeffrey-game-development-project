@@ -161,7 +161,7 @@ namespace JP
                 if (interactableUIGameObject != null && inputHandler.a_Input)
                 {
                     itemInteractableUIGameObject.SetActive(false);
-                    interactableUIDialogueObject.SetActive(false);
+                    interactableUIDialogueObject.GetComponent<DialogueTween>().HideDialogue();
                 }
             }
         }
@@ -171,14 +171,14 @@ namespace JP
         {
             tempQuest.isActive = true;
             quests.Add(tempQuest);
-            interactableUIQuestObject.SetActive(false);
+            interactableUIQuestObject.GetComponent<QuestTween>().Close();
             tempQuest = null;
         }
 
         // Disables Quest Dialogue(Accept/Decline) Window and resets tempQuest variable
         public void DeclineQuest()
         {
-            interactableUIQuestObject.SetActive(false);
+            interactableUIQuestObject.GetComponent<QuestTween>().Close();
             tempQuest = null;
         }
 
@@ -226,7 +226,7 @@ namespace JP
                         tempQuest = null;
 
                         // Handle UI
-                        interactableUICompleteQuestObject.SetActive(false);
+                        interactableUICompleteQuestObject.GetComponent<QuestTween>().Close();
                         itemInteractableUIGameObject.SetActive(true);
                         break;
                     }   

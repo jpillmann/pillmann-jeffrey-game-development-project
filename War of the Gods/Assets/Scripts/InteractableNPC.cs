@@ -33,6 +33,7 @@ namespace JP
             playerManager.interactableNPCName.GetComponentInChildren<Text>().text = interactabeNPCName;
             playerManager.interactableNPCDialogue.GetComponentInChildren<Text>().text = interactableNPCDialogue;
             playerManager.interactableUIDialogueObject.SetActive(true);
+            playerManager.interactableUIDialogueObject.GetComponent<DialogueTween>().ShowDialogue();
             #endregion
 
             #region Quest
@@ -56,6 +57,7 @@ namespace JP
                     playerManager.completeQuestTitle.GetComponentInChildren<Text>().text = quest.title;
                     playerManager.tempQuest = quest;
                     playerManager.interactableUICompleteQuestObject.SetActive(true);
+                    playerManager.interactableUICompleteQuestObject.GetComponent<QuestTween>().Open();
                 }
                 else
                 {
@@ -63,6 +65,7 @@ namespace JP
                     playerManager.questDescription.GetComponentInChildren<Text>().text = quest.description;
                     playerManager.tempQuest = quest;
                     playerManager.interactableUIQuestObject.SetActive(true);
+                    playerManager.interactableUIQuestObject.GetComponent<QuestTween>().Open();
                 }
             }
             #endregion
