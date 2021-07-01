@@ -14,6 +14,7 @@ namespace JP
 
         public bool b_Input;
         public bool a_Input;
+        public bool lockOnInput;
         public bool inventory_Input;
         public bool rb_Input;
         public bool rt_Input;
@@ -25,6 +26,7 @@ namespace JP
 
         public bool rollFlag;
         public bool sprintFlag;
+        public bool lockOnFlag;
         public bool inventoryFlag;
         public float rollInputTimer;
         public bool isInteracting;
@@ -34,6 +36,7 @@ namespace JP
         PlayerInventory playerInventory;
         UIManager uiManager;
         PlayerManager playerManager;
+        CameraHandler cameraHandler;
         PlayerStats playerStats;
 
         Vector2 movementInput;
@@ -46,6 +49,7 @@ namespace JP
             playerInventory = GetComponent<PlayerInventory>();
             uiManager = FindObjectOfType<UIManager>();
             playerManager = GetComponent<PlayerManager>();
+            cameraHandler = FindObjectOfType<CameraHandler>();
             playerStats = GetComponent<PlayerStats>();
         }
 
@@ -57,10 +61,13 @@ namespace JP
                 inputActions = new PlayerConttrols();
                 inputActions.PlayerMovement.Movement.performed += inputActions => movementInput = inputActions.ReadValue<Vector2>();
                 inputActions.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
+                inputActions.PlayerActions.RB.performed += i => rb_Input = true;
+                inputActions.PlayerActions.RT.performed += i => rt_Input = true;
                 inputActions.InventoryQuickSlots.DPadRight.performed += i => d_Pad_Right = true;
                 inputActions.InventoryQuickSlots.DPadLeft.performed += i => d_Pad_Left = true;
                 inputActions.PlayerActions.Interact.performed += i => a_Input = true;
                 inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
+                inputActions.PlayerActions.LockOn.performed += i => lockOnInput = true;
 
                 inputActions.PlayerActions.Roll.performed += i => b_Input = true;
                 inputActions.PlayerActions.Roll.canceled += i => b_Input = false;
@@ -82,6 +89,7 @@ namespace JP
             HandleAttackInput(delta);
             HandleQuickSlotsInput();
             HandleInventoryInput();
+            HandleLockOnInput();
         }
 
         // Handle Movement Input
@@ -166,9 +174,6 @@ namespace JP
 
         private void HandleAttackInput(float delta)
         {
-            inputActions.PlayerActions.RB.performed += i => rb_Input = true;
-            inputActions.PlayerActions.RT.performed += i => rt_Input = true;
-
             // RB Input handles RIGHT hand weapon's light attack
             if (rb_Input)
             {
@@ -184,6 +189,26 @@ namespace JP
                 }
 
                 playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+            }
+        }
+
+        private void HandleLockOnInput()
+        {
+            if (lockOnInput && lockOnFlag == false)
+            {
+                lockOnInput = false;
+                cameraHandler.HandleLockOn();
+                if (cameraHandler.nearestLockOnTarget != null)
+                {
+                    cameraHandler.currentLockOnTarget = cameraHandler.nearestLockOnTarget;
+                    lockOnFlag = true;
+                }
+            }
+            else if (lockOnInput && lockOnFlag)
+            {
+                lockOnInput = false;
+                lockOnFlag = false;
+                cameraHandler.ClearLockOnTargets();
             }
         }
     }

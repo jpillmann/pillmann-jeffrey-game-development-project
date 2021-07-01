@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 102
+  controlID: 78
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 103
+  controlID: 48
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 104
+  controlID: 49
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -439,22 +439,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 67
   m_LastFolders:
-  - Assets/Scripts
-  m_LastFoldersGridSize: -1
+  - Assets
+  m_LastFoldersGridSize: 67
   m_LastProjectPath: D:\pillmann-jeffrey-game-development-project\War of the Gods
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 842}
-    m_SelectedIDs: 325b0000
-    m_LastClickedID: 23346
-    m_ExpandedIDs: 00000000b0440000b2440000b4440000b6440000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000ca440000cc440000ce440000d0440000d2440000d4440000d6440000d8440000da440000dc440000305b000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f6440000
+    m_LastClickedID: 17654
+    m_ExpandedIDs: 00000000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000ca440000cc440000ce440000d0440000d2440000d4440000d6440000d8440000da440000dc440000de440000e0440000e2440000e444000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -482,7 +482,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b0440000b2440000b4440000b6440000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000ca440000cc440000ce440000d0440000d2440000d4440000d6440000d8440000da440000dc440000
+    m_ExpandedIDs: 00000000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000ca440000cc440000ce440000d0440000d2440000d4440000d6440000d8440000da440000dc440000de440000e0440000e2440000e4440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -535,7 +535,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 67
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &15
@@ -605,7 +605,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 24fbffff4efbffffbe3f0000
+      m_ExpandedIDs: e8f6ffff4efbffffe6400000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -665,9 +665,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.3162436, y: 0.2931137, z: 2.6766033}
+    m_Target: {x: -4.7808843, y: -1.4289622, z: 16.812218}
     speed: 2
-    m_Value: {x: -1.3162436, y: 0.2931137, z: 2.6766033}
+    m_Value: {x: -4.7808843, y: -1.4289622, z: 16.812218}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -714,13 +714,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1518102, y: 0.79777724, z: -0.22492725, w: -0.53844064}
+    m_Target: {x: 0.13016418, y: 0.06421298, z: -0.008448718, w: 0.98938346}
     speed: 2
-    m_Value: {x: -0.1518098, y: 0.79777515, z: -0.22492665, w: -0.5384392}
+    m_Value: {x: 0.13016307, y: 0.064212434, z: -0.008448646, w: 0.9893751}
   m_Size:
-    m_Target: 3.6516156
+    m_Target: 6.651617
     speed: 2
-    m_Value: 3.6516156
+    m_Value: 6.651617
   m_Ortho:
     m_Target: 0
     speed: 2

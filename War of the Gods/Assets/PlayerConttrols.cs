@@ -158,6 +158,14 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LockOn"",
+                    ""type"": ""Button"",
+                    ""id"": ""f1e32454-181d-4b3b-9933-daafbbe8bc71"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -246,6 +254,28 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3d288df9-0738-4a15-9f3f-8c83a508486c"",
+                    ""path"": ""<Gamepad>/rightStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LockOn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2cf9b17b-3898-475b-b03c-670dce43355d"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LockOn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -393,6 +423,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         m_PlayerActions_Inventory = m_PlayerActions.FindAction("Inventory", throwIfNotFound: true);
         m_PlayerActions_RB = m_PlayerActions.FindAction("RB", throwIfNotFound: true);
         m_PlayerActions_RT = m_PlayerActions.FindAction("RT", throwIfNotFound: true);
+        m_PlayerActions_LockOn = m_PlayerActions.FindAction("LockOn", throwIfNotFound: true);
         // Inventory Quick Slots
         m_InventoryQuickSlots = asset.FindActionMap("Inventory Quick Slots", throwIfNotFound: true);
         m_InventoryQuickSlots_DPadUp = m_InventoryQuickSlots.FindAction("D-Pad Up", throwIfNotFound: true);
@@ -494,6 +525,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerActions_Inventory;
     private readonly InputAction m_PlayerActions_RB;
     private readonly InputAction m_PlayerActions_RT;
+    private readonly InputAction m_PlayerActions_LockOn;
     public struct PlayerActionsActions
     {
         private @PlayerConttrols m_Wrapper;
@@ -503,6 +535,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         public InputAction @Inventory => m_Wrapper.m_PlayerActions_Inventory;
         public InputAction @RB => m_Wrapper.m_PlayerActions_RB;
         public InputAction @RT => m_Wrapper.m_PlayerActions_RT;
+        public InputAction @LockOn => m_Wrapper.m_PlayerActions_LockOn;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -527,6 +560,9 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                 @RT.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnRT;
                 @RT.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnRT;
                 @RT.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnRT;
+                @LockOn.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOn;
+                @LockOn.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOn;
+                @LockOn.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOn;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -546,6 +582,9 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                 @RT.started += instance.OnRT;
                 @RT.performed += instance.OnRT;
                 @RT.canceled += instance.OnRT;
+                @LockOn.started += instance.OnLockOn;
+                @LockOn.performed += instance.OnLockOn;
+                @LockOn.canceled += instance.OnLockOn;
             }
         }
     }
@@ -619,6 +658,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         void OnInventory(InputAction.CallbackContext context);
         void OnRB(InputAction.CallbackContext context);
         void OnRT(InputAction.CallbackContext context);
+        void OnLockOn(InputAction.CallbackContext context);
     }
     public interface IInventoryQuickSlotsActions
     {
