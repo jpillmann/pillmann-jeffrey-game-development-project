@@ -6,22 +6,22 @@ namespace JP
 {
     public class NPCAnimatorHandler : AnimatorManager
     {
-        NPCMovementManager npcMovementManager;
+        NPCManager npcManager;
 
         private void Awake()
         {
             anim = GetComponent<Animator>();
-            npcMovementManager = GetComponentInParent<NPCMovementManager>();
+            npcManager = GetComponentInParent<NPCManager>();
         }
 
         private void OnAnimatorMove()
         {
             float delta = Time.deltaTime;
-            npcMovementManager.npcRigidbody.drag = 0;
+            npcManager.npcRigidbody.drag = 0;
             Vector3 deltaPosition = anim.deltaPosition;
             deltaPosition.y = 0;
             Vector3 velocity = deltaPosition / delta;
-            npcMovementManager.npcRigidbody.velocity = velocity;
+            npcManager.npcRigidbody.velocity = velocity;
         }
     }
 }

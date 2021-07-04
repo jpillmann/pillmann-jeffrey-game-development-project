@@ -37,6 +37,7 @@ namespace JP
         [Header("Player Flags")]
         public bool isSprinting;
         public bool isInteracting;
+        public bool canDoCombo;
 
 
         private void Awake()
@@ -63,6 +64,7 @@ namespace JP
         {
             float delta = Time.deltaTime;
             isInteracting = anim.GetBool("isInteracting");
+            canDoCombo = anim.GetBool("canDoCombo");
 
             inputHandler.TickInput(delta);
             playerMovement.HandleRollingAndSprinting(delta);

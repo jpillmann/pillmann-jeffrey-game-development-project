@@ -28,6 +28,7 @@ namespace JP
 
         public bool rollFlag;
         public bool sprintFlag;
+        public bool comboFlag;
         public bool lockOnFlag;
         public bool inventoryFlag;
         public float rollInputTimer;
@@ -181,7 +182,19 @@ namespace JP
             // RB Input handles RIGHT hand weapon's light attack
             if (rb_Input)
             {
-                playerAttacker.HandleLightAttack(playerInventory.rightWeapon);
+                if (playerManager.canDoCombo)
+                {
+                    comboFlag = true;
+                    playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
+                    comboFlag = false;
+                }
+                else
+                {
+                    if (playerManager.canDoCombo)
+                        return;
+
+                    playerAttacker.HandleLightAttack(playerInventory.rightWeapon);
+                }
             }
 
             // RT Input handles RIGHT hand weapon's heavy attack
