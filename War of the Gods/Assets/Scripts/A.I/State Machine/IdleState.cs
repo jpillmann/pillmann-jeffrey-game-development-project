@@ -8,6 +8,7 @@ namespace JP
     public class IdleState : State
     {
         public PursueTargetState pursueTargetState;
+        public FleeingState fleeingState;
         public LayerMask detectionLayer;
 
         public override State Tick(NPCManager npcManager, NPCStats npcStats, NPCAnimatorHandler npcAnimatorHandler)
@@ -15,6 +16,7 @@ namespace JP
             #region Handle Target Detection
 
             Collider[] colliders = Physics.OverlapSphere(npcManager.transform.position, npcManager.detectionRadius, detectionLayer);
+
             for (int i = 0; i < colliders.Length; i++)
             {
                 CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
@@ -74,9 +76,13 @@ namespace JP
 
             #region Handle Switch State
 
-            if (npcManager.currentTarget != null)
+            if (npcManager.currentTarget != null && npcManager.isEnemy == true)
             {
                 return pursueTargetState;
+            }
+            else if (npcManager.currentTarget != null && npcManager.isEnemy == false)
+            {
+                return fleeingState;
             }
             else
             {

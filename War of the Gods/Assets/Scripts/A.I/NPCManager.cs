@@ -21,12 +21,15 @@ namespace JP
         public float rotationSpeed = 25;
         public float maximumAttackRange = 1.5f;
 
+        public float minimumDesiredDistance = 18;
+
         public bool isWandering = false;
         public Vector3 wanderingTargetLocation = Vector3.zero;
 
         [Header("A.I Settings")]
         public float detectionRadius = 20;
         public bool isPassive;
+        public bool isEnemy;
         [Range(1, 100)] public float walkradius; 
 
         // A.I Detection FOV
