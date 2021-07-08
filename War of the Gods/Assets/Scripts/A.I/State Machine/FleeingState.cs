@@ -8,6 +8,7 @@ namespace JP
     public class FleeingState : State
     {
         public IdleState idleState;
+        public LayerMask detectionLayer;
         public override State Tick(NPCManager npcManager, NPCStats npcStats, NPCAnimatorHandler npcAnimatorHandler)
         {
             Vector3 targetDirection = npcManager.currentTarget.transform.position - npcManager.transform.position;
@@ -16,7 +17,7 @@ namespace JP
 
             Vector3 fleeingDirection = -targetDirection;
             fleeingDirection.Normalize();
-            Vector3 fleeingPosition = npcManager.transform.position + (fleeingDirection * 20);
+            Vector3 fleeingPosition = npcManager.transform.position + (fleeingDirection * 5);
 
             if (distanceFromTarget < npcManager.minimumDesiredDistance)
             {
@@ -30,6 +31,7 @@ namespace JP
 
             if (distanceFromTarget >= npcManager.minimumDesiredDistance)
             {
+                npcManager.currentTarget = null;
                 return idleState;
             }
             else

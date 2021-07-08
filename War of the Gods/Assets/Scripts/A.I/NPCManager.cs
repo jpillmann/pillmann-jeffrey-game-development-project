@@ -14,6 +14,7 @@ namespace JP
 
         public State currentState;
         public CharacterStats currentTarget;
+        public CharacterStats flockNeighbour;
         public NavMeshAgent navMeshAgent;
         public Rigidbody npcRigidbody;
 
@@ -30,6 +31,7 @@ namespace JP
         public float detectionRadius = 20;
         public bool isPassive;
         public bool isEnemy;
+        public string faction;
         [Range(1, 100)] public float walkradius; 
 
         // A.I Detection FOV

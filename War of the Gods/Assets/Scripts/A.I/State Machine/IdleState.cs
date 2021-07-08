@@ -24,13 +24,15 @@ namespace JP
                 if (characterStats != null)
                 {
                     // CHECK FOR TEAM ID
-
-                    Vector3 targetDirection = characterStats.transform.position - npcManager.transform.position;
-                    float viewableAngle = Vector3.Angle(targetDirection, npcManager.transform.forward);
-
-                    if (viewableAngle > npcManager.minimumDetectionAngle && viewableAngle < npcManager.maximumDetectionAngle)
+                    if (characterStats.tag != npcManager.faction)
                     {
-                        npcManager.currentTarget = characterStats;
+                        Vector3 targetDirection = characterStats.transform.position - npcManager.transform.position;
+                        float viewableAngle = Vector3.Angle(targetDirection, npcManager.transform.forward);
+
+                        if (viewableAngle > npcManager.minimumDetectionAngle && viewableAngle < npcManager.maximumDetectionAngle)
+                        {
+                            npcManager.currentTarget = characterStats;
+                        }
                     }
                 }
             }
@@ -72,6 +74,10 @@ namespace JP
                 npcManager.navMeshAgent.transform.localPosition = Vector3.zero;
                 npcManager.navMeshAgent.transform.localRotation = Quaternion.identity;
             }
+            else
+            {
+                npcAnimatorHandler.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime);
+            }
             #endregion
 
             #region Handle Switch State
@@ -82,7 +88,16 @@ namespace JP
             }
             else if (npcManager.currentTarget != null && npcManager.isEnemy == false)
             {
-                return fleeingState;
+                float distanceFromTarget = Vector3.Distance(npcManager.currentTarget.transform.position, npcManager.transform.position);
+                
+                if (distanceFromTarget < npcManager.minimumDesiredDistance)
+                {
+                    return fleeingState;
+                }
+                else
+                {
+                    return this;
+                }
             }
             else
             {
