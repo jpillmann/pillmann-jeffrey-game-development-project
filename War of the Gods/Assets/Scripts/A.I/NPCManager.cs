@@ -27,6 +27,9 @@ namespace JP
         public bool isWandering = false;
         public Vector3 wanderingTargetLocation = Vector3.zero;
 
+        // For comparison of distances to Target of flockNeighbours
+        public float distanceFromTarget;
+
         [Header("A.I Settings")]
         public float detectionRadius = 20;
         public bool isPassive;

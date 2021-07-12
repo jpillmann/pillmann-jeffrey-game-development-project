@@ -12,14 +12,37 @@ namespace JP
         public override State Tick(NPCManager npcManager, NPCStats npcStats, NPCAnimatorHandler npcAnimatorHandler)
         {
             Vector3 targetDirection = npcManager.currentTarget.transform.position - npcManager.transform.position;
-            float distanceFromTarget = Vector3.Distance(npcManager.currentTarget.transform.position, npcManager.transform.position);
+            npcManager.distanceFromTarget = Vector3.Distance(npcManager.currentTarget.transform.position, npcManager.transform.position);
             float viewableAngle = Vector3.Angle(targetDirection, npcManager.transform.forward);
 
             Vector3 fleeingDirection = -targetDirection;
             fleeingDirection.Normalize();
             Vector3 fleeingPosition = npcManager.transform.position + (fleeingDirection * 5);
 
-            if (distanceFromTarget < npcManager.minimumDesiredDistance)
+            // Detecting Flock Neighbours
+            Collider[] colliders = Physics.OverlapSphere(npcManager.transform.position, npcManager.detectionRadius, detectionLayer);
+
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
+
+                if (characterStats != null)
+                {
+                    // CHECK FOR TEAM ID
+                    if (characterStats.tag == npcManager.faction && characterStats.transform.position != npcManager.transform.position)
+                    {
+                        NPCManager nearestFlockNeighbour = characterStats.GetComponent<NPCManager>();
+                        
+                        if (nearestFlockNeighbour.distanceFromTarget > npcManager.distanceFromTarget)
+                        {
+                            npcManager.flockNeighbour = characterStats;
+                            fleeingPosition = characterStats.transform.position;
+                        }
+                    }
+                }
+            }
+
+            if (npcManager.distanceFromTarget < npcManager.minimumDesiredDistance)
             {
                 npcAnimatorHandler.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime);
             }
@@ -29,7 +52,7 @@ namespace JP
             npcManager.navMeshAgent.transform.localPosition = Vector3.zero;
             npcManager.navMeshAgent.transform.localRotation = Quaternion.identity;
 
-            if (distanceFromTarget >= npcManager.minimumDesiredDistance)
+            if (npcManager.distanceFromTarget >= npcManager.minimumDesiredDistance)
             {
                 npcManager.currentTarget = null;
                 return idleState;

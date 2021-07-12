@@ -65,6 +65,7 @@ namespace JP
             {
                 Vector3 relativeDirection = npcManager.transform.InverseTransformDirection(npcManager.navMeshAgent.desiredVelocity);
                 Vector3 targetVelocity = npcManager.npcRigidbody.velocity;
+                Debug.Log(targetVelocity);
 
                 npcManager.navMeshAgent.enabled = true;
                 npcManager.navMeshAgent.SetDestination(npcManager.currentTarget.transform.position);

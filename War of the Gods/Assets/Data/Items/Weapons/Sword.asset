@@ -16,6 +16,17 @@ MonoBehaviour:
   itemName: Sword
   modelPrefab: {fileID: 6337552554242579930, guid: 8b8ea6925acc3ce4d8772451185eacaf, type: 3}
   isUnarmed: 0
+  minDamage: 20
+  maxDamage: 30
+  minMagicDamage: 10
+  maxMagicDamage: 20
+  minBloodDamage: 20
+  maxBloodDamage: 30
+  isMagic: 0
+  isCursed: 0
+  damage: 0
+  magicDamage: 0
+  bloodDamage: 0
   OH_Light_Attack_01: OH_Light_Attack_01
   OH_Light_Attack_02: OH_Light_Attack_02
   OH_Light_Attack_03: OH_Light_Attack_03
