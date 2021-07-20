@@ -190,6 +190,9 @@ namespace JP
                 }
                 else
                 {
+                    if (playerManager.isInteracting)
+                        return;
+
                     if (playerManager.canDoCombo)
                         return;
 
@@ -200,12 +203,22 @@ namespace JP
             // RT Input handles RIGHT hand weapon's heavy attack
             if (rt_Input)
             {
-                if (playerManager.isInteracting)
+                if (playerManager.canDoCombo)
                 {
-                    return;
+                    comboFlag = true;
+                    playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
+                    comboFlag = false;
                 }
+                else
+                {
+                    if (playerManager.isInteracting)
+                        return;
 
-                playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+                    if (playerManager.canDoCombo)
+                        return;
+
+                    playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+                }
             }
         }
 

@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19041.1083; Version 2004; 64bit' Language: 'de' Physical Memory: 8157 MB
+OS: 'Windows 10 Pro; OS build 19041.1110; Version 2004; 64bit' Language: 'de' Physical Memory: 8157 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ D:/pillmann-jeffrey-game-development-project/War of the Gods
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49861
+63690
 Successfully changed project path to: D:/pillmann-jeffrey-game-development-project/War of the Gods
 D:/pillmann-jeffrey-game-development-project/War of the Gods
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 47.05 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 44.69 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,316 +35,512 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002457 seconds.
+Registered in 0.003135 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.63 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 47.91 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.405 seconds
+- Completed reload, in  1.354 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000666 seconds.
+Registered in 0.000709 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 43.99 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.179 seconds
+- Completed reload, in  1.130 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1544 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1546 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 86.4 MB.
 System memory in use after: 86.4 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2011.
-Total: 3.004600 ms (FindLiveObjects: 0.924100 ms CreateObjectMapping: 0.238300 ms MarkObjects: 1.748700 ms  DeleteObjects: 0.092000 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2013.
+Total: 2.270900 ms (FindLiveObjects: 0.512300 ms CreateObjectMapping: 0.063200 ms MarkObjects: 1.604300 ms  DeleteObjects: 0.089700 ms)
 
 ========================================================================
 Received Import Request.
+  path: Assets/Kevin Iglesias
+  artifactKey: Guid(10d723eb0d4a47c4aa56b6a73a67b509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias using Guid(10d723eb0d4a47c4aa56b6a73a67b509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92b54f6553c220aa524938aee1dda3dc') in 0.010437 seconds
+  Import took 0.013189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/AnimatorControllers
+  artifactKey: Guid(417d464edc4cb2e4cbd6c35b77690a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/AnimatorControllers using Guid(417d464edc4cb2e4cbd6c35b77690a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '680119ec79b13f8c7b01928c30c4435c') in 0.005764 seconds
+  Import took 0.009352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations
+  artifactKey: Guid(4ed93f52c1a9abd46a44bf3b86d6b024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations using Guid(4ed93f52c1a9abd46a44bf3b86d6b024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdebdbbbfc954ddb20ad77a75a45d7c3') in 0.005484 seconds
+  Import took 0.008315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.043706 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/AnimatorControllers/1H
+  artifactKey: Guid(00a44ee4d6bed8f4680098a61d4308fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/AnimatorControllers/1H using Guid(00a44ee4d6bed8f4680098a61d4308fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '383986910250df5e0b5ee5081f3b4b90') in 0.013211 seconds
+  Import took 0.018685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.171594 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/AnimatorControllers/1H/1H@CombatIdle.controller
+  artifactKey: Guid(92efc5a6051953a4db45a52f72df44cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/AnimatorControllers/1H/1H@CombatIdle.controller using Guid(92efc5a6051953a4db45a52f72df44cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '336773d64507ce576dc2c7abe6757399') in 0.057929 seconds
+  Import took 0.062632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.934987 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations
+  artifactKey: Guid(f0c21875b15af264db996644ed07d053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations using Guid(f0c21875b15af264db996644ed07d053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12fd4996a33d69f2022280d7523cdd8f') in 0.013055 seconds
+  Import took 0.020583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.131842 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death01.fbx
+  artifactKey: Guid(f45f25a676b0b0841a9ae2d01172d138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death01.fbx using Guid(f45f25a676b0b0841a9ae2d01172d138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1fa74cdb41456027bd5bdee1e5aa409') in 0.090252 seconds
+  Import took 0.096259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death04.fbx
+  artifactKey: Guid(84a1fff57b318844aa198d5d0b790c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death04.fbx using Guid(84a1fff57b318844aa198d5d0b790c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd305fa09bb140a7f67eb230ad84d366') in 0.014401 seconds
+  Import took 0.017780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death02.fbx
+  artifactKey: Guid(bbbfe5c3279e5614ebe079b891cc74bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death02.fbx using Guid(bbbfe5c3279e5614ebe079b891cc74bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91189894d9be9634897bc32b59576a6e') in 0.016395 seconds
+  Import took 0.019872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death03.fbx
+  artifactKey: Guid(5002e0391c6e6e746b55c28114ec2e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death03.fbx using Guid(5002e0391c6e6e746b55c28114ec2e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8575f02fed63b5a20a66faaa09e19fa') in 0.016369 seconds
+  Import took 0.019970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.735033 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded
+  artifactKey: Guid(9992b8ec950ff9d47ba9d7745e9e1a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded using Guid(9992b8ec950ff9d47ba9d7745e9e1a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35778629d62bfe8ffcc8f6858db18955') in 0.013306 seconds
+  Import took 0.017982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044146 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@CombatIdle01.fbx
+  artifactKey: Guid(af5871ba53a7c294aa4b5fa1995768b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@CombatIdle01.fbx using Guid(af5871ba53a7c294aa4b5fa1995768b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e44de311b1e67fab406cb0f4ed78898') in 0.014210 seconds
+  Import took 0.026734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage03.fbx
+  artifactKey: Guid(8a704e7fccc7d6948b7df4ece5ce7f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage03.fbx using Guid(8a704e7fccc7d6948b7df4ece5ce7f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e163cc049d0fe976b8da0c19ac5e551') in 0.022771 seconds
+  Import took 0.026720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage01.fbx
+  artifactKey: Guid(9a18fd4d37d8ab44789d6ad9d5a2aef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage01.fbx using Guid(9a18fd4d37d8ab44789d6ad9d5a2aef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57d4b3ac900924b1be5fac5fbfd307f3') in 0.017250 seconds
+  Import took 0.023710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage05.fbx
+  artifactKey: Guid(677b935a909c52544a8e13d1bca1921f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage05.fbx using Guid(677b935a909c52544a8e13d1bca1921f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63ac2931df6daf9755db9a23eae2e8b6') in 0.010923 seconds
+  Import took 0.015535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage02.fbx
+  artifactKey: Guid(2c0b4460cdeb7594b9ac19a251e82038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage02.fbx using Guid(2c0b4460cdeb7594b9ac19a251e82038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47bb333d5e8dd0c753d3d5937d2981dc') in 0.015741 seconds
+  Import took 0.019433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage04.fbx
+  artifactKey: Guid(af219fc607028d0419b0120644c4102a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/1H@TakeDamage04.fbx using Guid(af219fc607028d0419b0120644c4102a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e20510c9782d694d61a152456e6b3382') in 0.015927 seconds
+  Import took 0.019602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.765790 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand
+  artifactKey: Guid(811920d346222fb4c872405a607ffd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand using Guid(811920d346222fb4c872405a607ffd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8118110333712bf261e9ae7683a1472b') in 0.009362 seconds
+  Import took 0.020335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.082240 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx
+  artifactKey: Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx using Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b6f2100533f819aafe9488c029ca95') in 0.011854 seconds
+  Import took 0.015086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Parry01.fbx
+  artifactKey: Guid(6f07f77346b201c4285e9ab3be604e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Parry01.fbx using Guid(6f07f77346b201c4285e9ab3be604e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7c1317f4fb018492fe06f3b05827e60') in 0.018048 seconds
+  Import took 0.021789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack02.fbx
+  artifactKey: Guid(f9808de8e12794d468604280ad76ca36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack02.fbx using Guid(f9808de8e12794d468604280ad76ca36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faaa1330b9d947b6233b68878514a1ea') in 0.020484 seconds
+  Import took 0.023858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack04.fbx
+  artifactKey: Guid(210680178f4ec7045b47ffeeb53bc31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack04.fbx using Guid(210680178f4ec7045b47ffeeb53bc31d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '252534a650e03ac45d76eb96ef955f26') in 0.015555 seconds
+  Import took 0.018704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack03.fbx
+  artifactKey: Guid(f5aa16e8d7347d14ba16d52fe4b7921c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack03.fbx using Guid(f5aa16e8d7347d14ba16d52fe4b7921c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b96e5fd79a97d8f8ec1e9ac789ff30') in 0.016341 seconds
+  Import took 0.020064 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000709 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.046 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.6 MB.
+System memory in use after: 86.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2016.
+Total: 2.442800 ms (FindLiveObjects: 0.351100 ms CreateObjectMapping: 0.133800 ms MarkObjects: 1.856200 ms  DeleteObjects: 0.100000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 157.811383 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong
+  artifactKey: Guid(fcec8204ad17b9242ab5b3fc2322f42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong using Guid(fcec8204ad17b9242ab5b3fc2322f42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f93c2feb15914fd69e973528a0539b5') in 0.012302 seconds
+  Import took 0.015567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052603 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack01.fbx
+  artifactKey: Guid(1dcc2edbc13208e478d6379d53be875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack01.fbx using Guid(1dcc2edbc13208e478d6379d53be875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9c3530df35ed9021c514554cf1692b') in 0.028929 seconds
+  Import took 0.033244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000489 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage03.fbx
+  artifactKey: Guid(26189f67fd7263349983964fcdc1f528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage03.fbx using Guid(26189f67fd7263349983964fcdc1f528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e2a69093eaff3f612db565c68ea8f09') in 0.012609 seconds
+  Import took 0.017686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack02.fbx
+  artifactKey: Guid(85b49650f570aed45a62cc7c95a0d107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack02.fbx using Guid(85b49650f570aed45a62cc7c95a0d107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1058d4977d3506465a5a759a1433457f') in 0.013426 seconds
+  Import took 0.017300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage04.fbx
+  artifactKey: Guid(8ba8a318882b8f74687ce1830ad1800b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage04.fbx using Guid(8ba8a318882b8f74687ce1830ad1800b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7c1e222026ff1fe0cc28086d891cf53') in 0.015774 seconds
+  Import took 0.019827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage02.fbx
+  artifactKey: Guid(5c17e76d18f962f4a8d5f40996b2d3ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage02.fbx using Guid(5c17e76d18f962f4a8d5f40996b2d3ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2bdd24dc7a41efd60c7593a03c1f7ee') in 0.013438 seconds
+  Import took 0.017025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage05.fbx
+  artifactKey: Guid(0a5d18107b86c754bb6858aaa945c724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage05.fbx using Guid(0a5d18107b86c754bb6858aaa945c724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87eda24b24126ca7a6b69170380df7a') in 0.014128 seconds
+  Import took 0.038686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Parry01.fbx
+  artifactKey: Guid(ba0aa74d843ed154688f782d024436a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Parry01.fbx using Guid(ba0aa74d843ed154688f782d024436a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ba7b64fa65058d0c8dd23e2f493c342') in 0.013877 seconds
+  Import took 0.016886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack03.fbx
+  artifactKey: Guid(8d8711d8e70f1c440b3f5a03bc07bcca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack03.fbx using Guid(8d8711d8e70f1c440b3f5a03bc07bcca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fa719e63c52d348de80793ca841c150') in 0.013365 seconds
+  Import took 0.018572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack04.fbx
+  artifactKey: Guid(691367ab99058a54aa44bfe81f3c78cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@Attack04.fbx using Guid(691367ab99058a54aa44bfe81f3c78cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65ac7088402c30c11d0135f1d523fb6') in 0.011146 seconds
+  Import took 0.014852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage01.fbx
+  artifactKey: Guid(2ddc406f14a8e6641ab0e828351266dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@TakeDamage01.fbx using Guid(2ddc406f14a8e6641ab0e828351266dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd392bcd5c5d6bdc6794d36bcaec4c9a') in 0.013789 seconds
+  Import took 0.017271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@CombatIdle01.fbx
+  artifactKey: Guid(05322b86291275e4b8bc2d21d1e5c66c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/TwoHandedLong/2HLong@CombatIdle01.fbx using Guid(05322b86291275e4b8bc2d21d1e5c66c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcacdcbb22d62a70fca9e2b75c975439') in 0.018034 seconds
+  Import took 0.022576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.324803 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx
+  artifactKey: Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx using Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9749213e449397cae6ac1bb19ca5df') in 0.008031 seconds
+  Import took 0.020721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006589 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx
+  artifactKey: Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx using Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9749213e449397cae6ac1bb19ca5df') in 0.007051 seconds
+  Import took 0.011089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.183991 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx
+  artifactKey: Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/RightHand@Attack01.fbx using Guid(3558db8e6c045c3418d8e7593f8a88de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '115a7f5b49903641c2e3638d4ab3a040') in 0.008970 seconds
+  Import took 0.030411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 202.521237 seconds.
   path: Assets/Scripts/WeaponItem.cs
   artifactKey: Guid(cb61ced4d31f07346885b186f23723c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WeaponItem.cs using Guid(cb61ced4d31f07346885b186f23723c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d6c49d7d31f3bee26b93941bec4d0e') in 0.063268 seconds
-  Import took 0.099800 seconds .
+Start importing Assets/Scripts/WeaponItem.cs using Guid(cb61ced4d31f07346885b186f23723c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a72820788c88d544586950b2970bed3') in 0.049344 seconds
+  Import took 0.053494 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.661801 seconds.
-  path: Assets/Scripts/WeaponSlotManager.cs
-  artifactKey: Guid(9547e553865fad945aa8cb7ca24566b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WeaponSlotManager.cs using Guid(9547e553865fad945aa8cb7ca24566b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a574e278b6f79fc3c9464d12fd628556') in 0.010666 seconds
-  Import took 0.037969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 425.485571 seconds.
-  path: Assets/Scripts/Item.cs
-  artifactKey: Guid(1a337e842ba90d24689b9dcb26dc98f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Item.cs using Guid(1a337e842ba90d24689b9dcb26dc98f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06e79b9128c694017c3084774939b3da') in 0.016546 seconds
-  Import took 0.046874 seconds .
+  Time since last request: 0.001180 seconds.
+  path: Assets/Scripts/WeaponItem.cs
+  artifactKey: Guid(cb61ced4d31f07346885b186f23723c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/WeaponItem.cs using Guid(cb61ced4d31f07346885b186f23723c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a72820788c88d544586950b2970bed3') in 0.001725 seconds
+  Import took 0.006594 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000811 seconds.
+Registered in 0.003802 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.990 seconds
+- Completed reload, in  1.357 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.3 MB.
-System memory in use after: 86.4 MB.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.9 MB.
+System memory in use after: 87.0 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2014.
-Total: 2.308500 ms (FindLiveObjects: 0.208700 ms CreateObjectMapping: 0.069900 ms MarkObjects: 1.966300 ms  DeleteObjects: 0.062600 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2019.
+Total: 2.526000 ms (FindLiveObjects: 0.194700 ms CreateObjectMapping: 0.063900 ms MarkObjects: 1.967000 ms  DeleteObjects: 0.298600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1921.806770 seconds.
-  path: Assets/Scripts/DamagePlayer.cs
-  artifactKey: Guid(e9a5e599394a45947ac158e4443ca819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DamagePlayer.cs using Guid(e9a5e599394a45947ac158e4443ca819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '032cc355d980ae0345de3aec133cc53e') in 0.023838 seconds
-  Import took 0.027944 seconds .
+  Time since last request: 66.936564 seconds.
+  path: Assets/Scripts/WeaponItem.cs
+  artifactKey: Guid(cb61ced4d31f07346885b186f23723c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/WeaponItem.cs using Guid(cb61ced4d31f07346885b186f23723c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed9429c8e0ca1a0d523e4e7b2da3e26') in 0.005886 seconds
+  Import took 0.008778 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 32.799241 seconds.
-  path: Assets/Scripts/UI/HealthBar.cs
-  artifactKey: Guid(911738cb6b7ce8f458403cd4547bf19d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/HealthBar.cs using Guid(911738cb6b7ce8f458403cd4547bf19d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ac4b91b2ba88d76535c5ae1cc20c055') in 0.016735 seconds
-  Import took 0.020221 seconds .
+  Time since last request: 25.297369 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement
+  artifactKey: Guid(4ab9fca60b430cb40baf42ea9b61dafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement using Guid(4ab9fca60b430cb40baf42ea9b61dafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df1bed0cfc5fe7b56e7d0617a5abe9a6') in 0.012880 seconds
+  Import took 0.017606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.053033 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Run01 - Forward [RM].fbx
+  artifactKey: Guid(7b69ca1e991f4ee45b7ec439405734eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Run01 - Forward [RM].fbx using Guid(7b69ca1e991f4ee45b7ec439405734eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b6efec847f6f401be3fbab8683fb5bb') in 0.121560 seconds
+  Import took 0.125345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Sprint01 - Forward [RM].fbx
+  artifactKey: Guid(6342e3e599153f943833cd1576dd4ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Sprint01 - Forward [RM].fbx using Guid(6342e3e599153f943833cd1576dd4ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0779fe9a7c899accde0cc43b1e64b95') in 0.026856 seconds
+  Import took 0.030494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Sprint01 - Forward.fbx
+  artifactKey: Guid(ce6b5c9f588a2be49a0268787c7444a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Sprint01 - Forward.fbx using Guid(ce6b5c9f588a2be49a0268787c7444a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d58f647fd426f47750ed5ff6c411e38') in 0.023345 seconds
+  Import took 0.026328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Run01 - Forward.fbx
+  artifactKey: Guid(da377704b7242394093984fb754cf1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/Movement/1H@Run01 - Forward.fbx using Guid(da377704b7242394093984fb754cf1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fa459277b0753a386c4624c69960e4e') in 0.050290 seconds
+  Import took 0.053494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.028082 seconds.
+  path: Assets/Data/Items/Weapons/Sword.asset
+  artifactKey: Guid(f5d00b79ac555b448870b55d4978aa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Items/Weapons/Sword.asset using Guid(f5d00b79ac555b448870b55d4978aa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31db07aa2eb86b7dde3ce36e22b31995') in 0.040356 seconds
+  Import took 0.045061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.922486 seconds.
+  path: Assets/Humanoid.controller
+  artifactKey: Guid(a525bf6b544995d4abc5b88a83dfdf3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Humanoid.controller using Guid(a525bf6b544995d4abc5b88a83dfdf3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed311b0426a959ff9687dda79ec95cc4') in 0.411528 seconds
+  Import took 0.416453 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001412 seconds.
+Registered in 0.000767 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.998 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.3 MB.
-System memory in use after: 86.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2017.
-Total: 2.073500 ms (FindLiveObjects: 0.167900 ms CreateObjectMapping: 0.054900 ms MarkObjects: 1.782400 ms  DeleteObjects: 0.067200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000705 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.034 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2020.
-Total: 4.223700 ms (FindLiveObjects: 1.160700 ms CreateObjectMapping: 0.130000 ms MarkObjects: 1.902200 ms  DeleteObjects: 0.227100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000981 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.164 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.928 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.0 MB.
+System memory in use after: 87.1 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2023.
-Total: 2.034300 ms (FindLiveObjects: 0.171900 ms CreateObjectMapping: 0.062200 ms MarkObjects: 1.733700 ms  DeleteObjects: 0.065100 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2022.
+Total: 1.869900 ms (FindLiveObjects: 0.169600 ms CreateObjectMapping: 0.051700 ms MarkObjects: 1.549400 ms  DeleteObjects: 0.098000 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000698 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.147 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2026.
-Total: 2.395300 ms (FindLiveObjects: 0.226400 ms CreateObjectMapping: 0.118400 ms MarkObjects: 1.968900 ms  DeleteObjects: 0.079600 ms)
+Received Import Request.
+  Time since last request: 128.386095 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield
+  artifactKey: Guid(923c9d1f04351874694b7bdcbe21e279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield using Guid(923c9d1f04351874694b7bdcbe21e279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f963a40c94a1511b9ed67e1cf3e397') in 0.019465 seconds
+  Import took 0.023390 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001551 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.122 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2029.
-Total: 2.023600 ms (FindLiveObjects: 0.193300 ms CreateObjectMapping: 0.069200 ms MarkObjects: 1.690400 ms  DeleteObjects: 0.069700 ms)
+Received Import Request.
+  Time since last request: 0.070605 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield/DualWield@Attack01.fbx
+  artifactKey: Guid(376c19d344975d04bb01442e9da72392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield/DualWield@Attack01.fbx using Guid(376c19d344975d04bb01442e9da72392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b29208653fd5bca042cf32e3e0b94d') in 0.048407 seconds
+  Import took 0.051714 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000741 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.145 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2032.
-Total: 2.195000 ms (FindLiveObjects: 0.253200 ms CreateObjectMapping: 0.068800 ms MarkObjects: 1.803300 ms  DeleteObjects: 0.068200 ms)
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield/DualWield@Attack02.fbx
+  artifactKey: Guid(10829884498932648ae2799d2fab9659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield/DualWield@Attack02.fbx using Guid(10829884498932648ae2799d2fab9659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7debf9df30bb5d6a4a333e751948492f') in 0.031546 seconds
+  Import took 0.034708 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000687 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.085 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2035.
-Total: 1.929200 ms (FindLiveObjects: 0.178800 ms CreateObjectMapping: 0.060200 ms MarkObjects: 1.622500 ms  DeleteObjects: 0.066200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000798 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.993 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2038.
-Total: 2.456400 ms (FindLiveObjects: 0.180800 ms CreateObjectMapping: 0.156500 ms MarkObjects: 2.048700 ms  DeleteObjects: 0.068900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000807 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.048 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2041.
-Total: 2.534800 ms (FindLiveObjects: 0.334300 ms CreateObjectMapping: 0.092200 ms MarkObjects: 2.042900 ms  DeleteObjects: 0.064000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000700 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.013 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2044.
-Total: 3.610900 ms (FindLiveObjects: 0.863800 ms CreateObjectMapping: 0.104500 ms MarkObjects: 2.537500 ms  DeleteObjects: 0.103800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000728 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.997 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.4 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2047.
-Total: 2.034000 ms (FindLiveObjects: 0.194300 ms CreateObjectMapping: 0.079300 ms MarkObjects: 1.696500 ms  DeleteObjects: 0.062700 ms)
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield/DualWield@Parry01.fbx
+  artifactKey: Guid(8415e15102761b1468b50932d4f9f741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/DualWield/DualWield@Parry01.fbx using Guid(8415e15102761b1468b50932d4f9f741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71ac03ad4b2535039e2acc29370aeeee') in 0.035906 seconds
+  Import took 0.038814 seconds .
 
 ========================================================================
 Received Prepare
@@ -352,66 +548,362 @@ Registering precompiled user dll's ...
 Registered in 0.000720 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.968 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.5 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2050.
-Total: 7.283400 ms (FindLiveObjects: 4.334900 ms CreateObjectMapping: 0.104800 ms MarkObjects: 2.769400 ms  DeleteObjects: 0.072800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000658 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.978 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.5 MB.
-System memory in use after: 86.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2053.
-Total: 9.594400 ms (FindLiveObjects: 0.200400 ms CreateObjectMapping: 0.064700 ms MarkObjects: 9.108900 ms  DeleteObjects: 0.218500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000683 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.070 seconds
+- Completed reload, in  0.916 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.0 MB.
+System memory in use after: 87.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2025.
+Total: 1.994400 ms (FindLiveObjects: 0.152500 ms CreateObjectMapping: 0.050400 ms MarkObjects: 1.720300 ms  DeleteObjects: 0.070000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000718 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.948 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1537 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.5 MB.
-System memory in use after: 86.5 MB.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.1 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2056.
-Total: 2.524300 ms (FindLiveObjects: 0.193700 ms CreateObjectMapping: 0.062900 ms MarkObjects: 2.189300 ms  DeleteObjects: 0.076600 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2028.
+Total: 2.822300 ms (FindLiveObjects: 0.185600 ms CreateObjectMapping: 0.073300 ms MarkObjects: 2.498900 ms  DeleteObjects: 0.063500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3355.692062 seconds.
-  path: Assets/Data/Items/Weapons/Sword.asset
-  artifactKey: Guid(f5d00b79ac555b448870b55d4978aa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Items/Weapons/Sword.asset using Guid(f5d00b79ac555b448870b55d4978aa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5da4a4d7cc127a360a8598da172c3220') in 0.051394 seconds
-  Import took 0.055619 seconds .
+  Time since last request: 986.405630 seconds.
+  path: Assets/Scripts/Player/PlayerAttacker.cs
+  artifactKey: Guid(170a2d0778f3e8740aec32b76fe6cc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/PlayerAttacker.cs using Guid(170a2d0778f3e8740aec32b76fe6cc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '510101899a164b9008478cc6828fc3d5') in 0.021038 seconds
+  Import took 0.024686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001174 seconds.
+  path: Assets/Scripts/Player/PlayerAttacker.cs
+  artifactKey: Guid(170a2d0778f3e8740aec32b76fe6cc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/PlayerAttacker.cs using Guid(170a2d0778f3e8740aec32b76fe6cc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '510101899a164b9008478cc6828fc3d5') in 0.004567 seconds
+  Import took 0.008299 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001069 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.931 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2031.
+Total: 2.048300 ms (FindLiveObjects: 0.224000 ms CreateObjectMapping: 0.167700 ms MarkObjects: 1.568100 ms  DeleteObjects: 0.087800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.669862 seconds.
+  path: Assets/Scripts/Player/InputHandler.cs
+  artifactKey: Guid(3eac71f6e7ba3964cba18c47f8b733db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/InputHandler.cs using Guid(3eac71f6e7ba3964cba18c47f8b733db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '008786fd8fc9751cbe4ee64af0207a1c') in 0.021090 seconds
+  Import took 0.026516 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000834 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.74 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.666 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2034.
+Total: 3.258100 ms (FindLiveObjects: 0.322900 ms CreateObjectMapping: 0.195400 ms MarkObjects: 2.649900 ms  DeleteObjects: 0.088700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 280.529209 seconds.
+  path: Assets/PlayerConttrols.inputactions
+  artifactKey: Guid(f4e283d8a9363b344905391eaa3d96ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerConttrols.inputactions using Guid(f4e283d8a9363b344905391eaa3d96ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13acefbc734cc9c29d0cc1572061d23e') in 0.037091 seconds
+  Import took 0.040330 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000660 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.937 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2037.
+Total: 2.098500 ms (FindLiveObjects: 0.159100 ms CreateObjectMapping: 0.053400 ms MarkObjects: 1.824900 ms  DeleteObjects: 0.059900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000704 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.964 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2040.
+Total: 4.305600 ms (FindLiveObjects: 0.219800 ms CreateObjectMapping: 0.057200 ms MarkObjects: 3.960700 ms  DeleteObjects: 0.066500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000676 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.882 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2043.
+Total: 1.901700 ms (FindLiveObjects: 0.159900 ms CreateObjectMapping: 0.051400 ms MarkObjects: 1.598200 ms  DeleteObjects: 0.091400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1150.191956 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack01.anim
+  artifactKey: Guid(ad59b2c3daf3fec4cb3f21c6a60f01b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack01.anim using Guid(ad59b2c3daf3fec4cb3f21c6a60f01b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31081721b9e170c6fb7f0f7a62bcb156') in 0.049134 seconds
+  Import took 0.053007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.329939 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack02.anim
+  artifactKey: Guid(010761a549b73e84d97c4be4d85a33f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack02.anim using Guid(010761a549b73e84d97c4be4d85a33f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff81d5c0edd1f032ea3dae480c463a80') in 0.035900 seconds
+  Import took 0.039947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.999254 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack03.anim
+  artifactKey: Guid(881c76081ddacc243bb5bfe65858ad91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack03.anim using Guid(881c76081ddacc243bb5bfe65858ad91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5048309a7183171fd9be8af457949220') in 0.040603 seconds
+  Import took 0.043810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.116466 seconds.
+  path: Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack04.anim
+  artifactKey: Guid(78bd50e0cd7b9bf439bfca1559a6750d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Melee Warrior Animations/Animations/OneHanded/RightHand/1H-RH@Attack04.anim using Guid(78bd50e0cd7b9bf439bfca1559a6750d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9a68165b27f82932b8166276d85a37d') in 0.037309 seconds
+  Import took 0.042514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.627450 seconds.
+  path: Assets/Art/Animations/RunBwd.anim
+  artifactKey: Guid(c240f593a2998c643987047024e79c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/RunBwd.anim using Guid(c240f593a2998c643987047024e79c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a823df9dd1fef4d803b542dce690181') in 0.027730 seconds
+  Import took 0.032786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.865332 seconds.
+  path: Assets/Art/Animations/Combat/1H-Light-Attack-01.anim
+  artifactKey: Guid(ad59b2c3daf3fec4cb3f21c6a60f01b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/Combat/1H-Light-Attack-01.anim using Guid(ad59b2c3daf3fec4cb3f21c6a60f01b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff256482816c2c627ce60f5bef112f5') in 0.030816 seconds
+  Import took 0.035611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.118206 seconds.
+  path: Assets/Art/Animations/Combat/1H-Light-Attack-02.anim
+  artifactKey: Guid(010761a549b73e84d97c4be4d85a33f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/Combat/1H-Light-Attack-02.anim using Guid(010761a549b73e84d97c4be4d85a33f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45cf6175be5e0cc8dfc0c6f8a865c8b6') in 0.026946 seconds
+  Import took 0.031479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.325251 seconds.
+  path: Assets/Art/Animations/Combat/1H-Heavy-Attack-01.anim
+  artifactKey: Guid(881c76081ddacc243bb5bfe65858ad91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/Combat/1H-Heavy-Attack-01.anim using Guid(881c76081ddacc243bb5bfe65858ad91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e390d81a497d823f059149de641950') in 0.025893 seconds
+  Import took 0.028825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.506210 seconds.
+  path: Assets/Art/Animations/Combat/1H-Heavy-Attack-02.anim
+  artifactKey: Guid(78bd50e0cd7b9bf439bfca1559a6750d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Animations/Combat/1H-Heavy-Attack-02.anim using Guid(78bd50e0cd7b9bf439bfca1559a6750d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47c43c3e54a974b13ba6df233d19ad4') in 0.023616 seconds
+  Import took 0.026581 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000705 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.916 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2046.
+Total: 2.616600 ms (FindLiveObjects: 0.314800 ms CreateObjectMapping: 0.065400 ms MarkObjects: 2.160500 ms  DeleteObjects: 0.074800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000712 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.045 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2049.
+Total: 3.153600 ms (FindLiveObjects: 0.980900 ms CreateObjectMapping: 0.089400 ms MarkObjects: 2.016300 ms  DeleteObjects: 0.065700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000715 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.989 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2052.
+Total: 2.477500 ms (FindLiveObjects: 0.232200 ms CreateObjectMapping: 0.078800 ms MarkObjects: 2.066700 ms  DeleteObjects: 0.098000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000663 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.950 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.2 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2055.
+Total: 2.260500 ms (FindLiveObjects: 0.188900 ms CreateObjectMapping: 0.072600 ms MarkObjects: 1.924500 ms  DeleteObjects: 0.073300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000666 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.004 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.2 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2058.
+Total: 1.794700 ms (FindLiveObjects: 0.173600 ms CreateObjectMapping: 0.054100 ms MarkObjects: 1.507500 ms  DeleteObjects: 0.058300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000723 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.000 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1539 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.2 MB.
+System memory in use after: 87.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2061.
+Total: 1.902800 ms (FindLiveObjects: 0.175400 ms CreateObjectMapping: 0.059000 ms MarkObjects: 1.604600 ms  DeleteObjects: 0.062400 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

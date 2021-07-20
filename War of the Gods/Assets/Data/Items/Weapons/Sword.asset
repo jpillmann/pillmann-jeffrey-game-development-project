@@ -27,8 +27,8 @@ MonoBehaviour:
   damage: 0
   magicDamage: 0
   bloodDamage: 0
-  OH_Light_Attack_01: OH_Light_Attack_01
-  OH_Light_Attack_02: OH_Light_Attack_02
-  OH_Light_Attack_03: OH_Light_Attack_03
-  OH_Heavy_Attack_01: OH_Heavy_Attack_01
-  OH_Sneak_Attack_01: OH_Sneak_Attack_01
+  OH_Light_Attack_01: 1H-Light-Attack-01
+  OH_Light_Attack_02: 1H-Light-Attack-02
+  OH_Heavy_Attack_01: 1H-Heavy-Attack-01
+  OH_Heavy_Attack_02: 1H-Heavy-Attack-02
+  OH_Sneak_Attack_01: 

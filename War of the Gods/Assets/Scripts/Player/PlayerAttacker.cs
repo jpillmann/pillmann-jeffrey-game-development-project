@@ -26,6 +26,11 @@ namespace JP
                 {
                     animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_02, true);
                 }
+
+                if (lastAttack == weapon.OH_Heavy_Attack_01)
+                {
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_02, true);
+                }
             }
         }
 
@@ -38,6 +43,7 @@ namespace JP
         public void HandleHeavyAttack(WeaponItem weapon)
         {
             animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_01, true);
+            lastAttack = weapon.OH_Heavy_Attack_01;
         }
     }
 }
