@@ -7,6 +7,7 @@ namespace JP
     public class PlayerStats : CharacterStats
     {
         PlayerManager playerManager;
+        AnimatorHandler animatorHandler;
         public HealthBar healthBar;
         public StaminaBar staminaBar;
 
@@ -14,6 +15,7 @@ namespace JP
         private void Awake()
         {
             playerManager = GetComponent<PlayerManager>();
+            animatorHandler = GetComponentInChildren<AnimatorHandler>();
         }
 
         // Set Values for Players Max and Current Health, Stamina
@@ -47,11 +49,13 @@ namespace JP
             healthBar.SetCurrentHealth(currentHealth);
 
             // TODO: Play "take damage" animation
+            animatorHandler.PlayTargetAnimation("Take-Damage-01", true);
 
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 // TODO: Handle Player Death
+                animatorHandler.PlayTargetAnimation("Death-04", true);
             }
         }
         #endregion

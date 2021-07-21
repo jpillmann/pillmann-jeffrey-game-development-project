@@ -40,6 +40,7 @@ namespace JP
         UIManager uiManager;
         PlayerManager playerManager;
         CameraHandler cameraHandler;
+        AnimatorHandler animatorHandler;
         PlayerStats playerStats;
 
         Vector2 movementInput;
@@ -54,6 +55,7 @@ namespace JP
             playerManager = GetComponent<PlayerManager>();
             cameraHandler = FindObjectOfType<CameraHandler>();
             playerStats = GetComponent<PlayerStats>();
+            animatorHandler = GetComponentInChildren<AnimatorHandler>();
         }
 
         // Enable Input Actions
@@ -185,6 +187,7 @@ namespace JP
                 if (playerManager.canDoCombo)
                 {
                     comboFlag = true;
+                    animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
                     comboFlag = false;
                 }
@@ -196,6 +199,7 @@ namespace JP
                     if (playerManager.canDoCombo)
                         return;
 
+                    animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleLightAttack(playerInventory.rightWeapon);
                 }
             }
@@ -206,6 +210,7 @@ namespace JP
                 if (playerManager.canDoCombo)
                 {
                     comboFlag = true;
+                    animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
                     comboFlag = false;
                 }
@@ -217,6 +222,7 @@ namespace JP
                     if (playerManager.canDoCombo)
                         return;
 
+                    animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
                 }
             }

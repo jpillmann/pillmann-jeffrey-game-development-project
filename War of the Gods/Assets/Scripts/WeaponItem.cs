@@ -22,15 +22,10 @@ namespace JP {
         public int minBloodDamage;
         public int maxBloodDamage;
 
-        [HideInInspector]
         public bool isMagic;
-        [HideInInspector]
         public bool isCursed;
-        [HideInInspector]
         public int damage;
-        [HideInInspector]
         public int magicDamage;
-        [HideInInspector]
         public int bloodDamage;
 
         [Header("One Handed Attack Animations")]
@@ -38,6 +33,5 @@ namespace JP {
         public string OH_Light_Attack_02;
         public string OH_Heavy_Attack_01;
         public string OH_Heavy_Attack_02;
-        public string OH_Sneak_Attack_01;
     }
 }

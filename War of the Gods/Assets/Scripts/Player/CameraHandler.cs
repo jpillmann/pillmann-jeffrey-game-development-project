@@ -53,6 +53,7 @@ namespace JP
             ignoreLayers = ~(1 << 8 | 1 << 9 | 1 << 10);
             inputHandler = FindObjectOfType<InputHandler>();
             playerManager = FindObjectOfType<PlayerManager>();
+            targetTransform = FindObjectOfType<PlayerManager>().transform;
         }
 
         private void Start()

@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - InteractableNPC
   - NPCVillager
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -73,6 +73,8 @@ GameObject:
   - component: {fileID: 9125849087596704082}
   - component: {fileID: 9125849087599604082}
   - component: {fileID: 9125849087598605234}
+  - component: {fileID: 5185667959538726258}
+  - component: {fileID: 387917965880335521}
   m_Layer: 0
   m_Name: MetalSword
   m_TagString: Untagged
@@ -121,7 +123,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 416aa3d63d96c524797418e7eb5e423d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -143,3 +145,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5185667959538726258
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9125849087596408178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7135494, y: 6.948082, z: 0.48588544}
+  m_Center: {x: -0.038973447, y: 4.5274973, z: -0.0005304245}
+--- !u!114 &387917965880335521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9125849087596408178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92263fadbc4a53f4baa0f721ba4f4564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

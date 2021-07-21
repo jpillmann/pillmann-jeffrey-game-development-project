@@ -6,6 +6,13 @@ namespace JP
 {
     public class NPCStats : CharacterStats
     {
+        Animator animator;
+
+        private void Awake()
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
+
         private void Start()
         {
             maxHealth = SetMaxHealthFromHealthLevel();
@@ -23,12 +30,12 @@ namespace JP
         public void TakeDamage(float damage)
         {
             currentHealth -= damage;
-            // TODO: Play "take damage" animation
+            animator.Play("Take-Damage-01");
 
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                // TODO: Handle NPC Death
+                animator.Play("Death-04");
             }
         }
     }

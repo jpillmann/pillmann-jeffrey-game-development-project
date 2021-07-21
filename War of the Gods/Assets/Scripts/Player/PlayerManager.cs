@@ -38,11 +38,13 @@ namespace JP
         public bool isSprinting;
         public bool isInteracting;
         public bool canDoCombo;
+        public bool isUsingRightHand;
+        public bool isUsingLeftHand;
 
 
         private void Awake()
         {
-            cameraHandler = CameraHandler.singleton;
+            cameraHandler = FindObjectOfType<CameraHandler>();
         }
 
         // Set Components
@@ -63,8 +65,11 @@ namespace JP
         void Update()
         {
             float delta = Time.deltaTime;
+
             isInteracting = anim.GetBool("isInteracting");
             canDoCombo = anim.GetBool("canDoCombo");
+            isUsingRightHand = anim.GetBool("isUsingRightHand");
+            isUsingLeftHand = anim.GetBool("isUsingLeftHand");
 
             inputHandler.TickInput(delta);
             playerMovement.HandleRollingAndSprinting(delta);

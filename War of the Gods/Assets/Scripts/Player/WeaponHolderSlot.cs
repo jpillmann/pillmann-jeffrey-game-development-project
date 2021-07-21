@@ -11,6 +11,7 @@ namespace JP
         public bool isRightHandSlot;
 
         public GameObject currentWeaponModel;
+        public WeaponItem currentWeapon;
 
         // Unload current Weapon Model
         public void UnloadWeapon()

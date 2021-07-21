@@ -65,11 +65,11 @@ namespace JP
             {
                 Vector3 relativeDirection = npcManager.transform.InverseTransformDirection(npcManager.navMeshAgent.desiredVelocity);
                 Vector3 targetVelocity = npcManager.npcRigidbody.velocity;
-                Debug.Log(targetVelocity);
+                //Debug.Log(targetVelocity);
 
                 npcManager.navMeshAgent.enabled = true;
                 npcManager.navMeshAgent.SetDestination(npcManager.currentTarget.transform.position);
-                npcManager.npcRigidbody.velocity = targetVelocity;
+                npcManager.npcRigidbody.velocity = npcManager.navMeshAgent.desiredVelocity;
                 npcManager.transform.rotation = Quaternion.Slerp(npcManager.transform.rotation, npcManager.navMeshAgent.transform.rotation, npcManager.rotationSpeed / Time.deltaTime);
             }
         }
