@@ -29,6 +29,9 @@ namespace JP
         // NPC takes damage to Health stat according to damage value
         public void TakeDamage(float damage)
         {
+            if (isDead)
+                return;
+
             currentHealth -= damage;
             animator.Play("Take-Damage-01");
 
@@ -36,6 +39,7 @@ namespace JP
             {
                 currentHealth = 0;
                 animator.Play("Death-04");
+                isDead = true;
             }
         }
     }

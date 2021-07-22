@@ -37,6 +37,9 @@ namespace JP
         [SerializeField]
         int sprintStaminaCost = 1;
 
+        public CapsuleCollider characterCollider;
+        public CapsuleCollider characterColliderBlocker;
+
 
         private void Awake()
         {
@@ -54,6 +57,7 @@ namespace JP
             cameraObject = Camera.main.transform;
             myTransform = transform;
             animatorHandler.Initialize();
+            Physics.IgnoreCollision(characterCollider, characterColliderBlocker, true);
         }
 
 

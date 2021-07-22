@@ -22,6 +22,8 @@ namespace JP
             float distanceFromTarget = Vector3.Distance(npcManager.currentTarget.transform.position, npcManager.transform.position);
             float viewableAngle = Vector3.Angle(targetDirection, npcManager.transform.forward);
 
+            HandleRotateTowardsTarget(npcManager);
+
             if (npcManager.isPerformingAction)
                 return combatStanceState;
 
@@ -102,6 +104,37 @@ namespace JP
                         }
                     }
                 }
+            }
+        }
+
+        private void HandleRotateTowardsTarget(NPCManager npcManager)
+        {
+            // Rotate manually
+            if (npcManager.isPerformingAction)
+            {
+                Vector3 direction = npcManager.currentTarget.transform.position - npcManager.transform.position;
+                direction.y = 0;
+                direction.Normalize();
+
+                if (direction == Vector3.zero)
+                {
+                    direction = npcManager.transform.forward;
+                }
+
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                npcManager.transform.rotation = Quaternion.Slerp(npcManager.transform.rotation, targetRotation, npcManager.rotationSpeed / Time.deltaTime);
+            }
+            // Rotate with Navmesh (pathfinding)
+            else
+            {
+                Vector3 relativeDirection = npcManager.transform.InverseTransformDirection(npcManager.navMeshAgent.desiredVelocity);
+                Vector3 targetVelocity = npcManager.npcRigidbody.velocity;
+                //Debug.Log(targetVelocity);
+
+                npcManager.navMeshAgent.enabled = true;
+                npcManager.navMeshAgent.SetDestination(npcManager.currentTarget.transform.position);
+                npcManager.npcRigidbody.velocity = npcManager.navMeshAgent.desiredVelocity;
+                npcManager.transform.rotation = Quaternion.Slerp(npcManager.transform.rotation, npcManager.navMeshAgent.transform.rotation, npcManager.rotationSpeed / Time.deltaTime);
             }
         }
     }

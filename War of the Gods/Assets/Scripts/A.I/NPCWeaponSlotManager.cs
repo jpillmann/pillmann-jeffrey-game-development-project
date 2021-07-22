@@ -81,5 +81,15 @@ namespace JP
         {
             rightHandDamageCollider.DisableDamageCollider();
         }
+
+        public void EnableCombo()
+        {
+
+        }
+
+        public void DisableCombo()
+        {
+
+        }
     }
 }

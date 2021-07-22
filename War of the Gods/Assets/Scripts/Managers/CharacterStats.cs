@@ -15,5 +15,7 @@ namespace JP
         public float currentStamina;
         public float staminaRegen;
         public float staminaRegenTimer = 0;
+
+        public bool isDead;
     }
 }

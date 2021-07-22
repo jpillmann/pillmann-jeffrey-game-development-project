@@ -45,17 +45,22 @@ namespace JP
         // Player takes damage to Health stat according to damage value
         public void TakeDamage(float damage)
         {
+            if (playerManager.isInvulnerable)
+                return;
+
+            if (isDead)
+                return;
+
             currentHealth -= damage;
             healthBar.SetCurrentHealth(currentHealth);
 
-            // TODO: Play "take damage" animation
             animatorHandler.PlayTargetAnimation("Take-Damage-01", true);
 
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                // TODO: Handle Player Death
                 animatorHandler.PlayTargetAnimation("Death-04", true);
+                isDead = true;
             }
         }
         #endregion
@@ -80,7 +85,7 @@ namespace JP
         // Regenerate Stamina on 1s delay if the player is currently not performing an action (i.e rolling, sprinting)
         public void RegenerateStamina()
         {
-            if (playerManager.isInteracting)
+            if (playerManager.isInteracting || playerManager.isSprinting)
             {
                 staminaRegenTimer = 0;
             }
@@ -90,7 +95,7 @@ namespace JP
 
                 if (currentStamina < maxStamina && staminaRegenTimer > 1f)
                 {
-                    currentStamina += Mathf.RoundToInt(staminaRegen * Time.deltaTime);
+                    currentStamina += staminaRegen * Time.deltaTime;
                     staminaBar.SetCurrentStamina(currentStamina);
                 }
             }

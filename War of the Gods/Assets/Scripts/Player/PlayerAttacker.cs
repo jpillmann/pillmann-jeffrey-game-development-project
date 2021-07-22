@@ -8,15 +8,35 @@ namespace JP
     {
         AnimatorHandler animatorHandler;
         InputHandler inputHandler;
+        PlayerStats playerStats;
         public string lastAttack;
+
+        [Header("Stamina Costs")]
+        public float lightAttackStaminaCost = 15;
+        public float heavyAttackStaminaCost = 30;
 
         private void Awake()
         {
             animatorHandler = GetComponentInChildren<AnimatorHandler>();
             inputHandler = GetComponent<InputHandler>();
+            playerStats = GetComponent<PlayerStats>();
         }
 
-        public void HandleWeaponCombo(WeaponItem weapon)
+        public void HandleLightAttack(WeaponItem weapon)
+        {
+            animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_01, true);
+            lastAttack = weapon.OH_Light_Attack_01;
+            playerStats.TakeStaminaDamage(lightAttackStaminaCost);
+        }
+
+        public void HandleHeavyAttack(WeaponItem weapon)
+        {
+            animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_01, true);
+            lastAttack = weapon.OH_Heavy_Attack_01;
+            playerStats.TakeStaminaDamage(heavyAttackStaminaCost);
+        }
+
+        public void HandleLightAttackCombo(WeaponItem weapon)
         {
             if (inputHandler.comboFlag)
             {
@@ -25,25 +45,33 @@ namespace JP
                 if (lastAttack == weapon.OH_Light_Attack_01)
                 {
                     animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_02, true);
+                    playerStats.TakeStaminaDamage(lightAttackStaminaCost);
                 }
-
-                if (lastAttack == weapon.OH_Heavy_Attack_01)
+                else
                 {
-                    animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_02, true);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_01, true);
+                    playerStats.TakeStaminaDamage(lightAttackStaminaCost);
                 }
             }
         }
 
-        public void HandleLightAttack(WeaponItem weapon)
+        public void HandleHeavyAttackCombo(WeaponItem weapon)
         {
-            animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_01, true);
-            lastAttack = weapon.OH_Light_Attack_01;
-        }
+            if (inputHandler.comboFlag)
+            {
+                animatorHandler.anim.SetBool("canDoCombo", false);
 
-        public void HandleHeavyAttack(WeaponItem weapon)
-        {
-            animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_01, true);
-            lastAttack = weapon.OH_Heavy_Attack_01;
+                if (lastAttack == weapon.OH_Heavy_Attack_01)
+                {
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_02, true);
+                    playerStats.TakeStaminaDamage(heavyAttackStaminaCost);
+                }
+                else
+                {
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_01, true);
+                    playerStats.TakeStaminaDamage(heavyAttackStaminaCost);
+                }
+            }
         }
     }
 }

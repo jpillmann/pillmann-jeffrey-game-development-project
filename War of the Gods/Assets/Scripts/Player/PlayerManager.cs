@@ -40,6 +40,7 @@ namespace JP
         public bool canDoCombo;
         public bool isUsingRightHand;
         public bool isUsingLeftHand;
+        public bool isInvulnerable;
 
 
         private void Awake()
@@ -70,6 +71,7 @@ namespace JP
             canDoCombo = anim.GetBool("canDoCombo");
             isUsingRightHand = anim.GetBool("isUsingRightHand");
             isUsingLeftHand = anim.GetBool("isUsingLeftHand");
+            isInvulnerable = anim.GetBool("isInvulnerable");
 
             inputHandler.TickInput(delta);
             playerMovement.HandleRollingAndSprinting(delta);

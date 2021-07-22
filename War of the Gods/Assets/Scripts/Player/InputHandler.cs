@@ -188,7 +188,7 @@ namespace JP
                 {
                     comboFlag = true;
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
-                    playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
+                    playerAttacker.HandleLightAttackCombo(playerInventory.rightWeapon);
                     comboFlag = false;
                 }
                 else
@@ -211,7 +211,7 @@ namespace JP
                 {
                     comboFlag = true;
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
-                    playerAttacker.HandleWeaponCombo(playerInventory.rightWeapon);
+                    playerAttacker.HandleHeavyAttackCombo(playerInventory.rightWeapon);
                     comboFlag = false;
                 }
                 else
