@@ -9,7 +9,7 @@ namespace JP
     {
         InputHandler inputHandler;
         Animator anim;
-        AnimatorHandler animatorHandler;
+        public AnimatorHandler animatorHandler;
         CameraHandler cameraHandler;
         PlayerMovement playerMovement;
         PlayerStats playerStats;
@@ -29,6 +29,12 @@ namespace JP
 
         public GameObject interactableUICompleteQuestObject;
         public GameObject completeQuestTitle;
+
+        public GameObject interactableUIAltarObject;
+        public GameObject altarTitleUIObject;
+        public GameObject firstTenantUIObject;
+        public GameObject secondTenantUIObject;
+        public GameObject thirdTenantUIObject;
 
         public List<Quest> quests = new List<Quest>();
         public List<Quest> completedQuests = new List<Quest>();
@@ -101,6 +107,7 @@ namespace JP
             inputHandler.d_Pad_Right = false;
             inputHandler.a_Input = false;
             inputHandler.inventory_Input = false;
+            inputHandler.y_Input = false;
 
             float delta = Time.fixedDeltaTime;
             if (cameraHandler != null)
@@ -158,6 +165,24 @@ namespace JP
                     }
                 }
                 #endregion
+
+                else if (hit.collider.tag == "Altar")
+                {
+                    Interactable interactableObject = hit.collider.GetComponent<Interactable>();
+
+                    if (interactableObject != null && !interactableUIAltarObject.activeSelf)
+                    {
+                        string interactableText = interactableObject.interactableText;
+                        interactableUI.interactableText.text = interactableText;
+                        interactableUIGameObject.SetActive(true);
+
+                        if (inputHandler.a_Input)
+                        {
+                            hit.collider.GetComponent<Interactable>().Interact(this);
+                            interactableUIGameObject.SetActive(false);
+                        }
+                    }
+                }
             }
             else
             {

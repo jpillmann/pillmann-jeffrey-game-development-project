@@ -20,6 +20,7 @@ namespace JP
         public bool inventory_Input;
         public bool rb_Input;
         public bool rt_Input;
+        public bool y_Input;
 
         public bool d_Pad_Up;
         public bool d_Pad_Down;
@@ -31,6 +32,7 @@ namespace JP
         public bool comboFlag;
         public bool lockOnFlag;
         public bool inventoryFlag;
+        public bool prayFlag;
         public float rollInputTimer;
         public bool isInteracting;
 
@@ -75,6 +77,7 @@ namespace JP
                 inputActions.PlayerActions.LockOn.performed += i => lockOnInput = true;
                 inputActions.PlayerMovement.LockOnTargetRight.performed += i => right_Stick_Right_Input = true;
                 inputActions.PlayerMovement.LockOnTargetLeft.performed += i => right_Stick_Left_Input = true;
+                inputActions.PlayerActions.Pray.performed += i => y_Input = true;
 
                 inputActions.PlayerActions.Roll.performed += i => b_Input = true;
                 inputActions.PlayerActions.Roll.canceled += i => b_Input = false;
@@ -97,6 +100,7 @@ namespace JP
             HandleQuickSlotsInput();
             HandleInventoryInput();
             HandleLockOnInput();
+            HandlePrayInput();
         }
 
         // Handle Movement Input
@@ -267,6 +271,20 @@ namespace JP
                 {
                     cameraHandler.currentLockOnTarget = cameraHandler.rightLockTarget;
                 }
+            }
+        }
+
+        private void HandlePrayInput()
+        {
+            if (playerManager.isInteracting)
+                return;
+
+            if (prayFlag)
+                return;
+
+            if (y_Input)
+            {
+                animatorHandler.PlayTargetAnimation("KneelDown", true);
             }
         }
     }

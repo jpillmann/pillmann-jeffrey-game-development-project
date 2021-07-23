@@ -281,6 +281,14 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pray"",
+                    ""type"": ""Button"",
+                    ""id"": ""222a6e10-7337-4cea-b94f-dbb2772071d8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -413,6 +421,28 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LockOn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c1d6eba-ea2c-4ee1-b4a0-b9bfc323fb71"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pray"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""542f01f9-3df7-4d87-82b0-377d02419ebc"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pray"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -563,6 +593,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         m_PlayerActions_RB = m_PlayerActions.FindAction("RB", throwIfNotFound: true);
         m_PlayerActions_RT = m_PlayerActions.FindAction("RT", throwIfNotFound: true);
         m_PlayerActions_LockOn = m_PlayerActions.FindAction("LockOn", throwIfNotFound: true);
+        m_PlayerActions_Pray = m_PlayerActions.FindAction("Pray", throwIfNotFound: true);
         // Inventory Quick Slots
         m_InventoryQuickSlots = asset.FindActionMap("Inventory Quick Slots", throwIfNotFound: true);
         m_InventoryQuickSlots_DPadUp = m_InventoryQuickSlots.FindAction("D-Pad Up", throwIfNotFound: true);
@@ -681,6 +712,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerActions_RB;
     private readonly InputAction m_PlayerActions_RT;
     private readonly InputAction m_PlayerActions_LockOn;
+    private readonly InputAction m_PlayerActions_Pray;
     public struct PlayerActionsActions
     {
         private @PlayerConttrols m_Wrapper;
@@ -691,6 +723,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         public InputAction @RB => m_Wrapper.m_PlayerActions_RB;
         public InputAction @RT => m_Wrapper.m_PlayerActions_RT;
         public InputAction @LockOn => m_Wrapper.m_PlayerActions_LockOn;
+        public InputAction @Pray => m_Wrapper.m_PlayerActions_Pray;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -718,6 +751,9 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                 @LockOn.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOn;
                 @LockOn.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOn;
                 @LockOn.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLockOn;
+                @Pray.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPray;
+                @Pray.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPray;
+                @Pray.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPray;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -740,6 +776,9 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                 @LockOn.started += instance.OnLockOn;
                 @LockOn.performed += instance.OnLockOn;
                 @LockOn.canceled += instance.OnLockOn;
+                @Pray.started += instance.OnPray;
+                @Pray.performed += instance.OnPray;
+                @Pray.canceled += instance.OnPray;
             }
         }
     }
@@ -816,6 +855,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         void OnRB(InputAction.CallbackContext context);
         void OnRT(InputAction.CallbackContext context);
         void OnLockOn(InputAction.CallbackContext context);
+        void OnPray(InputAction.CallbackContext context);
     }
     public interface IInventoryQuickSlotsActions
     {
