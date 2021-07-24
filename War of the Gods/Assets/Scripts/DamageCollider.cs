@@ -9,7 +9,7 @@ namespace JP
         Collider damageCollider;
 
         public PlayerInventory playerInventory;
-        public int currentWeaponDamage;
+        public float currentWeaponDamage;
 
         private void Awake()
         {
@@ -31,15 +31,112 @@ namespace JP
             damageCollider.enabled = false;
         }
 
+        private float calcDamageOnPlayer(WeaponItem weapon, NPCStats npcStats)
+        {
+            float damage = weapon.damage;
+            float magicDamage = 0f;
+            float bloodDamage = 0f;
+
+            if (weapon.weaponType == WeaponType.Sword)
+            {
+                damage *= npcStats.swordDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Axe)
+            {
+                damage *= npcStats.axeDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Mace)
+            {
+                damage *= npcStats.maceDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Greatsword)
+            {
+                damage *= npcStats.greatswordDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Greataxe)
+            {
+                damage *= npcStats.greataxeDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Warhammer)
+            {
+                damage *= npcStats.warhammerDamageMultiplier;
+            }
+
+            if (weapon.isMagic)
+            {
+                magicDamage = weapon.magicDamage;
+                magicDamage *= npcStats.magicDamageMultiplier;
+                damage += magicDamage;
+            }
+            else if (weapon.isCursed)
+            {
+                bloodDamage = weapon.bloodDamage;
+                bloodDamage *= npcStats.bloodDamageMultiplier;
+                damage += bloodDamage;
+            }
+
+            return damage;
+        }
+
+        private float calcDamageOnNPC(WeaponItem weapon, PlayerStats playerStats)
+        {
+            float damage = weapon.damage;
+            float magicDamage = 0f;
+            float bloodDamage = 0f;
+
+            if (weapon.weaponType == WeaponType.Sword)
+            {
+                damage *= playerStats.swordDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Axe)
+            {
+                damage *= playerStats.axeDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Mace)
+            {
+                damage *= playerStats.maceDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Greatsword)
+            {
+                damage *= playerStats.greatswordDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Greataxe)
+            {
+                damage *= playerStats.greataxeDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Warhammer)
+            {
+                damage *= playerStats.warhammerDamageMultiplier;
+            }
+
+            if (weapon.isMagic)
+            {
+                magicDamage = weapon.magicDamage;
+                magicDamage *= playerStats.magicDamageMultiplier;
+                damage += magicDamage;
+            }
+            else if (weapon.isCursed)
+            {
+                bloodDamage = weapon.bloodDamage;
+                bloodDamage *= playerStats.bloodDamageMultiplier;
+                damage += bloodDamage;
+            }
+
+            return damage;
+        }
+
         private void OnTriggerEnter(Collider collision)
         {
             if (collision.tag == "Player")
             {
                 PlayerStats playerStats = collision.GetComponent<PlayerStats>();
+                NPCStats npcStats = GetComponentInParent<NPCStats>();
+                WeaponItem weapon = npcStats.weapon;
 
                 if (playerStats != null)
                 {
-                    currentWeaponDamage = 25;
+                    currentWeaponDamage = calcDamageOnPlayer(weapon, npcStats);
+                    currentWeaponDamage *= playerStats.armorMultiplier;
                     playerStats.TakeDamage(currentWeaponDamage);
                 }
             }
@@ -47,10 +144,13 @@ namespace JP
             if (collision.tag == "Enemy")
             {
                 NPCStats npcStats = collision.GetComponent<NPCStats>();
+                PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+                WeaponItem weapon = playerInventory.rightWeapon;
 
                 if (npcStats != null)
                 {
-                    currentWeaponDamage = playerInventory.rightWeapon.damage;
+                    currentWeaponDamage = calcDamageOnNPC(weapon, playerStats);
+                    currentWeaponDamage *= playerStats.armorMultiplier;
                     npcStats.TakeDamage(currentWeaponDamage);
                 }
             }

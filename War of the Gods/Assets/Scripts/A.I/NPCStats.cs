@@ -7,16 +7,20 @@ namespace JP
     public class NPCStats : CharacterStats
     {
         Animator animator;
+        NPCWeaponSlotManager npcWeaponSlotManager;
+        public WeaponItem weapon;
 
         private void Awake()
         {
             animator = GetComponentInChildren<Animator>();
+            npcWeaponSlotManager = GetComponentInChildren<NPCWeaponSlotManager>();
         }
 
         private void Start()
         {
             maxHealth = SetMaxHealthFromHealthLevel();
             currentHealth = maxHealth;
+            weapon = npcWeaponSlotManager.rightHandWeapon;
         }
 
         // Set MaxHealth value from NPC's Health Level
