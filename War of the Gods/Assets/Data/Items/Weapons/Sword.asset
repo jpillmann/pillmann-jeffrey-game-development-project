@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Sword
   modelPrefab: {fileID: 6337552554242579930, guid: 8b8ea6925acc3ce4d8772451185eacaf, type: 3}
   isUnarmed: 0
+  weaponType: 0
   minDamage: 20
   maxDamage: 30
   minMagicDamage: 10
@@ -27,7 +28,10 @@ MonoBehaviour:
   damage: 15
   magicDamage: 0
   bloodDamage: 0
-  OH_Light_Attack_01: 1H-Light-Attack-01
-  OH_Light_Attack_02: 1H-Light-Attack-02
-  OH_Heavy_Attack_01: 1H-Heavy-Attack-01
-  OH_Heavy_Attack_02: 1H-Heavy-Attack-02
+  blockingValue: 0
+  OH_Right_Light_Attack_01: 1H-Right-Light-Attack-01
+  OH_Right_Light_Attack_02: 1H-Right-Light-Attack-02
+  OH_Right_Heavy_Attack_01: 1H-Right-Heavy-Attack-01
+  OH_Right_Heavy_Attack_02: 1H-Right-Heavy-Attack-02
+  OH_Left_Light_Attack_01: 1H-Left-Light-Attack-01
+  OH_Left_Light_Attack_02: 1H-Left-Light-Attack-02

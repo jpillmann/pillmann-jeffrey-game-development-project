@@ -289,6 +289,22 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LB"",
+                    ""type"": ""Button"",
+                    ""id"": ""97b1dd93-218d-4e57-9ec8-4d37c1f40f89"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""LT"",
+                    ""type"": ""Button"",
+                    ""id"": ""65180a55-0d37-43ea-b5a4-b746797dc425"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -362,7 +378,7 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""45743c55-36e8-4c92-824d-a1917f9fd215"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Tap"",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RB"",
@@ -443,6 +459,50 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pray"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""031737a8-1659-4f51-9433-3d56d44ae7e5"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""679e3ab8-3ffa-4dc9-87e8-16432ef1837c"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fef8589f-6426-4168-b82b-18b599966c3d"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83badb5e-d8cb-4c3a-ac2d-f68a6465d2f4"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LT"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -594,6 +654,8 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         m_PlayerActions_RT = m_PlayerActions.FindAction("RT", throwIfNotFound: true);
         m_PlayerActions_LockOn = m_PlayerActions.FindAction("LockOn", throwIfNotFound: true);
         m_PlayerActions_Pray = m_PlayerActions.FindAction("Pray", throwIfNotFound: true);
+        m_PlayerActions_LB = m_PlayerActions.FindAction("LB", throwIfNotFound: true);
+        m_PlayerActions_LT = m_PlayerActions.FindAction("LT", throwIfNotFound: true);
         // Inventory Quick Slots
         m_InventoryQuickSlots = asset.FindActionMap("Inventory Quick Slots", throwIfNotFound: true);
         m_InventoryQuickSlots_DPadUp = m_InventoryQuickSlots.FindAction("D-Pad Up", throwIfNotFound: true);
@@ -713,6 +775,8 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerActions_RT;
     private readonly InputAction m_PlayerActions_LockOn;
     private readonly InputAction m_PlayerActions_Pray;
+    private readonly InputAction m_PlayerActions_LB;
+    private readonly InputAction m_PlayerActions_LT;
     public struct PlayerActionsActions
     {
         private @PlayerConttrols m_Wrapper;
@@ -724,6 +788,8 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         public InputAction @RT => m_Wrapper.m_PlayerActions_RT;
         public InputAction @LockOn => m_Wrapper.m_PlayerActions_LockOn;
         public InputAction @Pray => m_Wrapper.m_PlayerActions_Pray;
+        public InputAction @LB => m_Wrapper.m_PlayerActions_LB;
+        public InputAction @LT => m_Wrapper.m_PlayerActions_LT;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -754,6 +820,12 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                 @Pray.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPray;
                 @Pray.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPray;
                 @Pray.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPray;
+                @LB.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLB;
+                @LB.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLB;
+                @LB.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLB;
+                @LT.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLT;
+                @LT.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLT;
+                @LT.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnLT;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -779,6 +851,12 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                 @Pray.started += instance.OnPray;
                 @Pray.performed += instance.OnPray;
                 @Pray.canceled += instance.OnPray;
+                @LB.started += instance.OnLB;
+                @LB.performed += instance.OnLB;
+                @LB.canceled += instance.OnLB;
+                @LT.started += instance.OnLT;
+                @LT.performed += instance.OnLT;
+                @LT.canceled += instance.OnLT;
             }
         }
     }
@@ -856,6 +934,8 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
         void OnRT(InputAction.CallbackContext context);
         void OnLockOn(InputAction.CallbackContext context);
         void OnPray(InputAction.CallbackContext context);
+        void OnLB(InputAction.CallbackContext context);
+        void OnLT(InputAction.CallbackContext context);
     }
     public interface IInventoryQuickSlotsActions
     {

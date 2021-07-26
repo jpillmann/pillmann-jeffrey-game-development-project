@@ -22,56 +22,87 @@ namespace JP
             playerStats = GetComponent<PlayerStats>();
         }
 
-        public void HandleLightAttack(WeaponItem weapon)
+        public void HandleRightLightAttack(WeaponItem weapon)
         {
-            animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_01, true);
-            lastAttack = weapon.OH_Light_Attack_01;
+            animatorHandler.PlayTargetAnimation(weapon.OH_Right_Light_Attack_01, true);
+            lastAttack = weapon.OH_Right_Light_Attack_01;
             playerStats.TakeStaminaDamage(lightAttackStaminaCost);
         }
 
-        public void HandleHeavyAttack(WeaponItem weapon)
+        public void HandleRightHeavyAttack(WeaponItem weapon)
         {
-            animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_01, true);
-            lastAttack = weapon.OH_Heavy_Attack_01;
+            animatorHandler.PlayTargetAnimation(weapon.OH_Right_Heavy_Attack_01, true);
+            lastAttack = weapon.OH_Right_Heavy_Attack_01;
             playerStats.TakeStaminaDamage(heavyAttackStaminaCost);
         }
 
-        public void HandleLightAttackCombo(WeaponItem weapon)
+        public void HandleRightLightAttackCombo(WeaponItem weapon)
         {
             if (inputHandler.comboFlag)
             {
                 animatorHandler.anim.SetBool("canDoCombo", false);
 
-                if (lastAttack == weapon.OH_Light_Attack_01)
+                if (lastAttack == weapon.OH_Right_Light_Attack_01)
                 {
-                    animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_02, true);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Right_Light_Attack_02, true);
                     playerStats.TakeStaminaDamage(lightAttackStaminaCost);
                 }
                 else
                 {
-                    animatorHandler.PlayTargetAnimation(weapon.OH_Light_Attack_01, true);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Right_Light_Attack_01, true);
                     playerStats.TakeStaminaDamage(lightAttackStaminaCost);
                 }
             }
         }
 
-        public void HandleHeavyAttackCombo(WeaponItem weapon)
+        public void HandleRightHeavyAttackCombo(WeaponItem weapon)
         {
             if (inputHandler.comboFlag)
             {
                 animatorHandler.anim.SetBool("canDoCombo", false);
 
-                if (lastAttack == weapon.OH_Heavy_Attack_01)
+                if (lastAttack == weapon.OH_Right_Heavy_Attack_01)
                 {
-                    animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_02, true);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Right_Heavy_Attack_02, true);
                     playerStats.TakeStaminaDamage(heavyAttackStaminaCost);
                 }
                 else
                 {
-                    animatorHandler.PlayTargetAnimation(weapon.OH_Heavy_Attack_01, true);
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Right_Heavy_Attack_01, true);
                     playerStats.TakeStaminaDamage(heavyAttackStaminaCost);
                 }
             }
+        }
+
+        public void HandleLeftLightAttack(WeaponItem weapon)
+        {
+            animatorHandler.PlayTargetAnimation(weapon.OH_Left_Light_Attack_01, true);
+            lastAttack = weapon.OH_Left_Light_Attack_01;
+            playerStats.TakeStaminaDamage(lightAttackStaminaCost);
+        }
+
+        public void HandleLeftLightAttackCombo(WeaponItem weapon)
+        {
+            if (inputHandler.comboFlag)
+            {
+                animatorHandler.anim.SetBool("canDoCombo", false);
+
+                if (lastAttack == weapon.OH_Left_Light_Attack_01)
+                {
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Left_Light_Attack_02, true);
+                    playerStats.TakeStaminaDamage(lightAttackStaminaCost);
+                }
+                else
+                {
+                    animatorHandler.PlayTargetAnimation(weapon.OH_Left_Light_Attack_01, true);
+                    playerStats.TakeStaminaDamage(lightAttackStaminaCost);
+                }
+            }
+        }
+
+        public void HandleBlocking()
+        {
+            animatorHandler.PlayTargetAnimation("Block-Start", false);
         }
     }
 }

@@ -49,18 +49,6 @@ namespace JP
             {
                 damage *= npcStats.maceDamageMultiplier;
             }
-            else if (weapon.weaponType == WeaponType.Greatsword)
-            {
-                damage *= npcStats.greatswordDamageMultiplier;
-            }
-            else if (weapon.weaponType == WeaponType.Greataxe)
-            {
-                damage *= npcStats.greataxeDamageMultiplier;
-            }
-            else if (weapon.weaponType == WeaponType.Warhammer)
-            {
-                damage *= npcStats.warhammerDamageMultiplier;
-            }
 
             if (weapon.isMagic)
             {
@@ -96,18 +84,6 @@ namespace JP
             {
                 damage *= playerStats.maceDamageMultiplier;
             }
-            else if (weapon.weaponType == WeaponType.Greatsword)
-            {
-                damage *= playerStats.greatswordDamageMultiplier;
-            }
-            else if (weapon.weaponType == WeaponType.Greataxe)
-            {
-                damage *= playerStats.greataxeDamageMultiplier;
-            }
-            else if (weapon.weaponType == WeaponType.Warhammer)
-            {
-                damage *= playerStats.warhammerDamageMultiplier;
-            }
 
             if (weapon.isMagic)
             {
@@ -130,11 +106,21 @@ namespace JP
             if (collision.tag == "Player")
             {
                 PlayerStats playerStats = collision.GetComponent<PlayerStats>();
+                PlayerManager playerManager = FindObjectOfType<PlayerManager>();
                 NPCStats npcStats = GetComponentInParent<NPCStats>();
                 WeaponItem weapon = npcStats.weapon;
 
                 if (playerStats != null)
                 {
+                    if (playerManager.isBlocking)
+                    {
+                        playerStats.armorMultiplier = playerStats.armorMultiplier - (playerInventory.leftWeapon.blockingValue / 100);
+                    }
+                    else
+                    {
+                        playerStats.armorMultiplier = 1.0f;
+                    }
+
                     currentWeaponDamage = calcDamageOnPlayer(weapon, npcStats);
                     currentWeaponDamage *= playerStats.armorMultiplier;
                     playerStats.TakeDamage(currentWeaponDamage);
@@ -145,11 +131,19 @@ namespace JP
             {
                 NPCStats npcStats = collision.GetComponent<NPCStats>();
                 PlayerStats playerStats = FindObjectOfType<PlayerStats>();
-                WeaponItem weapon = playerInventory.rightWeapon;
+                PlayerManager playerManager = FindObjectOfType<PlayerManager>();
 
                 if (npcStats != null)
                 {
-                    currentWeaponDamage = calcDamageOnNPC(weapon, playerStats);
+                    if (playerManager.isUsingRightHand)
+                    {
+                        currentWeaponDamage = calcDamageOnNPC(playerInventory.rightWeapon, playerStats);
+                    }
+                    else if (playerManager.isUsingLeftHand)
+                    {
+                        currentWeaponDamage = calcDamageOnNPC(playerInventory.leftWeapon, playerStats);
+                    }
+
                     currentWeaponDamage *= playerStats.armorMultiplier;
                     npcStats.TakeDamage(currentWeaponDamage);
                 }

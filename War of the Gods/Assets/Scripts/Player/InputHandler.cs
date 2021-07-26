@@ -20,6 +20,8 @@ namespace JP
         public bool inventory_Input;
         public bool rb_Input;
         public bool rt_Input;
+        public bool lb_Input;
+        public bool lt_Input;
         public bool y_Input;
 
         public bool d_Pad_Up;
@@ -70,6 +72,9 @@ namespace JP
                 inputActions.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
                 inputActions.PlayerActions.RB.performed += i => rb_Input = true;
                 inputActions.PlayerActions.RT.performed += i => rt_Input = true;
+                inputActions.PlayerActions.LB.performed += i => lb_Input = true;
+                inputActions.PlayerActions.LT.performed += i => lt_Input = true;
+                inputActions.PlayerActions.LT.canceled += i => lt_Input = false;
                 inputActions.InventoryQuickSlots.DPadRight.performed += i => d_Pad_Right = true;
                 inputActions.InventoryQuickSlots.DPadLeft.performed += i => d_Pad_Left = true;
                 inputActions.PlayerActions.Interact.performed += i => a_Input = true;
@@ -96,7 +101,7 @@ namespace JP
         {
             HandleMoveInput(delta);
             HandleRollInput(delta);
-            HandleAttackInput(delta);
+            HandleCombatInput(delta);
             HandleQuickSlotsInput();
             HandleInventoryInput();
             HandleLockOnInput();
@@ -183,7 +188,7 @@ namespace JP
             }
         }
 
-        private void HandleAttackInput(float delta)
+        private void HandleCombatInput(float delta)
         {
             // RB Input handles RIGHT hand weapon's light attack
             if (rb_Input)
@@ -192,7 +197,7 @@ namespace JP
                 {
                     comboFlag = true;
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
-                    playerAttacker.HandleLightAttackCombo(playerInventory.rightWeapon);
+                    playerAttacker.HandleRightLightAttackCombo(playerInventory.rightWeapon);
                     comboFlag = false;
                 }
                 else
@@ -204,7 +209,7 @@ namespace JP
                         return;
 
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
-                    playerAttacker.HandleLightAttack(playerInventory.rightWeapon);
+                    playerAttacker.HandleRightLightAttack(playerInventory.rightWeapon);
                 }
             }
 
@@ -215,7 +220,7 @@ namespace JP
                 {
                     comboFlag = true;
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
-                    playerAttacker.HandleHeavyAttackCombo(playerInventory.rightWeapon);
+                    playerAttacker.HandleRightHeavyAttackCombo(playerInventory.rightWeapon);
                     comboFlag = false;
                 }
                 else
@@ -227,8 +232,48 @@ namespace JP
                         return;
 
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
-                    playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+                    playerAttacker.HandleRightHeavyAttack(playerInventory.rightWeapon);
                 }
+            }
+
+            // LB Input handle LEFT weapon's attack
+            if (lb_Input)
+            {
+                if (playerManager.canDoCombo)
+                {
+                    comboFlag = false;
+                    animatorHandler.anim.SetBool("isUsingLeftHand", true);
+                    playerAttacker.HandleLeftLightAttackCombo(playerInventory.leftWeapon);
+                    comboFlag = false;
+                }
+                else
+                {
+                    if (playerManager.isInteracting)
+                        return;
+
+                    if (playerManager.canDoCombo)
+                        return;
+
+                    animatorHandler.anim.SetBool("isUsingLeftHand", true);
+                    playerAttacker.HandleLeftLightAttack(playerInventory.leftWeapon);
+                }
+            }
+
+            // LT Handle Blocking using your LEFT hand weapon
+            if (lt_Input)
+            {
+                if (playerManager.isInteracting)
+                    return;
+
+                if (playerManager.isBlocking)
+                    return;
+
+                playerManager.isBlocking = true;
+                playerAttacker.HandleBlocking();
+            }
+            else
+            {
+                playerManager.isBlocking = false;
             }
         }
 

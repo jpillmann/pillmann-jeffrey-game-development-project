@@ -28,7 +28,10 @@ MonoBehaviour:
   damage: 0
   magicDamage: 0
   bloodDamage: 0
-  OH_Light_Attack_01: 
-  OH_Light_Attack_02: 
-  OH_Heavy_Attack_01: 
-  OH_Heavy_Attack_02: 
+  blockingValue: 100
+  OH_Right_Light_Attack_01: 
+  OH_Right_Light_Attack_02: 
+  OH_Right_Heavy_Attack_01: 
+  OH_Right_Heavy_Attack_02: 
+  OH_Left_Light_Attack_01: Shield-Attack-01
+  OH_Left_Light_Attack_02: Shield-Attack-02

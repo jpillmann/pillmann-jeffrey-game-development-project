@@ -31,11 +31,15 @@ namespace JP {
         public int magicDamage;
         public int bloodDamage;
 
+        public int blockingValue;
+
         [Header("One Handed Attack Animations")]
-        public string OH_Light_Attack_01;
-        public string OH_Light_Attack_02;
-        public string OH_Heavy_Attack_01;
-        public string OH_Heavy_Attack_02;
+        public string OH_Right_Light_Attack_01;
+        public string OH_Right_Light_Attack_02;
+        public string OH_Right_Heavy_Attack_01;
+        public string OH_Right_Heavy_Attack_02;
+        public string OH_Left_Light_Attack_01;
+        public string OH_Left_Light_Attack_02;
     }
 
     public enum WeaponType
@@ -43,9 +47,6 @@ namespace JP {
         Sword,
         Axe,
         Mace,
-        Greatsword,
-        Greataxe,
-        Warhammer,
         Shield,
         Staff
     }

@@ -22,9 +22,6 @@ namespace JP
         public float swordDamageMultiplier = 1.0f;
         public float axeDamageMultiplier = 1.0f;
         public float maceDamageMultiplier = 1.0f;
-        public float greatswordDamageMultiplier = 1.0f;
-        public float greataxeDamageMultiplier = 1.0f;
-        public float warhammerDamageMultiplier = 1.0f;
         public float bloodDamageMultiplier = 1.0f;
         public float magicDamageMultiplier = 1.0f;
         public float armorMultiplier = 1.0f;

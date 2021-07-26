@@ -73,6 +73,8 @@ GameObject:
   - component: {fileID: 7548952517683109947}
   - component: {fileID: 7548952517686501403}
   - component: {fileID: 7548952517685535451}
+  - component: {fileID: 1067971454056442291}
+  - component: {fileID: 3902359582627328165}
   m_Layer: 0
   m_Name: WoodenShield
   m_TagString: Untagged
@@ -143,3 +145,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1067971454056442291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548952517683280923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.969899, y: 6.6856427, z: 1.4562488}
+  m_Center: {x: 0.036046147, y: -0.54476976, z: 0.42977154}
+--- !u!114 &3902359582627328165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548952517683280923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92263fadbc4a53f4baa0f721ba4f4564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 0}
+  currentWeaponDamage: 0

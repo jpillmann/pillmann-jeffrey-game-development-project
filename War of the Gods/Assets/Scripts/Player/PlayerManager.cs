@@ -47,6 +47,7 @@ namespace JP
         public bool isUsingRightHand;
         public bool isUsingLeftHand;
         public bool isInvulnerable;
+        public bool isBlocking;
 
 
         private void Awake()
@@ -79,6 +80,8 @@ namespace JP
             isUsingLeftHand = anim.GetBool("isUsingLeftHand");
             isInvulnerable = anim.GetBool("isInvulnerable");
 
+            anim.SetBool("isBlocking", isBlocking);
+
             inputHandler.TickInput(delta);
             playerMovement.HandleRollingAndSprinting(delta);
             playerStats.RegenerateStamina();
@@ -100,6 +103,7 @@ namespace JP
             inputHandler.rollFlag = false;
             inputHandler.rb_Input = false;
             inputHandler.rt_Input = false;
+            inputHandler.lb_Input = false;
 
             inputHandler.d_Pad_Up = false;
             inputHandler.d_Pad_Down = false;
