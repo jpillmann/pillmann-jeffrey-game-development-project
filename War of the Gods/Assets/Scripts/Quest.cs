@@ -13,7 +13,14 @@ namespace JP
         public string title;
         public string description;
         public WeaponItem weaponReward;
+        public QuestType questType;
 
         public QuestGoal questGoal;
+    }
+
+    public enum QuestType
+    {
+        SideQuest,
+        MainQuest
     }
 }

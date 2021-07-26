@@ -887,7 +887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242530088}
   m_Layer: 5
-  m_Name: Second Tenant
+  m_Name: Priest Bonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1785,7 @@ GameObject:
   - component: {fileID: 456712800}
   - component: {fileID: 456712799}
   m_Layer: 5
-  m_Name: Tenant Title
+  m_Name: Champion Bonus Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1939,6 +1939,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1979560629}
+        m_TargetAssemblyTypeName: JP.PlayerManager, Assembly-CSharp
+        m_MethodName: BeginWorship
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3127,7 +3139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733580444}
   m_Layer: 5
-  m_Name: Third Tenant
+  m_Name: Champion Bonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3811,22 +3823,18 @@ MonoBehaviour:
   radius: 0.6
   interactableText: Shrine to Thor, the God of Thunder
   altarTitle: THOR, GOD OF THUNDER
-  tenants:
-  - title: Crushing Stones
-    description: Kill your enemies in open combat.
-    tenantType: 0
-    favorReward: 1
-    favorLoss: 2
-  - title: The Evil Aesir God
-    description: Slaughter the Innocents of Enemy Settlements.
-    tenantType: 0
-    favorReward: 1
-    favorLoss: 0
-  - title: Of One
-    description: Never kill your own.
-    tenantType: 3
-    favorReward: 0
-    favorLoss: 10
+  bonus:
+    deity: Thor
+    bonusType: 0
+    noviceBonus: 1.25
+    priestBonus: 1.5
+    championWeapon: {fileID: 0}
+    noviceBonusTitle: d
+    noviceBonusDescription: d
+    priestBonusTitle: d
+    priestBonusDescription: d
+    championBonusTitle: d
+    championBonusDescription: d
 --- !u!1 &934958867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,7 +4103,7 @@ GameObject:
   - component: {fileID: 1027077390}
   - component: {fileID: 1027077389}
   m_Layer: 5
-  m_Name: Tenant Description
+  m_Name: Novice Bonus Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4444,6 +4452,7 @@ MonoBehaviour:
     title: Errand Boy
     description: Bring a Shield to Sidgeir.
     weaponReward: {fileID: 11400000, guid: f5d00b79ac555b448870b55d4978aa1d, type: 2}
+    questType: 0
     questGoal:
       goalType: 0
       item: {fileID: 11400000, guid: 8035d43025da7dd478ba88359edf0415, type: 2}
@@ -6639,7 +6648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447013970}
   m_Layer: 5
-  m_Name: First Tenant
+  m_Name: Novice Bonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6997,7 +7006,7 @@ GameObject:
   - component: {fileID: 1492244538}
   - component: {fileID: 1492244537}
   m_Layer: 5
-  m_Name: Tenant Description
+  m_Name: Priest Bonus Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7076,7 +7085,7 @@ GameObject:
   - component: {fileID: 1508877149}
   - component: {fileID: 1508877148}
   m_Layer: 5
-  m_Name: Tenant Title
+  m_Name: Novice Bonus Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7537,7 +7546,7 @@ GameObject:
   - component: {fileID: 1676269594}
   - component: {fileID: 1676269593}
   m_Layer: 5
-  m_Name: Tenant Title
+  m_Name: Priest Bonus Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7828,7 +7837,7 @@ GameObject:
   - component: {fileID: 1731747787}
   - component: {fileID: 1731747786}
   m_Layer: 5
-  m_Name: Tenant Description
+  m_Name: Champion Bonus Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9373,6 +9382,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2117237744}
     - target: {fileID: 2964976509521350043, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
+      propertyPath: noviceBonusUIObject
+      value: 
+      objectReference: {fileID: 1447013969}
+    - target: {fileID: 2964976509521350043, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
+      propertyPath: priestBonusUIObject
+      value: 
+      objectReference: {fileID: 242530087}
+    - target: {fileID: 2964976509521350043, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
       propertyPath: thirdTenantUIObject
       value: 
       objectReference: {fileID: 733580443}
@@ -9380,6 +9397,10 @@ PrefabInstance:
       propertyPath: secondTenantUIObject
       value: 
       objectReference: {fileID: 242530087}
+    - target: {fileID: 2964976509521350043, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
+      propertyPath: championBonusUIObject
+      value: 
+      objectReference: {fileID: 733580443}
     - target: {fileID: 2964976509521350043, guid: 7dc16db07e99b8142821c2b5b78d19de, type: 3}
       propertyPath: interactableNPCDialogue
       value: 

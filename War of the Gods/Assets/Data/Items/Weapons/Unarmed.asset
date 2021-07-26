@@ -16,3 +16,22 @@ MonoBehaviour:
   itemName: 
   modelPrefab: {fileID: 2022913437770883632, guid: eb1d4978dfba9e648a0903db0e883cca, type: 3}
   isUnarmed: 1
+  weaponType: 5
+  minDamage: 0
+  maxDamage: 0
+  minMagicDamage: 0
+  maxMagicDamage: 0
+  minBloodDamage: 0
+  maxBloodDamage: 0
+  isMagic: 0
+  isCursed: 0
+  damage: 0
+  magicDamage: 0
+  bloodDamage: 0
+  blockingValue: 0
+  OH_Right_Light_Attack_01: 
+  OH_Right_Light_Attack_02: 
+  OH_Right_Heavy_Attack_01: 
+  OH_Right_Heavy_Attack_02: 
+  OH_Left_Light_Attack_01: 
+  OH_Left_Light_Attack_02: 

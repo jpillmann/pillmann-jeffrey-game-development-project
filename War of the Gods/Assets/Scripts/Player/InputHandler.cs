@@ -330,6 +330,7 @@ namespace JP
             if (y_Input)
             {
                 animatorHandler.PlayTargetAnimation("KneelDown", true);
+                playerStats.HandleFavor();
             }
         }
     }

@@ -48,6 +48,7 @@ namespace JP {
         Axe,
         Mace,
         Shield,
-        Staff
+        Staff,
+        Unarmed
     }
 }

@@ -24,7 +24,7 @@ namespace JP
                 if (characterStats != null)
                 {
                     // CHECK FOR TEAM ID
-                    if (characterStats.tag != npcManager.faction && characterStats.isDead == false)
+                    if (characterStats.tag != npcManager.faction && characterStats.faction != npcManager.faction && characterStats.isDead == false)
                     {
                         Vector3 targetDirection = characterStats.transform.position - npcManager.transform.position;
                         float viewableAngle = Vector3.Angle(targetDirection, npcManager.transform.forward);

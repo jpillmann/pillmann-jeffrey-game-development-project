@@ -49,6 +49,10 @@ namespace JP
             {
                 damage *= npcStats.maceDamageMultiplier;
             }
+            else if (weapon.weaponType == WeaponType.Staff)
+            {
+                damage *= npcStats.staffDamageMultiplier;
+            }
 
             if (weapon.isMagic)
             {
@@ -83,6 +87,10 @@ namespace JP
             else if (weapon.weaponType == WeaponType.Mace)
             {
                 damage *= playerStats.maceDamageMultiplier;
+            }
+            else if (weapon.weaponType == WeaponType.Staff)
+            {
+                damage *= playerStats.staffDamageMultiplier;
             }
 
             if (weapon.isMagic)
@@ -142,6 +150,16 @@ namespace JP
                     else if (playerManager.isUsingLeftHand)
                     {
                         currentWeaponDamage = calcDamageOnNPC(playerInventory.leftWeapon, playerStats);
+                    }
+
+                    if (playerInventory.rightWeapon.weaponType != WeaponType.Unarmed 
+                        && playerInventory.rightWeapon.weaponType != WeaponType.Shield 
+                        && playerInventory.rightWeapon.weaponType != WeaponType.Staff 
+                        && playerInventory.leftWeapon.weaponType != WeaponType.Unarmed 
+                        && playerInventory.leftWeapon.weaponType != WeaponType.Shield 
+                        && playerInventory.leftWeapon.weaponType != WeaponType.Staff)
+                    {
+                        currentWeaponDamage *= playerStats.dualWieldMultiplier;
                     }
 
                     currentWeaponDamage *= playerStats.armorMultiplier;

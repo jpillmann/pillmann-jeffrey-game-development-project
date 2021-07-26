@@ -16,12 +16,16 @@ namespace JP
         public float staminaRegen;
         public float staminaRegenTimer = 0;
 
+        public string faction;
+
         public bool isDead;
 
         [Header("Multipliers")]
         public float swordDamageMultiplier = 1.0f;
         public float axeDamageMultiplier = 1.0f;
         public float maceDamageMultiplier = 1.0f;
+        public float staffDamageMultiplier = 1.0f;
+        public float dualWieldMultiplier = 1.0f;
         public float bloodDamageMultiplier = 1.0f;
         public float magicDamageMultiplier = 1.0f;
         public float armorMultiplier = 1.0f;

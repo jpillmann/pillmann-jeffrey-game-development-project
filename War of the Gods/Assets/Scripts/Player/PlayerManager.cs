@@ -32,13 +32,15 @@ namespace JP
 
         public GameObject interactableUIAltarObject;
         public GameObject altarTitleUIObject;
-        public GameObject firstTenantUIObject;
-        public GameObject secondTenantUIObject;
-        public GameObject thirdTenantUIObject;
+        public GameObject noviceBonusUIObject;
+        public GameObject priestBonusUIObject;
+        public GameObject championBonusUIObject;
 
         public List<Quest> quests = new List<Quest>();
         public List<Quest> completedQuests = new List<Quest>();
         public Quest tempQuest;
+
+        public Bonus tempBonus;
 
         [Header("Player Flags")]
         public bool isSprinting;
@@ -254,6 +256,16 @@ namespace JP
 
                         // Handle Quest Reward
                         playerInventory.weaponsInventory.Add(quests[i].weaponReward);
+
+                        if (quests[i].questType == QuestType.SideQuest)
+                        {
+                            playerStats.sideQuestsCompleted++;
+                        }
+                        else if (quests[i].questType == QuestType.MainQuest)
+                        {
+                            playerStats.mainQuestsCompleted++;
+                        }
+
                         itemInteractableUIGameObject.GetComponentInChildren<Text>().text = quests[i].weaponReward.itemName;
                         itemInteractableUIGameObject.GetComponentInChildren<RawImage>().texture = quests[i].weaponReward.itemIcon.texture;
 
@@ -268,6 +280,81 @@ namespace JP
                         itemInteractableUIGameObject.SetActive(true);
                         break;
                     }   
+                }
+            }
+        }
+
+        // Begin Worship of a God
+        public void BeginWorship()
+        {
+            PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+
+            if (playerStats.bonus == null)
+            {
+                playerStats.bonus = tempBonus;
+                playerStats.faction = tempBonus.deity;
+                playerStats.worshipTitle = "Novice";
+                playerStats.favor = 30;
+
+                if (tempBonus.bonusType == BonusType.Weapon)
+                {
+                    playerStats.swordDamageMultiplier = tempBonus.noviceBonus;
+                    playerStats.axeDamageMultiplier = tempBonus.noviceBonus;
+                    playerStats.maceDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Staff)
+                {
+                    playerStats.staffDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Dual)
+                {
+                    playerStats.dualWieldMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Magic)
+                {
+                    playerStats.magicDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Blood)
+                {
+                    playerStats.bloodDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Armor)
+                {
+                    playerStats.armorMultiplier = tempBonus.noviceBonus;
+                }
+            }
+            else if (tempBonus.deity != playerStats.bonus.deity)
+            {
+                playerStats.bonus = tempBonus;
+                playerStats.faction = tempBonus.deity;
+                playerStats.worshipTitle = "Novice";
+                playerStats.favor = 30;
+
+                if (tempBonus.bonusType == BonusType.Weapon)
+                {
+                    playerStats.swordDamageMultiplier = tempBonus.noviceBonus;
+                    playerStats.axeDamageMultiplier = tempBonus.noviceBonus;
+                    playerStats.maceDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Staff)
+                {
+                    playerStats.staffDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Dual)
+                {
+                    playerStats.dualWieldMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Magic)
+                {
+                    playerStats.magicDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Blood)
+                {
+                    playerStats.bloodDamageMultiplier = tempBonus.noviceBonus;
+                }
+                else if (tempBonus.bonusType == BonusType.Armor)
+                {
+                    playerStats.armorMultiplier = tempBonus.noviceBonus;
                 }
             }
         }

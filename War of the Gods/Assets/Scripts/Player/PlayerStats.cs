@@ -7,14 +7,24 @@ namespace JP
     public class PlayerStats : CharacterStats
     {
         PlayerManager playerManager;
+        PlayerInventory playerInventory;
         AnimatorHandler animatorHandler;
         public HealthBar healthBar;
         public StaminaBar staminaBar;
+
+        public Bonus bonus;
+        public string worshipTitle;
+        public int favor = 0;
+        public int enemiesKilled = 0;
+        public int friendsKilled = 0;
+        public int mainQuestsCompleted = 0;
+        public int sideQuestsCompleted = 0;
 
 
         private void Awake()
         {
             playerManager = GetComponent<PlayerManager>();
+            playerInventory = GetComponent<PlayerInventory>();
             animatorHandler = GetComponentInChildren<AnimatorHandler>();
         }
 
@@ -100,6 +110,72 @@ namespace JP
                 }
             }
         }
+        #endregion
+
+        #region Favor
+
+        public void HandleFavor()
+        {
+            if (bonus != null)
+            {
+                favor += enemiesKilled * 2;
+                favor += sideQuestsCompleted * 5;
+                favor += mainQuestsCompleted * 10;
+                favor -= friendsKilled * 25;
+
+                enemiesKilled = 0;
+                friendsKilled = 0;
+                sideQuestsCompleted = 0;
+                mainQuestsCompleted = 0;
+
+                // Change the Worship Title / Boni of the character
+                if (favor >= 100 && favor < 150 && worshipTitle == "Novice")
+                {
+                    worshipTitle = "Priest";
+
+                    if (bonus.bonusType == BonusType.Weapon)
+                    {
+                        swordDamageMultiplier = bonus.priestBonus;
+                        axeDamageMultiplier = bonus.priestBonus;
+                        maceDamageMultiplier = bonus.priestBonus;
+                    }
+                    else if (bonus.bonusType == BonusType.Staff)
+                    {
+                        staffDamageMultiplier = bonus.priestBonus;
+                    }
+                    else if (bonus.bonusType == BonusType.Dual)
+                    {
+                        dualWieldMultiplier = bonus.priestBonus;
+                    }
+                    else if (bonus.bonusType == BonusType.Magic)
+                    {
+                        magicDamageMultiplier = bonus.priestBonus;
+                    }
+                    else if (bonus.bonusType == BonusType.Blood)
+                    {
+                        bloodDamageMultiplier = bonus.priestBonus;
+                    }
+                    else if (bonus.bonusType == BonusType.Armor)
+                    {
+                        armorMultiplier = bonus.priestBonus;
+                    }
+                }
+                else if (favor >= 150 && worshipTitle == "Priest")
+                {
+                    worshipTitle = "Champion";
+
+                    playerInventory.weaponsInventory.Add(bonus.championWeapon);
+                }
+                else if (favor < 25)
+                {
+                    worshipTitle = null;
+                    bonus = null;
+                }
+
+                Debug.Log(favor);
+            }
+        }
+
         #endregion
     }
 }

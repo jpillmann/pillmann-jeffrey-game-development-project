@@ -8,7 +8,7 @@ namespace JP
     public class Altar : Interactable
     {
         public string altarTitle;
-        public Tenant[] tenants;
+        public Bonus bonus;
 
         public override void Interact(PlayerManager playerManager)
         {
@@ -18,18 +18,23 @@ namespace JP
 
         private void PrayAtAltar(PlayerManager playerManager)
         {
+            PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+
             playerManager.animatorHandler.PlayTargetAnimation("KneelDown", true);
+            playerStats.HandleFavor();
 
             playerManager.altarTitleUIObject.GetComponentInChildren<Text>().text = altarTitle;
 
-            playerManager.firstTenantUIObject.transform.GetChild(0).gameObject.GetComponent<Text>().text = tenants[0].title;
-            playerManager.firstTenantUIObject.transform.GetChild(1).gameObject.GetComponent<Text>().text = tenants[0].description;
+            playerManager.noviceBonusUIObject.transform.GetChild(0).gameObject.GetComponent<Text>().text = bonus.noviceBonusTitle;
+            playerManager.noviceBonusUIObject.transform.GetChild(1).gameObject.GetComponent<Text>().text = bonus.noviceBonusDescription;
 
-            playerManager.secondTenantUIObject.transform.GetChild(0).gameObject.GetComponent<Text>().text = tenants[1].title;
-            playerManager.secondTenantUIObject.transform.GetChild(1).gameObject.GetComponent<Text>().text = tenants[1].description;
+            playerManager.priestBonusUIObject.transform.GetChild(0).gameObject.GetComponent<Text>().text = bonus.priestBonusTitle;
+            playerManager.priestBonusUIObject.transform.GetChild(1).gameObject.GetComponent<Text>().text = bonus.priestBonusDescription;
 
-            playerManager.thirdTenantUIObject.transform.GetChild(0).gameObject.GetComponent<Text>().text = tenants[2].title;
-            playerManager.thirdTenantUIObject.transform.GetChild(1).gameObject.GetComponent<Text>().text = tenants[2].description;
+            playerManager.championBonusUIObject.transform.GetChild(0).gameObject.GetComponent<Text>().text = bonus.championBonusTitle;
+            playerManager.championBonusUIObject.transform.GetChild(1).gameObject.GetComponent<Text>().text = bonus.championBonusDescription;
+
+            playerManager.tempBonus = bonus;
 
             playerManager.interactableUIAltarObject.SetActive(true);
         }
