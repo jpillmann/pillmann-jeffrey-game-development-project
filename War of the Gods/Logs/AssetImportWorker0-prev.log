@@ -15,11 +15,11 @@ D:/pillmann-jeffrey-game-development-project/War of the Gods
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56204
+50020
 Successfully changed project path to: D:/pillmann-jeffrey-game-development-project/War of the Gods
 D:/pillmann-jeffrey-game-development-project/War of the Gods
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 1037.98 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 40.66 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,442 +35,1055 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56924
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004603 seconds.
+Registered in 0.002555 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 57.44 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 45.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.276 seconds
+- Completed reload, in  1.274 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.019054 seconds.
+Registered in 0.000773 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 67.70 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 45.54 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.500 seconds
+- Completed reload, in  1.038 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1550 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 86.6 MB.
 System memory in use after: 86.6 MB.
 
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2017.
-Total: 2.654800 ms (FindLiveObjects: 0.738500 ms CreateObjectMapping: 0.167700 ms MarkObjects: 1.626100 ms  DeleteObjects: 0.121800 ms)
+Total: 2.196100 ms (FindLiveObjects: 0.158400 ms CreateObjectMapping: 0.053700 ms MarkObjects: 1.858600 ms  DeleteObjects: 0.124400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9298038886c9ed37a53d01a61f0cfa0b') in 0.184803 seconds
-  Import took 0.203188 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.623271 seconds.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5fb5a38c0008314c37b786a0b24f69') in 0.025081 seconds
-  Import took 0.029728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.917694 seconds.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc7145b2ddb0ba8762b776eb72c250b5') in 0.017515 seconds
-  Import took 0.020687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.091809 seconds.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f57c4728d35cf76f1cf4b4846084532') in 0.017559 seconds
-  Import took 0.028457 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.075665 seconds.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd25ab8e027386ce0f69fd6ce340ff57') in 0.034689 seconds
-  Import took 0.051124 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.972003 seconds.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0650e4e173f905b9919e0a9b75cc430') in 0.019638 seconds
-  Import took 0.038427 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.259924 seconds.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd12fb27d30f3336af0a7026aed3b4dfe') in 0.017820 seconds
-  Import took 0.022814 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.463359 seconds.
-  path: Assets/Data/Prefabs/Weapons/Mace.prefab
-  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '217f11bc3c52f101d3a840306572ff13') in 0.015256 seconds
-  Import took 0.019773 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 73.868260 seconds.
-  path: Assets/Data/Prefabs/Weapons/WoodenShield.prefab
-  artifactKey: Guid(08deab1d29c973a4fb4315c131ed4b4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/WoodenShield.prefab using Guid(08deab1d29c973a4fb4315c131ed4b4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca7604c5d161bf02f2e80df3fecef16') in 0.035738 seconds
-  Import took 0.047262 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 78.659794 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57eab1abdc810fc18d1cca3dc9581ccb') in 0.066905 seconds
-  Import took 0.070768 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.362763 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9786c01f6b4bc9fd3d5e37ca1c5ff8e0') in 0.019991 seconds
-  Import took 0.025127 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.803129 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13404b337a8627c591fa9c105846a315') in 0.014439 seconds
-  Import took 0.025934 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.570089 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '070736d067e63d79344bc951b11c5a23') in 0.014791 seconds
-  Import took 0.022471 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.223697 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd66065da832b5c80896c1dcc64aeb1') in 0.016950 seconds
-  Import took 0.030383 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.236858 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99325cac47b310a851f3932299cb765f') in 0.019999 seconds
-  Import took 0.041023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.065103 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '390581c1505008937a09caea8d47c633') in 0.011687 seconds
-  Import took 0.017515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.205277 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5192b02ac1f8ca96d3502e2016ddc83') in 0.016305 seconds
-  Import took 0.028747 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.729945 seconds.
-  path: Assets/Data/Prefabs/Weapons/Axe.prefab
-  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49fe106c0635b36fd8fa0fffba9bfcd3') in 0.024318 seconds
-  Import took 0.028371 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 68.299862 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64ce1ba907e76f779b288bbaf427c58') in 0.041078 seconds
-  Import took 0.055521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004500 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64ce1ba907e76f779b288bbaf427c58') in 0.017579 seconds
-  Import took 0.021229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.346644 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '658f0036c9bd5b60a6ea8aa432a1fbf3') in 0.020865 seconds
-  Import took 0.026100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.212560 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '672ca16373d8ca6f4873b046c3950c94') in 0.014902 seconds
-  Import took 0.020772 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.451802 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bc1e656a48c42f62975794f6bce0be5') in 0.010678 seconds
-  Import took 0.029330 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.828104 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0286f7bc776c34fb9ee297afe9e7325') in 0.012199 seconds
-  Import took 0.016350 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.014305 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bf3133dfccebe5aff163ee60f3cf05a') in 0.014660 seconds
-  Import took 0.030749 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.001931 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c2dff78edc9f035a427b471cf6b1a43') in 0.014446 seconds
-  Import took 0.017885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.387341 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffa99df0fdde9a4f63c7ba7ff52d9a5') in 0.013081 seconds
-  Import took 0.026032 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.168186 seconds.
-  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
-  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbe3ec4783c91a249b5bec352f4df6e7') in 0.016980 seconds
-  Import took 0.021118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 157.837267 seconds.
   path: Assets/Data/Prefabs/Weapons/Iron Sword.prefab
   artifactKey: Guid(8b8ea6925acc3ce4d8772451185eacaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Iron Sword.prefab using Guid(8b8ea6925acc3ce4d8772451185eacaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3631d1b5b2b24139be580e4782e84053') in 0.024030 seconds
-  Import took 0.031323 seconds .
+Start importing Assets/Data/Prefabs/Weapons/Iron Sword.prefab using Guid(8b8ea6925acc3ce4d8772451185eacaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240f9e1d473f3cc469f7914509386bdb') in 0.160432 seconds
+  Import took 0.179955 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000694 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.967 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.6 MB.
+System memory in use after: 89.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2027.
+Total: 2.737900 ms (FindLiveObjects: 0.401400 ms CreateObjectMapping: 0.119100 ms MarkObjects: 2.118600 ms  DeleteObjects: 0.097600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000689 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.002 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.6 MB.
+System memory in use after: 89.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2030.
+Total: 2.496700 ms (FindLiveObjects: 0.222500 ms CreateObjectMapping: 0.387000 ms MarkObjects: 1.808900 ms  DeleteObjects: 0.076700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000672 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.7 MB.
+System memory in use after: 89.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2033.
+Total: 1.884500 ms (FindLiveObjects: 0.150800 ms CreateObjectMapping: 0.050500 ms MarkObjects: 1.585900 ms  DeleteObjects: 0.096400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 59.684256 seconds.
-  path: Assets/Data/Prefabs/Weapons/Steel Sword.prefab
-  artifactKey: Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Steel Sword.prefab using Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f17dbb5adf188cb6a82b94420475e57') in 0.025994 seconds
-  Import took 0.039239 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.699135 seconds.
-  path: Assets/Data/Prefabs/Weapons/Steel Sword.prefab
-  artifactKey: Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Steel Sword.prefab using Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3bef80b2f3ed11210ee6f0ca5ecc18') in 0.017859 seconds
-  Import took 0.021576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.019911 seconds.
-  path: Assets/Data/Prefabs/Weapons/Steel Sword.prefab
-  artifactKey: Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Steel Sword.prefab using Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c55d78f40debeb6e6c54b621df3d4301') in 0.013505 seconds
-  Import took 0.018286 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.377547 seconds.
-  path: Assets/Data/Prefabs/Weapons/Steel Sword.prefab
-  artifactKey: Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Steel Sword.prefab using Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10b45f7405d0c3782fc141990bb895e') in 0.017077 seconds
-  Import took 0.025590 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.637526 seconds.
-  path: Assets/Data/Prefabs/Weapons/Steel Sword.prefab
-  artifactKey: Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Steel Sword.prefab using Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b607715fdb71a7bc79c67ee2ae2142b5') in 0.018988 seconds
-  Import took 0.023058 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.931577 seconds.
-  path: Assets/Data/Prefabs/Weapons/Steel Sword.prefab
-  artifactKey: Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Steel Sword.prefab using Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ab19b12cc7d10ef94ece991750e272f') in 0.017183 seconds
-  Import took 0.027654 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 239.341806 seconds.
+  Time since last request: 327.914442 seconds.
   path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
   artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4a525ea0cacfb58241b8ccf5639f8d8') in 0.031793 seconds
-  Import took 0.035763 seconds .
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f632ab253721a8fc3f8680770592a3') in 0.067523 seconds
+  Import took 0.088864 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.650560 seconds.
+  Time since last request: 15.210280 seconds.
   path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
   artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3d8fb15fd948f95de964a6a51603337') in 0.013722 seconds
-  Import took 0.021970 seconds .
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c7d041f9d5793574567f7e567d5745') in 0.019422 seconds
+  Import took 0.039896 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.399922 seconds.
+  Time since last request: 2.203437 seconds.
   path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
   artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd849e682bdb9877f6c76a23b5615432') in 0.012505 seconds
-  Import took 0.017090 seconds .
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d603aab09d34d91677556620e6c43bd') in 0.020819 seconds
+  Import took 0.038421 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.849559 seconds.
+  Time since last request: 3.575859 seconds.
   path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
   artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6925a40db48ebb59c09240b1b105af41') in 0.015340 seconds
-  Import took 0.025956 seconds .
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fb45173ec8f7c928ab0331061d8c09d') in 0.017043 seconds
+  Import took 0.032549 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000710 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.839 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.7 MB.
+System memory in use after: 89.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2037.
+Total: 1.807200 ms (FindLiveObjects: 0.150900 ms CreateObjectMapping: 0.045800 ms MarkObjects: 1.515300 ms  DeleteObjects: 0.094300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 48.190386 seconds.
-  path: Assets/Data/Prefabs/Weapons/Staff.prefab
-  artifactKey: Guid(01d0c09d3b5ac91459be46b71828a678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Staff.prefab using Guid(01d0c09d3b5ac91459be46b71828a678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '317e0e30d5f58e615678d99ec41306f6') in 0.024683 seconds
-  Import took 0.029074 seconds .
+  Time since last request: 52.738637 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2814410ace3cd63b993e541aadecbcc4') in 0.051949 seconds
+  Import took 0.067259 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001418 seconds.
-  path: Assets/Data/Prefabs/Weapons/Staff.prefab
-  artifactKey: Guid(01d0c09d3b5ac91459be46b71828a678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Staff.prefab using Guid(01d0c09d3b5ac91459be46b71828a678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '317e0e30d5f58e615678d99ec41306f6') in 0.012003 seconds
-  Import took 0.015461 seconds .
+  Time since last request: 0.551268 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b385638b56742e5fbf3e0100f4bfbf78') in 0.013548 seconds
+  Import took 0.025160 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 104.084643 seconds.
-  path: Assets/Data/Prefabs/Weapons/Steel Shield.prefab
-  artifactKey: Guid(4d4b77b9343ca994d875e605722c80a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Steel Shield.prefab using Guid(4d4b77b9343ca994d875e605722c80a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b7c3224d7b0a4f34b0582efe53de1df') in 0.033158 seconds
-  Import took 0.042661 seconds .
+  Time since last request: 3.021415 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56154307204080b40f92cbcaeedddf25') in 0.015053 seconds
+  Import took 0.027940 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000643 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.828 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.7 MB.
+System memory in use after: 89.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2041.
+Total: 2.102200 ms (FindLiveObjects: 0.159300 ms CreateObjectMapping: 0.043300 ms MarkObjects: 1.804600 ms  DeleteObjects: 0.094100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 39.049658 seconds.
+  Time since last request: 22.862007 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16204499c00be4173a83b51ad8ad72f3') in 0.056866 seconds
+  Import took 0.086601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.370393 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a15b48fa16817d1e00b3b6b1d6292f23') in 0.014406 seconds
+  Import took 0.030640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.040780 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d615bbc2ca91c580f460d2e6413badf') in 0.012046 seconds
+  Import took 0.016017 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000671 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.847 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.7 MB.
+System memory in use after: 89.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2045.
+Total: 2.067200 ms (FindLiveObjects: 0.178600 ms CreateObjectMapping: 0.055400 ms MarkObjects: 1.736700 ms  DeleteObjects: 0.095400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.292077 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbe4119c2b4f84d38f4cb1d60edcd533') in 0.052107 seconds
+  Import took 0.067369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.344046 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6c3227e9954cb58a4e1085e26dffb5') in 0.011874 seconds
+  Import took 0.022801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.384976 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4042bad9ca9ab156490cffcb2b80d0c2') in 0.011950 seconds
+  Import took 0.026658 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000675 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.933 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2049.
+Total: 1.933500 ms (FindLiveObjects: 0.175600 ms CreateObjectMapping: 0.053400 ms MarkObjects: 1.641200 ms  DeleteObjects: 0.061400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 100.162961 seconds.
+  path: Assets/Data/Prefabs/Weapons/Aesir Sword.prefab
+  artifactKey: Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Aesir Sword.prefab using Guid(92cd0738cf35ea444ae9741d52dc4ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ada0f0d3386c503cef84fb94c9986c0') in 0.062026 seconds
+  Import took 0.079279 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000797 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.209 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2053.
+Total: 7.634800 ms (FindLiveObjects: 5.959500 ms CreateObjectMapping: 0.058900 ms MarkObjects: 1.555200 ms  DeleteObjects: 0.059800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000716 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.086 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.7 MB.
+System memory in use after: 89.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2056.
+Total: 1.837100 ms (FindLiveObjects: 0.173200 ms CreateObjectMapping: 0.058600 ms MarkObjects: 1.508100 ms  DeleteObjects: 0.095900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 168.909069 seconds.
+  path: Assets/Data/Prefabs/Weapons/WoodenShield.prefab
+  artifactKey: Guid(08deab1d29c973a4fb4315c131ed4b4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/WoodenShield.prefab using Guid(08deab1d29c973a4fb4315c131ed4b4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba4bbb5c88a17a90404ab495f253bbcb') in 0.065800 seconds
+  Import took 0.069225 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002832 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.044 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2060.
+Total: 5.661000 ms (FindLiveObjects: 1.030100 ms CreateObjectMapping: 0.195700 ms MarkObjects: 4.370500 ms  DeleteObjects: 0.063100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000673 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.045 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2063.
+Total: 2.034300 ms (FindLiveObjects: 0.179000 ms CreateObjectMapping: 0.061400 ms MarkObjects: 1.730000 ms  DeleteObjects: 0.062700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000694 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.942 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2066.
+Total: 2.316800 ms (FindLiveObjects: 0.498600 ms CreateObjectMapping: 0.074800 ms MarkObjects: 1.642000 ms  DeleteObjects: 0.098500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 133.980293 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564da53449ebd6df11d0a2790af28242') in 0.074814 seconds
+  Import took 0.077903 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.171043 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f978224e4288980be8d2acf21772aa54') in 0.025223 seconds
+  Import took 0.028251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.969027 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe3065d5c9660a99716e0a11dabc0eba') in 0.099805 seconds
+  Import took 0.121262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.521724 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '904aad09f68b8308a54417775ad47754') in 0.023062 seconds
+  Import took 0.045358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.156810 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41ec92b4067ccb8b5bdb742f52b83060') in 0.024939 seconds
+  Import took 0.029185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.974773 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad2c9509ed20724cb4f8c7e9c11f4173') in 0.011807 seconds
+  Import took 0.021651 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000679 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.945 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2070.
+Total: 3.260100 ms (FindLiveObjects: 0.585500 ms CreateObjectMapping: 0.110100 ms MarkObjects: 2.503500 ms  DeleteObjects: 0.059500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.820173 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11f0423adf64490eb189fcea2ba81751') in 0.070226 seconds
+  Import took 0.077739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.013898 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14355237dccb2f14d71aa35d190b3da6') in 0.023969 seconds
+  Import took 0.027841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.614974 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1de30824120224c7a9c8dac36eafa0d5') in 0.023686 seconds
+  Import took 0.034045 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000645 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.140 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2074.
+Total: 1.884600 ms (FindLiveObjects: 0.172400 ms CreateObjectMapping: 0.053300 ms MarkObjects: 1.561900 ms  DeleteObjects: 0.096100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 89.364445 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c213b0918bdaabdb8b2a8bb12a81d62f') in 0.089412 seconds
+  Import took 0.093697 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000685 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.086 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2078.
+Total: 2.231800 ms (FindLiveObjects: 0.160700 ms CreateObjectMapping: 0.050000 ms MarkObjects: 1.957400 ms  DeleteObjects: 0.062600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000845 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.978 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2081.
+Total: 5.852500 ms (FindLiveObjects: 2.420100 ms CreateObjectMapping: 0.228800 ms MarkObjects: 3.120900 ms  DeleteObjects: 0.081100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 117.289091 seconds.
   path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
   artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '297f1d7b492f33b9642d670abf0402a8') in 0.023515 seconds
-  Import took 0.035758 seconds .
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5509cd834bf5668be7240369d645a44e') in 0.059862 seconds
+  Import took 0.071048 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 49.653076 seconds.
+  Time since last request: 2.156343 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc7ec511130e30d283b7fe1cc8954a30') in 0.019282 seconds
+  Import took 0.024656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.007600 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de43ac61e2de0fddb3a225cad68484ec') in 0.030919 seconds
+  Import took 0.035349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.773423 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a334254eb8d2b91e74695a6432045f16') in 0.012470 seconds
+  Import took 0.027332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.947693 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a60409fd3d2df8b5f1d1901e62f688d') in 0.011383 seconds
+  Import took 0.024170 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000659 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.039 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2085.
+Total: 2.518700 ms (FindLiveObjects: 0.249500 ms CreateObjectMapping: 0.141700 ms MarkObjects: 2.019800 ms  DeleteObjects: 0.105900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.936041 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff6e93a84c2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff6e94107d2 (Unity) ResolveArtifactV2
+0x00007ff6e946b650 (Unity) ImportToObjects
+0x00007ff6e946a888 (Unity) AssetImportWorker::Import
+0x00007ff6e93c9e8f (Unity) <lambda_77c748ffdfab40a7d87ea62709a69e39>::operator()
+0x00007ff6e94953a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff6e9497500 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff6e949ac8e (Unity) asio::io_service::run
+0x00007ff6e9410d10 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6e9410d60 (Unity) RunAssetImporterV2
+0x00007ff6e891d086 (Unity) Application::InitializeProject
+0x00007ff6e929d292 (Unity) WinMain
+0x00007ff6eb115fc6 (Unity) __scrt_common_main_seh
+0x00007ffb8d367034 (KERNEL32) BaseThreadInitThunk
+0x00007ffb8e242651 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(caca7ee770dbce145a13ed501ac34998) Importer(-1,00000000000000000000000000000000), Assets/Data/Prefabs/Weapons/Bronze Shield.prefab from editor
+Resuming Guid(caca7ee770dbce145a13ed501ac34998) Importer(-1,00000000000000000000000000000000) -> 00000000000000000000000000000000 (aborted)
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff6e93a84c2 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff6e94107d2 (Unity) ResolveArtifactV2
+0x00007ff6e940b391 (Unity) ProduceArtifactV2
+0x00007ff6e93719ee (Unity) AssetDatabase::ProduceArtifact
+0x00007ff6e93577e8 (Unity) PreviewImporter::GenerateAssetData
+0x00007ff6e946ba19 (Unity) ImportToObjects
+0x00007ff6e946a888 (Unity) AssetImportWorker::Import
+0x00007ff6e93c9e8f (Unity) <lambda_77c748ffdfab40a7d87ea62709a69e39>::operator()
+0x00007ff6e94953a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff6e9497500 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff6e949ac8e (Unity) asio::io_service::run
+0x00007ff6e9410d10 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6e9410d60 (Unity) RunAssetImporterV2
+0x00007ff6e891d086 (Unity) Application::InitializeProject
+0x00007ff6e929d292 (Unity) WinMain
+0x00007ff6eb115fc6 (Unity) __scrt_common_main_seh
+0x00007ffb8d367034 (KERNEL32) BaseThreadInitThunk
+0x00007ffb8e242651 (ntdll) RtlUserThreadStart
+
+Sub-import of Guid(caca7ee770dbce145a13ed501ac34998) Importer(-1,00000000000000000000000000000000), Assets/Data/Prefabs/Weapons/Bronze Shield.prefab skipped because a previous one failed already
+ -> (artifact id: 'b2bc8d0012d39b08a6816d4a3681343e') in 2.044795 seconds
+  Import took 2.047326 seconds (was aborted).
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f69388ca0a8dee73790dd462693e781') in 0.058978 seconds
+  Import took 0.074785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.353904 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14da0f81411fc37d39286e5504b20dd2') in 0.010094 seconds
+  Import took 0.034888 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000683 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.058 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2089.
+Total: 1.845700 ms (FindLiveObjects: 0.165700 ms CreateObjectMapping: 0.047500 ms MarkObjects: 1.534900 ms  DeleteObjects: 0.096700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.978686 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f76df2832bc2a03ed9694b297f6d34') in 0.078248 seconds
+  Import took 0.082678 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000699 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.019 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2093.
+Total: 2.079400 ms (FindLiveObjects: 0.185000 ms CreateObjectMapping: 0.051900 ms MarkObjects: 1.761900 ms  DeleteObjects: 0.079400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000691 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.847 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2096.
+Total: 1.971600 ms (FindLiveObjects: 0.199400 ms CreateObjectMapping: 0.063400 ms MarkObjects: 1.636900 ms  DeleteObjects: 0.070500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 102.375068 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cea3251a0242ea7c49ee715a1c4981f') in 0.062852 seconds
+  Import took 0.084570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.784861 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc0cefb97767481124f7dbf64ef91df8') in 0.020210 seconds
+  Import took 0.034279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.177277 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98afbee5afbff53a24a669e96cdee282') in 0.015751 seconds
+  Import took 0.026161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.815382 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce3f19a69c8a9f46494f51e886ee5d56') in 0.015461 seconds
+  Import took 0.028318 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.401056 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab57ec7be1e5bdf8bde45f422db79417') in 0.014764 seconds
+  Import took 0.018436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.816935 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ef79bb92147411326199cca2ce26ee7') in 0.018484 seconds
+  Import took 0.026131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.172775 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7992efe98391bd913a156ca2ac7bfb') in 0.015334 seconds
+  Import took 0.019750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.635481 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6f8d85c774d785c515095905370e17') in 0.019444 seconds
+  Import took 0.035232 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000757 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.083 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2100.
+Total: 2.525600 ms (FindLiveObjects: 0.202100 ms CreateObjectMapping: 0.065700 ms MarkObjects: 2.161000 ms  DeleteObjects: 0.094300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 92.036968 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ad7cf24d07297be88ed34e6386c1ccc') in 0.067847 seconds
+  Import took 0.071292 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000707 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2104.
+Total: 4.223500 ms (FindLiveObjects: 0.188200 ms CreateObjectMapping: 0.061200 ms MarkObjects: 3.899400 ms  DeleteObjects: 0.073400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 258.196962 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e618a4c002ad57f8f97928167b74213f') in 0.077725 seconds
+  Import took 0.082841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.583725 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '434645b4b245b2f72a2f645342c25d37') in 0.010748 seconds
+  Import took 0.029097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.894403 seconds.
+  path: Assets/Data/Prefabs/Weapons/Hammer.prefab
+  artifactKey: Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Hammer.prefab using Guid(783ba4c2f8420c74fb9bec505b8baec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa13ca4527910367ed9937efe56ffd4a') in 0.014763 seconds
+  Import took 0.024399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.732627 seconds.
   path: Assets/Data/Prefabs/Weapons/Iron Shield.prefab
   artifactKey: Guid(c3f315e2ddc47b749a55659226e138e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Weapons/Iron Shield.prefab using Guid(c3f315e2ddc47b749a55659226e138e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89326d456c933bdc6f255f3b70700877') in 0.030450 seconds
-  Import took 0.041168 seconds .
+Start importing Assets/Data/Prefabs/Weapons/Iron Shield.prefab using Guid(c3f315e2ddc47b749a55659226e138e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af34154f685eb609b2304b034e3e0210') in 0.019505 seconds
+  Import took 0.023375 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 98.294905 seconds.
-  path: Assets/Data/Items/Weapons/Iron Sword.asset
-  artifactKey: Guid(f5d00b79ac555b448870b55d4978aa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Items/Weapons/Iron Sword.asset using Guid(f5d00b79ac555b448870b55d4978aa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53c2c418ee11aa02d20f4bb54f8c5c77') in 0.020944 seconds
-  Import took 0.039014 seconds .
+  Time since last request: 7.779522 seconds.
+  path: Assets/Data/Prefabs/Weapons/Mace.prefab
+  artifactKey: Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Mace.prefab using Guid(7d6530d8703e37a4780821a58f9e7cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23cabd25fa554202197954ef364244a4') in 0.017531 seconds
+  Import took 0.022007 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 133.189139 seconds.
-  path: Assets/Data/Items/Weapons/Mace.asset
-  artifactKey: Guid(eb86de3217ea16040a46aaae97e8371f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Items/Weapons/Mace.asset using Guid(eb86de3217ea16040a46aaae97e8371f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e434fb34444ce990f739856a3779389e') in 0.010361 seconds
-  Import took 0.014186 seconds .
+  Time since last request: 5.634555 seconds.
+  path: Assets/Data/Prefabs/Weapons/Staff.prefab
+  artifactKey: Guid(01d0c09d3b5ac91459be46b71828a678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Staff.prefab using Guid(01d0c09d3b5ac91459be46b71828a678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f7c944d5874d73b4b45dbea7a1fcffa') in 0.028858 seconds
+  Import took 0.046015 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 418.628649 seconds.
-  path: Assets/Data/Prefabs/Enemy.prefab
-  artifactKey: Guid(94d7197b9ef5f474b97fd5cf9010f7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Enemy.prefab using Guid(94d7197b9ef5f474b97fd5cf9010f7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3267ece99283864055c2facc279982e4') in 0.146887 seconds
-  Import took 0.166670 seconds .
+  Time since last request: 3.476294 seconds.
+  path: Assets/Data/Prefabs/Weapons/Steel Shield.prefab
+  artifactKey: Guid(4d4b77b9343ca994d875e605722c80a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Steel Shield.prefab using Guid(4d4b77b9343ca994d875e605722c80a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '714a48104b54eaea73503db8ca7fd027') in 0.024891 seconds
+  Import took 0.029018 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000231 seconds.
-  path: Assets/Data/Prefabs/Player.prefab
-  artifactKey: Guid(7dc16db07e99b8142821c2b5b78d19de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/Player.prefab using Guid(7dc16db07e99b8142821c2b5b78d19de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99a980aeb9574b04ad9ab110d7b84ed5') in 1.146498 seconds
-  Import took 1.151225 seconds .
+  Time since last request: 5.068074 seconds.
+  path: Assets/Data/Prefabs/Weapons/Steel Sword.prefab
+  artifactKey: Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Steel Sword.prefab using Guid(5fe404c8c11865b4ab53c7e1d1a2f838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48ba9a6412784435365cdc86ffce3aac') in 0.020600 seconds
+  Import took 0.024860 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001966 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.006 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2108.
+Total: 1.936500 ms (FindLiveObjects: 0.164400 ms CreateObjectMapping: 0.051100 ms MarkObjects: 1.620500 ms  DeleteObjects: 0.099500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000690 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.013 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2111.
+Total: 2.154500 ms (FindLiveObjects: 0.236300 ms CreateObjectMapping: 0.055400 ms MarkObjects: 1.781900 ms  DeleteObjects: 0.079200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000284 seconds.
-  path: Assets/Data/Prefabs/NPC Villager.prefab
-  artifactKey: Guid(9cb8c5fbce2cece408ddfde84f720e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Prefabs/NPC Villager.prefab using Guid(9cb8c5fbce2cece408ddfde84f720e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '851732bd26962c2c902ff970f6197599') in 0.485622 seconds
-  Import took 0.498231 seconds .
+  Time since last request: 193.773821 seconds.
+  path: Assets/Data/Prefabs/Weapons/Axe.prefab
+  artifactKey: Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Axe.prefab using Guid(d181f07e3c4442342b49d704ac627f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd65a924a01daf578bfac3742b991cec5') in 0.063900 seconds
+  Import took 0.067112 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000918 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.981 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2115.
+Total: 1.855200 ms (FindLiveObjects: 0.171400 ms CreateObjectMapping: 0.053500 ms MarkObjects: 1.533900 ms  DeleteObjects: 0.095600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 36.829337 seconds.
-  path: Assets/Data/Items/Weapons/Axe.asset
-  artifactKey: Guid(b1afcac05c4ea1149bd505e88c185300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Items/Weapons/Axe.asset using Guid(b1afcac05c4ea1149bd505e88c185300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c58b2c3cd070ef5fc4517ff61945711') in 0.003578 seconds
-  Import took 0.007372 seconds .
+  Time since last request: 64.248944 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ee752cf8a0b071a68d52f78ad23367a') in 0.061991 seconds
+  Import took 0.079548 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000681 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.882 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2119.
+Total: 2.146600 ms (FindLiveObjects: 0.166800 ms CreateObjectMapping: 0.055800 ms MarkObjects: 1.849300 ms  DeleteObjects: 0.073600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000450 seconds.
-  path: Assets/Data/Items/Weapons/Axe.asset
-  artifactKey: Guid(b1afcac05c4ea1149bd505e88c185300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Data/Items/Weapons/Axe.asset using Guid(b1afcac05c4ea1149bd505e88c185300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c58b2c3cd070ef5fc4517ff61945711') in 0.008519 seconds
-  Import took 0.011544 seconds .
+  Time since last request: 41.843800 seconds.
+  path: Assets/Data/Prefabs/Weapons/Bronze Shield.prefab
+  artifactKey: Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Prefabs/Weapons/Bronze Shield.prefab using Guid(caca7ee770dbce145a13ed501ac34998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3832ce5e250338c97954a0c5576e103e') in 0.059644 seconds
+  Import took 0.083229 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000678 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.863 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1543 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 90.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2123.
+Total: 1.941900 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.050900 ms MarkObjects: 1.615800 ms  DeleteObjects: 0.110700 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

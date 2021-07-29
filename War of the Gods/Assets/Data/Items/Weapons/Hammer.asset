@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 0}
   itemName: Hammer
-  modelPrefab: {fileID: 0}
+  modelPrefab: {fileID: 277088338674981686, guid: 783ba4c2f8420c74fb9bec505b8baec6, type: 3}
   isUnarmed: 0
   weaponType: 2
   minDamage: 40
