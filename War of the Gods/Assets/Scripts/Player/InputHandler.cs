@@ -208,6 +208,9 @@ namespace JP
                     if (playerManager.canDoCombo)
                         return;
 
+                    if (playerManager.isBlocking)
+                        return;
+
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleRightLightAttack(playerInventory.rightWeapon);
                 }
@@ -231,6 +234,9 @@ namespace JP
                     if (playerManager.canDoCombo)
                         return;
 
+                    if (playerManager.isBlocking)
+                        return;
+
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleRightHeavyAttack(playerInventory.rightWeapon);
                 }
@@ -252,6 +258,9 @@ namespace JP
                         return;
 
                     if (playerManager.canDoCombo)
+                        return;
+
+                    if (playerManager.isBlocking)
                         return;
 
                     animatorHandler.anim.SetBool("isUsingLeftHand", true);

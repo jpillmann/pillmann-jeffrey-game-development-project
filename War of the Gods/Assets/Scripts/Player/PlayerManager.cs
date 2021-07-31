@@ -44,6 +44,8 @@ namespace JP
 
         [Header("Player Flags")]
         public bool isSprinting;
+        public bool isInAir;
+        public bool isGrounded;
         public bool isInteracting;
         public bool canDoCombo;
         public bool isUsingRightHand;
@@ -96,6 +98,7 @@ namespace JP
         {
             float delta = Time.fixedDeltaTime;
             playerMovement.HandleMovement(delta);
+            playerMovement.HandleFalling(delta, playerMovement.moveDirection);
         }
 
         // Reset Player Flags
@@ -114,6 +117,11 @@ namespace JP
             inputHandler.a_Input = false;
             inputHandler.inventory_Input = false;
             inputHandler.y_Input = false;
+
+            if (isInAir)
+            {
+                playerMovement.inAirTimer += Time.deltaTime;
+            }
 
             float delta = Time.fixedDeltaTime;
             if (cameraHandler != null)
