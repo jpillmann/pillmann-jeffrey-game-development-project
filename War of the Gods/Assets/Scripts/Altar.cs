@@ -18,6 +18,7 @@ namespace JP
 
         private void PrayAtAltar(PlayerManager playerManager)
         {
+            playerManager.IsInUI();
             PlayerStats playerStats = FindObjectOfType<PlayerStats>();
 
             playerManager.animatorHandler.PlayTargetAnimation("KneelDown", true);

@@ -211,6 +211,9 @@ namespace JP
                     if (playerManager.isBlocking)
                         return;
 
+                    if (playerManager.isInUI)
+                        return;
+
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
                     playerAttacker.HandleRightLightAttack(playerInventory.rightWeapon);
                 }
@@ -235,6 +238,9 @@ namespace JP
                         return;
 
                     if (playerManager.isBlocking)
+                        return;
+
+                    if (playerManager.isInUI)
                         return;
 
                     animatorHandler.anim.SetBool("isUsingRightHand", true);
@@ -263,6 +269,9 @@ namespace JP
                     if (playerManager.isBlocking)
                         return;
 
+                    if (playerManager.isInUI)
+                        return;
+
                     animatorHandler.anim.SetBool("isUsingLeftHand", true);
                     playerAttacker.HandleLeftLightAttack(playerInventory.leftWeapon);
                 }
@@ -275,6 +284,9 @@ namespace JP
                     return;
 
                 if (playerManager.isBlocking)
+                    return;
+
+                if (playerManager.isInUI)
                     return;
 
                 playerManager.isBlocking = true;

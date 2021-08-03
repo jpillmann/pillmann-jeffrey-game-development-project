@@ -23,15 +23,23 @@ namespace JP
         // modular, will be expanded, when further inventory sections are added
         public void CheckCurrentAmount(PlayerInventory playerInventory)
         {
-            if (item is WeaponItem)
+            if (goalType == GoalType.Gathering)
             {
-                for (int i = 0; i < playerInventory.weaponsInventory.Count; i++)
+                if (item is WeaponItem)
                 {
-                    if (playerInventory.weaponsInventory[i] == item)
+                    for (int i = 0; i < playerInventory.weaponsInventory.Count; i++)
                     {
-                        currentAmount++;
+                        if (playerInventory.weaponsInventory[i] == item)
+                        {
+                            currentAmount++;
+                        }
                     }
                 }
+            }
+            else if (goalType == GoalType.Kill)
+            {
+                PlayerStats playerStats = playerInventory.GetComponent<PlayerStats>();
+                currentAmount = playerStats.enemiesKilledForQuest;
             }
         }
     }
@@ -39,6 +47,7 @@ namespace JP
     // Types of Quest are Listed here
     public enum GoalType
     {
-        Gathering
+        Gathering,
+        Kill
     }
 }

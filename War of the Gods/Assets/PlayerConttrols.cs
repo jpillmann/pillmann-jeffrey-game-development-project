@@ -487,8 +487,8 @@ public class @PlayerConttrols : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""fef8589f-6426-4168-b82b-18b599966c3d"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": ""Hold"",
+                    ""path"": ""<Keyboard>/leftAlt"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LT"",

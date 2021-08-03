@@ -16,6 +16,7 @@ namespace JP
         public GameObject equipmentScreenWindow;
         public GameObject weaponInventoryWindow;
         public GameObject questListWindow;
+        public GameObject gameOptionsWindow;
 
         [Header("Equipment Window Slot Selected")]
         public bool rightHandSlot01Selected;
@@ -129,6 +130,8 @@ namespace JP
             weaponInventoryWindow.SetActive(false);
             equipmentScreenWindow.SetActive(false);
             questListWindow.SetActive(false);
+            gameOptionsWindow.SetActive(false);
+            playerManager.IsNotInUI();
         }
 
         public void ResetAllSelectedSlots()

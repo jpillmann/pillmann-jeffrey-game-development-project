@@ -52,7 +52,7 @@ namespace JP
         public bool isUsingLeftHand;
         public bool isInvulnerable;
         public bool isBlocking;
-
+        public bool isInUI;
 
         private void Awake()
         {
@@ -89,6 +89,7 @@ namespace JP
             inputHandler.TickInput(delta);
             playerMovement.HandleRollingAndSprinting(delta);
             playerStats.RegenerateStamina();
+            playerStats.RegenerateHealth();
 
             CheckForInteractableObject();
         }
@@ -242,25 +243,33 @@ namespace JP
 
                     if (quests[i].questGoal.IsReached())
                     {
-                        // Remove required Item(s) from Player Inventory
-                        int currentAmount = quests[i].questGoal.requiredAmount;
-
-                        for (int j = 0; j < playerInventory.weaponsInventory.Count; j++)
+                        if (quests[i].questGoal.goalType == GoalType.Gathering)
                         {
-                            if (currentAmount > 0)
+                            // Remove required Item(s) from Player Inventory
+                            int currentAmount = quests[i].questGoal.requiredAmount;
+
+                            for (int j = 0; j < playerInventory.weaponsInventory.Count; j++)
                             {
-                                if (playerInventory.weaponsInventory[j] == quests[i].questGoal.item)
+                                if (currentAmount > 0)
                                 {
-                                    currentAmount--;
-                                    playerInventory.weaponsInventory.RemoveAt(j);
+                                    if (playerInventory.weaponsInventory[j] == quests[i].questGoal.item)
+                                    {
+                                        currentAmount--;
+                                        playerInventory.weaponsInventory.RemoveAt(j);
+                                    }
                                 }
+                                else
+                                {
+                                    break;
+                                }
+
                             }
-                            else
-                            {
-                                break;
-                            }
-                            
                         }
+                        else if (quests[i].questGoal.goalType == GoalType.Kill)
+                        {
+                            playerStats.enemiesKilledForQuest -= quests[i].questGoal.requiredAmount;
+                        }
+
 
                         // Handle Quest Reward
                         playerInventory.weaponsInventory.Add(quests[i].weaponReward);
@@ -365,6 +374,16 @@ namespace JP
                     playerStats.armorMultiplier = tempBonus.noviceBonus;
                 }
             }
+        }
+
+        public void IsInUI()
+        {
+            isInUI = true;
+        }
+
+        public void IsNotInUI()
+        {
+            isInUI = false;
         }
     }
 }

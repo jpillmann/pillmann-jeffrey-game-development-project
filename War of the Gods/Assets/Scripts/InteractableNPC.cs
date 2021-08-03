@@ -24,6 +24,7 @@ namespace JP
         // If NPC has a quest to give set
         private void StartDialogue(PlayerManager playerManager)
         {
+            playerManager.IsInUI();
             PlayerMovement playerMovement;
             playerMovement = playerManager.GetComponent<PlayerMovement>();
             playerMovement.rigidbody.velocity = Vector3.zero; // stops the Player from moving while interacting with npc's

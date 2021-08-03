@@ -12,10 +12,14 @@ namespace JP
         public HealthBar healthBar;
         public StaminaBar staminaBar;
 
+        public float healthRegen;
+        public float healthRegenTimer = 0;
+
         public Bonus bonus;
         public string worshipTitle;
         public int favor = 0;
         public int enemiesKilled = 0;
+        public int enemiesKilledForQuest = 0;
         public int friendsKilled = 0;
         public int mainQuestsCompleted = 0;
         public int sideQuestsCompleted = 0;
@@ -41,6 +45,7 @@ namespace JP
             currentStamina = maxStamina;
             staminaBar.SetMaxStamina(maxStamina);
             staminaRegen = 40;
+            healthRegen = 10;
         }
 
         #region Health
@@ -71,6 +76,24 @@ namespace JP
                 currentHealth = 0;
                 animatorHandler.PlayTargetAnimation("Death-04", true);
                 isDead = true;
+            }
+        }
+
+        public void RegenerateHealth()
+        {
+            if (playerManager.isInteracting || currentHealth >= maxHealth)
+            {
+                healthRegenTimer = 0;
+            }
+            else
+            {
+                healthRegenTimer += Time.deltaTime;
+
+                if (currentHealth < maxHealth && healthRegenTimer > 5f)
+                {
+                    currentHealth += healthRegen * Time.deltaTime;
+                    healthBar.SetCurrentHealth(currentHealth);
+                }
             }
         }
         #endregion

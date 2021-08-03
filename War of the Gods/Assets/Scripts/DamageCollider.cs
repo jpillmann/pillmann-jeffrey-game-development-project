@@ -135,7 +135,7 @@ namespace JP
                 }
             }
 
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Enemy" || collision.tag == "InteractableNPC")
             {
                 NPCStats npcStats = collision.GetComponent<NPCStats>();
                 PlayerStats playerStats = FindObjectOfType<PlayerStats>();

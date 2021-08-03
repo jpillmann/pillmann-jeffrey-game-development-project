@@ -49,6 +49,7 @@ namespace JP
                 if (faction != playerStats.faction)
                 {
                     playerStats.enemiesKilled++;
+                    playerStats.enemiesKilledForQuest++;
                 }
                 else if (faction == playerStats.faction)
                 {
@@ -58,6 +59,7 @@ namespace JP
                 currentHealth = 0;
                 animator.Play("Death-04");
                 isDead = true;
+                npcManager.currentState = null;
             }
         }
     }
