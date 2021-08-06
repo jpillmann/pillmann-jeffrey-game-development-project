@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61ced4d31f07346885b186f23723c3, type: 3}
   m_Name: Iron Shield
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: df827f8be4b23e84e91dbfd647754256, type: 3}
   itemName: Iron Shield
   modelPrefab: {fileID: 5109916852595765147, guid: c3f315e2ddc47b749a55659226e138e6, type: 3}
   isUnarmed: 0

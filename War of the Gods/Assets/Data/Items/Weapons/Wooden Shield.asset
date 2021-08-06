@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61ced4d31f07346885b186f23723c3, type: 3}
   m_Name: Wooden Shield
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 21300000, guid: d0a395030b1154540b3055b261ff11c2, type: 3}
+  itemIcon: {fileID: 21300000, guid: df827f8be4b23e84e91dbfd647754256, type: 3}
   itemName: Wooden Shield
   modelPrefab: {fileID: 5077797831414068371, guid: 08deab1d29c973a4fb4315c131ed4b4a, type: 3}
   isUnarmed: 0

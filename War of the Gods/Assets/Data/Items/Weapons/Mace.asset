@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61ced4d31f07346885b186f23723c3, type: 3}
   m_Name: Mace
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: ea59f4b4590747c459b1db20410b3ba0, type: 3}
   itemName: Mace
   modelPrefab: {fileID: 6820464165839908724, guid: 7d6530d8703e37a4780821a58f9e7cd5, type: 3}
   isUnarmed: 0

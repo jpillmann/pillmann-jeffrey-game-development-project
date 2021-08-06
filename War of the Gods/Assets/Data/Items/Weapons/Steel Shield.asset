@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61ced4d31f07346885b186f23723c3, type: 3}
   m_Name: Steel Shield
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: df827f8be4b23e84e91dbfd647754256, type: 3}
   itemName: Steel Shield
   modelPrefab: {fileID: 6978491639909075141, guid: 4d4b77b9343ca994d875e605722c80a8, type: 3}
   isUnarmed: 0

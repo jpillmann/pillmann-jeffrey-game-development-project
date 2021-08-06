@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61ced4d31f07346885b186f23723c3, type: 3}
   m_Name: Aesir Sword
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: ea59f4b4590747c459b1db20410b3ba0, type: 3}
   itemName: Aesir Sword
   modelPrefab: {fileID: 3202569383993902133, guid: 92cd0738cf35ea444ae9741d52dc4ddf, type: 3}
   isUnarmed: 0

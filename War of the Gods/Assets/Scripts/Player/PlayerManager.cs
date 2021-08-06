@@ -153,6 +153,7 @@ namespace JP
 
                         if (inputHandler.a_Input)
                         {
+                            Debug.Log("Oy!");
                             hit.collider.GetComponent<Interactable>().Interact(this);
                             animatorHandler.PlayTargetAnimation("PickUpItem", true);
                         }
