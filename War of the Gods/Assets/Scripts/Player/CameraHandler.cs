@@ -91,7 +91,7 @@ namespace JP
             }
             else
             {
-                float velocity = 0;
+                // float velocity = 0;
 
                 Vector3 dir = currentLockOnTarget.position - transform.position;
                 dir.Normalize();
